@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.57.1",
+    "date": "2026-10-11",
+    "type": "commit",
+    "message": "Add merch collection to personal services",
+    "commit": "3d2c0c3dd20787201cdd4b20c926c1843fd3ce84"
+  },
+  {
     "version": "3.0.56.1",
     "date": "2026-10-11",
     "type": "commit",
