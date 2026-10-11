@@ -363,6 +363,11 @@
             "title": "Twitch Miner",
             "url": "https://twitch.chi.qzz.io",
             "description": "Twitch Drops 自動化"
+          },
+          {
+            "title": "周邊收藏",
+            "url": "https://merch.chi.qzz.io/",
+            "description": "個人周邊收藏管理"
           }
         ]
       },
