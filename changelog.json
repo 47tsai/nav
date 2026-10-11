@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.56.1",
+    "date": "2026-10-11",
+    "type": "commit",
+    "message": "Update Discord link to direct messages",
+    "commit": "acd55806d15146d68d7ded807ad1e87efb257048"
+  },
+  {
     "version": "3.0.55.1",
     "date": "2026-10-08",
     "type": "commit",
