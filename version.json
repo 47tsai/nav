@@ -1,6 +1,6 @@
 {
-  "version": "3.0.57.1",
-  "date": "2026-10-11",
+  "version": "3.0.58.1",
+  "date": "2026-10-12",
   "type": "commit",
-  "message": "Add merch collection to personal services"
+  "message": "Add ImagesTool to image tools"
 }

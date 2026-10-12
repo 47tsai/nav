@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.58.1",
+    "date": "2026-10-12",
+    "type": "commit",
+    "message": "Add ImagesTool to image tools",
+    "commit": "707d96daa38f2ce4e665a5a57b29c1cd653bd0be"
+  },
+  {
     "version": "3.0.57.1",
     "date": "2026-10-11",
     "type": "commit",
