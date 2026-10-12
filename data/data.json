@@ -121,6 +121,11 @@
             "title": "Edit.photo",
             "url": "https://edit.photo/",
             "description": "圖片編輯"
+          },
+          {
+            "title": "ImagesTool",
+            "url": "https://imagestool.com/zh_TW/",
+            "description": "線上圖片處理工具"
           }
         ]
       },
