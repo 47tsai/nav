@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.80.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: fall back to cached assets on HTTP errors",
+    "commit": "c8f8230f1da9c023bed3c766592ca8b01a812a05"
+  },
+  {
     "version": "3.0.79.1",
     "date": "2026-10-16",
     "type": "commit",
