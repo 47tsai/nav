@@ -4,8 +4,8 @@
   "description": "Chi 的個人網站導航與常用工具箱",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#f4f6f8",
-  "theme_color": "#356ae6",
+  "background_color": "#f5f4f0",
+  "theme_color": "#426579",
   "lang": "zh-TW",
   "icons": [{"src":"assets/icon/icon-wb.png","sizes":"any","type":"image/png"}],
   "shortcuts": [
