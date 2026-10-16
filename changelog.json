@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.103.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "chore: refresh PWA cache for compact cards",
+    "commit": "6445ed982cd8ea848eb0fb94eaed95c93dfd4ade"
+  },
+  {
     "version": "3.0.102.1",
     "date": "2026-10-16",
     "type": "commit",

@@ -1,6 +1,6 @@
 {
-  "version": "3.0.102.1",
+  "version": "3.0.103.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "chore: refresh compact card stylesheet"
+  "message": "chore: refresh PWA cache for compact cards"
 }
