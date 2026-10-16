@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.101.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "style: restore compact cards and refine text alignment",
+    "commit": "7aee08d42b6589c7eb2caf857da6eb37f2990ab1"
+  },
+  {
     "version": "3.0.100.1",
     "date": "2026-10-16",
     "type": "commit",
