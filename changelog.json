@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.92.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: clear sidebar category highlight during search",
+    "commit": "3ca3381750c4d68de30b149c80856ca9ded556a9"
+  },
+  {
     "version": "3.0.91.1",
     "date": "2026-10-16",
     "type": "commit",
