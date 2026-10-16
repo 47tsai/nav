@@ -397,3 +397,71 @@ button:focus-visible, input:focus-visible, a:focus-visible, [tabindex]:focus-vis
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+
+/* Final layout pass: keep the dense link library comfortable on small screens. */
+@media (max-width: 720px) {
+  .topbar {
+    position: static;
+    z-index: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    border-bottom: 0;
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .grid, .home-block .grid, .quick-section .grid, .quick-page .grid,
+  .category-page-body .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .card {
+    height: 100%;
+    padding: 10px;
+  }
+  .card-main { align-items: flex-start; gap: 8px; }
+  .card-logo-container, .card-logo {
+    width: 29px;
+    height: 29px;
+  }
+  .card-logo-container { flex-basis: 29px; }
+  .card-content { padding-right: 17px; gap: 3px; }
+  .card-title {
+    font-size: 12px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+  .card-desc {
+    height: auto;
+    min-height: 0;
+    max-height: 2.8em;
+    white-space: normal;
+    font-size: 10px;
+    line-height: 1.4;
+    -webkit-line-clamp: 2;
+  }
+  .favorite-btn {
+    top: 4px;
+    right: 4px;
+    min-width: 25px;
+    min-height: 25px;
+  }
+  .copy-badge { right: 5px; bottom: 5px; }
+}
+@media (max-width: 390px) {
+  .grid, .home-block .grid, .quick-section .grid, .quick-page .grid,
+  .category-page-body .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .card-main { align-items: center; }
+  .card-logo-container, .card-logo {
+    width: 32px;
+    height: 32px;
+  }
+  .card-logo-container { flex-basis: 32px; }
+  .card-content { padding-right: 25px; }
+  .card-title { font-size: 12.5px; }
+  .card-desc { font-size: 10.5px; }
+}
