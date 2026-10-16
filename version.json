@@ -1,6 +1,6 @@
 {
-  "version": "3.0.86.1",
+  "version": "3.0.87.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "style: improve link description readability"
+  "message": "fix: refresh cached navigation assets"
 }

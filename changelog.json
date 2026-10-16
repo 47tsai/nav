@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.87.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: refresh cached navigation assets",
+    "commit": "74919fb48e234e4648de614c5a91e81f1da64c90"
+  },
+  {
     "version": "3.0.86.1",
     "date": "2026-10-16",
     "type": "commit",
