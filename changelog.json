@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.64.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "style: apply refreshed NAV design system",
+    "commit": "fc5df0cc679e83c98872ed7a6a52359fe0bb44db"
+  },
+  {
     "version": "3.0.63.1",
     "date": "2026-10-16",
     "type": "commit",
