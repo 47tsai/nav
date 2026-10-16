@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.71.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: refresh cached white theme assets",
+    "commit": "5ab509af1ee9703e4607a839f3ded61296ea1dc6"
+  },
+  {
     "version": "3.0.70.1",
     "date": "2026-10-16",
     "type": "commit",

@@ -1,6 +1,6 @@
 {
-  "version": "3.0.70.1",
+  "version": "3.0.71.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "style: switch light theme to clean white"
+  "message": "fix: refresh cached white theme assets"
 }
