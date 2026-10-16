@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.75.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "test: add NAV data integrity validator",
+    "commit": "005fb508cd8c4bfd6b2a322029c622ae6f000027"
+  },
+  {
     "version": "3.0.74.1",
     "date": "2026-10-16",
     "type": "commit",

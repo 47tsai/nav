@@ -1,6 +1,6 @@
 {
-  "version": "3.0.74.1",
+  "version": "3.0.75.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix: correct word matching in ranked search"
+  "message": "test: add NAV data integrity validator"
 }
