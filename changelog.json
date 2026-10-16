@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.107.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "Redesign navigation cards with centered content and balanced spacing",
+    "commit": "6997fc0c7a617221e49833f584890c6bd91b04f1"
+  },
+  {
     "version": "3.0.106.1",
     "date": "2026-10-16",
     "type": "commit",

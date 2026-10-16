@@ -1,6 +1,6 @@
 {
-  "version": "3.0.106.1",
+  "version": "3.0.107.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "Refresh cached assets for vertical alignment adjustment"
+  "message": "Redesign navigation cards with centered content and balanced spacing"
 }
