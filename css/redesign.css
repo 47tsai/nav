@@ -620,3 +620,48 @@ button:focus-visible, input:focus-visible, a:focus-visible, [tabindex]:focus-vis
 @media (max-width: 720px) {
   .card-meta, .recent-time { font-size: 9.5px; }
 }
+
+
+/* Card typography pass: make each destination readable at a glance. */
+.card, .category-page-body .card { padding: 14px; }
+.card-main { gap: 11px; }
+.card-logo-container, .card-logo { width: 40px; height: 40px; }
+.card-logo-container { flex-basis: 40px; }
+.card-content { gap: 4px; padding-right: 25px; }
+.card-title { font-size: 15px; line-height: 1.35; font-weight: 700; }
+.card-desc {
+  font-size: 12px;
+  line-height: 1.45;
+  height: 2.9em;
+  min-height: 2.9em;
+  max-height: 2.9em;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+.grid, .home-block .grid, .quick-section .grid, .quick-page .grid,
+.category-page-body .grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 11px; }
+@media (max-width: 1050px) {
+  .grid, .home-block .grid, .quick-section .grid, .quick-page .grid,
+  .category-page-body .grid { grid-template-columns: repeat(auto-fill, minmax(235px, 1fr)); }
+}
+@media (max-width: 720px) {
+  .grid, .home-block .grid, .quick-section .grid, .quick-page .grid,
+  .category-page-body .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .card, .category-page-body .card { padding: 12px; }
+  .card-main { gap: 8px; }
+  .card-logo-container, .card-logo { width: 32px; height: 32px; }
+  .card-logo-container { flex-basis: 32px; }
+  .card-content { padding-right: 16px; gap: 4px; }
+  .card-title { font-size: 13.5px; line-height: 1.4; }
+  .card-desc { font-size: 11.5px; line-height: 1.45; height: 2.9em; min-height: 0; max-height: 2.9em; }
+}
+@media (max-width: 390px) {
+  .grid, .home-block .grid, .quick-section .grid, .quick-page .grid,
+  .category-page-body .grid { grid-template-columns: minmax(0, 1fr); gap: 9px; }
+  .card-main { align-items: center; gap: 11px; }
+  .card-logo-container, .card-logo { width: 38px; height: 38px; }
+  .card-logo-container { flex-basis: 38px; }
+  .card-content { padding-right: 25px; }
+  .card-title { font-size: 15px; }
+  .card-desc { font-size: 12px; }
+}
