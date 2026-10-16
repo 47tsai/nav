@@ -465,3 +465,22 @@ button:focus-visible, input:focus-visible, a:focus-visible, [tabindex]:focus-vis
   .card-title { font-size: 12.5px; }
   .card-desc { font-size: 10.5px; }
 }
+
+
+/* Shape language: use rounded corners where they help grouping and touch,
+   while keeping editorial sections and tab underlines deliberately flat. */
+.brand-mark { border-radius: 7px; }
+.sidebar-toggle { border-radius: 7px; }
+.nav-item { border-radius: 7px; }
+.search-box { border-radius: 10px; }
+.page-tab { border-radius: 6px; }
+.card, .category-page-body .card { border-radius: 10px; }
+.card-logo-container { border-radius: 9px; }
+.favorite-btn { border-radius: 8px; }
+.empty-state { border-radius: 10px; }
+.toast, .update-toast { border-radius: 12px; }
+.category-page-search { border-radius: 10px; }
+@media (max-width: 720px) {
+  .nav-item, .sidebar.collapsed .nav-item { border-radius: 6px; }
+  .card, .category-page-body .card { border-radius: 9px; }
+}
