@@ -1,5 +1,5 @@
-const CACHE_NAME="chi-nav-clean-cache-v13";
-const CORE_ASSETS=["./","./index.html","./css/style.css","./css/responsive.css","./css/theme.css","./css/update.css","./css/card-tooltip.css","./css/enhancements.css","./css/loading.css","./css/category-page.css","./css/design-system.css","./css/card-layout.css","./css/redesign.css?v=7","./js/utils.js","./js/data.js","./js/storage.js","./js/update.js","./js/search.js","./js/navigation.js","./js/render.js","./js/data/metadata.js","./js/app.js","./js/theme.js","./js/card-tooltip.js","./js/bootstrap.js","./data/data.json","./manifest.json","./assets/icon/icon-bw.png","./assets/icon/icon-wb.png"];
+const CACHE_NAME="chi-nav-clean-cache-v14";
+const CORE_ASSETS=["./","./index.html","./css/style.css","./css/responsive.css","./css/theme.css","./css/update.css","./css/card-tooltip.css","./css/enhancements.css","./css/loading.css","./css/category-page.css","./css/design-system.css","./css/card-layout.css","./css/redesign.css?v=8","./js/utils.js","./js/data.js","./js/storage.js","./js/update.js","./js/search.js","./js/navigation.js","./js/render.js","./js/data/metadata.js","./js/app.js","./js/theme.js","./js/card-tooltip.js","./js/bootstrap.js","./data/data.json","./manifest.json","./assets/icon/icon-bw.png","./assets/icon/icon-wb.png"];
 const NETWORK_FIRST=["/","/index.html","/data/data.json","/manifest.json"];
 const NETWORK_FIRST_EXTENSIONS=[".css",".js"];
 const CACHE_FIRST_EXTENSIONS=[".svg",".png",".jpg",".jpeg",".webp",".ico",".woff",".woff2"];
