@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.82.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "style: restore a balanced mix of corner radii",
+    "commit": "3649bedad7dc6c971dbca6e5498865cda5e7dfe4"
+  },
+  {
     "version": "3.0.81.1",
     "date": "2026-10-16",
     "type": "commit",
