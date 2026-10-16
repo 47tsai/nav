@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.81.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: preserve live assets when cache writes fail",
+    "commit": "3cc1bcf9bfe5276c847634434a360ad24eeb6a34"
+  },
+  {
     "version": "3.0.80.1",
     "date": "2026-10-16",
     "type": "commit",
