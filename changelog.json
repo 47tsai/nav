@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.94.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "style: use a clean white light theme background",
+    "commit": "bc673d8d39f703982c94746e4d3b05d026a892f3"
+  },
+  {
     "version": "3.0.93.1",
     "date": "2026-10-16",
     "type": "commit",
