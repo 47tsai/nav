@@ -1,6 +1,6 @@
 {
-  "version": "3.0.58.1",
-  "date": "2026-10-12",
+  "version": "3.0.59.1",
+  "date": "2026-10-16",
   "type": "commit",
-  "message": "Add ImagesTool to image tools"
+  "message": "fix(admin): restrict quick-add URLs to HTTP(S)"
 }

@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.59.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix(admin): restrict quick-add URLs to HTTP(S)",
+    "commit": "af55b19d6daaf5a9054c9b1fabc523449d7700aa"
+  },
+  {
     "version": "3.0.58.1",
     "date": "2026-10-12",
     "type": "commit",
