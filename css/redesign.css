@@ -676,3 +676,179 @@ button:focus-visible, input:focus-visible, a:focus-visible, [tabindex]:focus-vis
 @media (max-width: 390px) {
   .card, .category-page-body .card { padding-top: 23px; padding-bottom: 1px; }
 }
+
+
+/* Card redesign: balanced, vertically centered content with a calmer hierarchy. */
+.grid, .home-block .grid, .quick-section .grid, .quick-page .grid,
+.category-page-body .grid {
+  align-items: stretch;
+  gap: 12px;
+}
+.card, .category-page-body .card {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 94px;
+  height: 100%;
+  padding: 12px 42px 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(20, 30, 35, .025);
+}
+.card-link, .copy-action {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+  min-height: 100%;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.card-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+.card-logo-container {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--surface-soft);
+}
+.card-logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+.card-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  min-width: 0;
+  gap: 4px;
+  padding: 2px 0;
+}
+.card-title {
+  color: var(--text);
+  font-size: 13.5px;
+  font-weight: 680;
+  line-height: 1.4;
+  letter-spacing: -.1px;
+  overflow-wrap: anywhere;
+}
+.card-desc {
+  height: auto;
+  min-height: 0;
+  max-height: 2.8em;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+.card-meta, .recent-time {
+  margin-top: 1px;
+  font-size: 10px;
+  line-height: 1.35;
+}
+.favorite-btn {
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--muted);
+  background: transparent;
+}
+.favorite-btn:hover, .favorite-btn:focus-visible {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+.copy-badge {
+  right: 9px;
+  bottom: 5px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .card:hover, .category-page-body .card:hover {
+    transform: translateY(-1px);
+    border-color: color-mix(in srgb, var(--accent) 38%, var(--border));
+    box-shadow: 0 4px 12px rgba(20, 30, 35, .055);
+  }
+}
+@media (max-width: 1050px) {
+  .grid, .home-block .grid, .quick-section .grid, .quick-page .grid,
+  .category-page-body .grid { gap: 10px; }
+}
+@media (max-width: 720px) {
+  .grid, .home-block .grid, .quick-section .grid, .quick-page .grid,
+  .category-page-body .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+  .card, .category-page-body .card {
+    min-height: 100px;
+    padding: 10px 31px 10px 10px;
+    border-radius: 10px;
+  }
+  .card-main { gap: 9px; }
+  .card-logo-container {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+  .card-logo { width: 23px; height: 23px; }
+  .card-content { gap: 4px; }
+  .card-title { font-size: 12.5px; line-height: 1.4; }
+  .card-desc { font-size: 10.5px; line-height: 1.4; }
+  .favorite-btn {
+    top: 8px;
+    right: 5px;
+    transform: none;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+  }
+}
+@media (max-width: 390px) {
+  .grid, .home-block .grid, .quick-section .grid, .quick-page .grid,
+  .category-page-body .grid { grid-template-columns: minmax(0, 1fr); }
+  .card, .category-page-body .card {
+    min-height: 84px;
+    padding: 12px 40px 12px 13px;
+  }
+  .card-main { gap: 11px; }
+  .card-logo-container { flex-basis: 36px; width: 36px; height: 36px; }
+  .card-logo { width: 25px; height: 25px; }
+  .card-title { font-size: 13.5px; }
+  .card-desc { font-size: 11px; }
+  .favorite-btn { top: 50%; right: 8px; transform: translateY(-50%); }
+}
