@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.66.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: precache refreshed stylesheet for offline use",
+    "commit": "1e60cb75e72ce21dc6a78f1a3ca466efceab9775"
+  },
+  {
     "version": "3.0.65.1",
     "date": "2026-10-16",
     "type": "commit",
