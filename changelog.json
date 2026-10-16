@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.108.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "Refresh cache for redesigned navigation cards",
+    "commit": "6275ea727a024816fc0eb1039cd6eb7c34bd73e5"
+  },
+  {
     "version": "3.0.107.1",
     "date": "2026-10-16",
     "type": "commit",
