@@ -1,6 +1,6 @@
 {
-  "version": "3.0.73.1",
+  "version": "3.0.74.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "chore: refresh service worker cache after search improvements"
+  "message": "fix: correct word matching in ranked search"
 }

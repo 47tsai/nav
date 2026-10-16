@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.74.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: correct word matching in ranked search",
+    "commit": "df502ee330ee59a3019a2fa41cd1c381baba9531"
+  },
+  {
     "version": "3.0.73.1",
     "date": "2026-10-16",
     "type": "commit",
