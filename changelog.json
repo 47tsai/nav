@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.89.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: refresh navigation stylesheet cache key",
+    "commit": "ab93a5f101a007410de5142157bc46f3d6d40c2f"
+  },
+  {
     "version": "3.0.88.1",
     "date": "2026-10-16",
     "type": "commit",
