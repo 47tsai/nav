@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.63.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "style: introduce cohesive editorial NAV redesign",
+    "commit": "1bc00e16d2cc8a56144afaa425970b434dbb5af2"
+  },
+  {
     "version": "3.0.62.1",
     "date": "2026-10-16",
     "type": "commit",
