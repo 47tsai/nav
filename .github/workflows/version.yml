@@ -72,5 +72,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add version.json changelog.json
-          git commit -m "chore: auto bump version [skip ci]" || exit 0
+          git commit -m "chore: auto bump version [skip ci]"
           git push
