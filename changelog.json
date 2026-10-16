@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.62.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix(admin): correct URL validation syntax",
+    "commit": "479d64ddafefc254313de677771616922e1bab9c"
+  },
+  {
     "version": "3.0.61.1",
     "date": "2026-10-16",
     "type": "commit",
