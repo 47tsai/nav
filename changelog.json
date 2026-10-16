@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.73.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "chore: refresh service worker cache after search improvements",
+    "commit": "b6b8f53025e73384f91cbca268a4b9191aa03b50"
+  },
+  {
     "version": "3.0.72.1",
     "date": "2026-10-16",
     "type": "commit",
