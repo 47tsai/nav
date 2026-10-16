@@ -1,6 +1,6 @@
 {
-  "version": "3.0.71.1",
+  "version": "3.0.72.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix: refresh cached white theme assets"
+  "message": "feat: rank search results and restore command palette focus"
 }

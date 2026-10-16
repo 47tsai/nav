@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.72.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "feat: rank search results and restore command palette focus",
+    "commit": "5e64de3068dad8c535d1a7e17671cf39976e2b97"
+  },
+  {
     "version": "3.0.71.1",
     "date": "2026-10-16",
     "type": "commit",
