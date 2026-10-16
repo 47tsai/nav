@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.98.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "ci: validate admin scripts in pull requests",
+    "commit": "3c3ed0afc3ee6bc481d1dd2ee06f7f3ef0d3ee6a"
+  },
+  {
     "version": "3.0.97.1",
     "date": "2026-10-16",
     "type": "commit",
