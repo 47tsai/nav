@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.104.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "Refresh service worker cache for card alignment fix",
+    "commit": "81852ef65f45251c75215b00574ab57a983cc7a8"
+  },
+  {
     "version": "3.0.103.1",
     "date": "2026-10-16",
     "type": "commit",
