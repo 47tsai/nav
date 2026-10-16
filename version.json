@@ -1,6 +1,6 @@
 {
-  "version": "3.0.90.1",
+  "version": "3.0.91.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix: refresh service worker cache for navigation styles"
+  "message": "fix: highlight current navigation section"
 }
