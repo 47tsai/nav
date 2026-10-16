@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.83.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: refresh redesign stylesheet cache key",
+    "commit": "167f99f0d3f8318ec12299a52f6dddb6f55e57fa"
+  },
+  {
     "version": "3.0.82.1",
     "date": "2026-10-16",
     "type": "commit",

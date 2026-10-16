@@ -1,6 +1,6 @@
 {
-  "version": "3.0.82.1",
+  "version": "3.0.83.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "style: restore a balanced mix of corner radii"
+  "message": "fix: refresh redesign stylesheet cache key"
 }
