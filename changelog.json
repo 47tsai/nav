@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.106.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "Refresh cached assets for vertical alignment adjustment",
+    "commit": "3231d7c989d453e39b011ffb041699bad5d2cd7c"
+  },
+  {
     "version": "3.0.105.1",
     "date": "2026-10-16",
     "type": "commit",
