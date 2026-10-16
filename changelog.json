@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.61.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix(ci): surface auto-version commit failures",
+    "commit": "a473c3b510e275f04417ccb7e20db9f5624f4ab5"
+  },
+  {
     "version": "3.0.60.1",
     "date": "2026-10-16",
     "type": "commit",

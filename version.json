@@ -1,6 +1,6 @@
 {
-  "version": "3.0.60.1",
+  "version": "3.0.61.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix(admin): remove escaped newline from head markup"
+  "message": "fix(ci): surface auto-version commit failures"
 }
