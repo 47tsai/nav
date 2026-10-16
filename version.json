@@ -1,6 +1,6 @@
 {
-  "version": "3.0.87.1",
+  "version": "3.0.88.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix: refresh cached navigation assets"
+  "message": "style: refine search and activity metadata"
 }

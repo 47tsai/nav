@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.88.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "style: refine search and activity metadata",
+    "commit": "8ecb0b9344509e989345a0d5e6b530ad16bdbd38"
+  },
+  {
     "version": "3.0.87.1",
     "date": "2026-10-16",
     "type": "commit",
