@@ -1,6 +1,6 @@
 {
-  "version": "3.0.77.1",
+  "version": "3.0.78.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "ci: validate JavaScript syntax"
+  "message": "ci: validate JavaScript on pull requests"
 }
