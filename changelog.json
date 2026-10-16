@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.99.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "chore: refresh card stylesheet asset version",
+    "commit": "cc279f06bae58ca3125e9058ce8dd7d29ac3c1c6"
+  },
+  {
     "version": "3.0.98.1",
     "date": "2026-10-16",
     "type": "commit",
