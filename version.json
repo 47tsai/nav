@@ -1,6 +1,6 @@
 {
-  "version": "3.0.101.1",
+  "version": "3.0.102.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "style: restore compact cards and refine text alignment"
+  "message": "chore: refresh compact card stylesheet"
 }
