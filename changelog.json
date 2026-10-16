@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.77.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "ci: validate JavaScript syntax",
+    "commit": "9408e6fc3ac14731c4d06f7e5c291a548bd1bd6c"
+  },
+  {
     "version": "3.0.76.1",
     "date": "2026-10-16",
     "type": "commit",

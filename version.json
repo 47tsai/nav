@@ -1,6 +1,6 @@
 {
-  "version": "3.0.76.1",
+  "version": "3.0.77.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "ci: validate NAV data on changes"
+  "message": "ci: validate JavaScript syntax"
 }
