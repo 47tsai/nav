@@ -1,6 +1,6 @@
 {
-  "version": "3.0.68.1",
+  "version": "3.0.69.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix: allow cached NAV data to load offline"
+  "message": "fix: allow sidebar toggle to expand and collapse"
 }

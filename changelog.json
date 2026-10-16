@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.69.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: allow sidebar toggle to expand and collapse",
+    "commit": "26a77a1f4bbdab8967729c75e2b9736ee9e1f7d6"
+  },
+  {
     "version": "3.0.68.1",
     "date": "2026-10-16",
     "type": "commit",
