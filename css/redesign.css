@@ -666,3 +666,13 @@ button:focus-visible, input:focus-visible, a:focus-visible, [tabindex]:focus-vis
   .card-title { font-size: 14px; }
   .card-desc { font-size: 11.5px; }
 }
+
+
+/* Vertical balance refinement: move card contents down without increasing card height. */
+.card, .category-page-body .card { padding-top: 18px; padding-bottom: 6px; }
+@media (max-width: 720px) {
+  .card, .category-page-body .card { padding-top: 15px; padding-bottom: 5px; }
+}
+@media (max-width: 390px) {
+  .card, .category-page-body .card { padding-top: 17px; padding-bottom: 7px; }
+}
