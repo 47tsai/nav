@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.84.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: refresh service worker cache for redesign",
+    "commit": "99135600850f510c67138b99279484eb89743c63"
+  },
+  {
     "version": "3.0.83.1",
     "date": "2026-10-16",
     "type": "commit",

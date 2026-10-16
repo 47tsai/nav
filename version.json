@@ -1,6 +1,6 @@
 {
-  "version": "3.0.83.1",
+  "version": "3.0.84.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix: refresh redesign stylesheet cache key"
+  "message": "fix: refresh service worker cache for redesign"
 }
