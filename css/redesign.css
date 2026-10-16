@@ -566,3 +566,30 @@ button:focus-visible, input:focus-visible, a:focus-visible, [tabindex]:focus-vis
     transition: none !important;
   }
 }
+
+
+/* Content readability pass: descriptions should be useful, not merely a one-line teaser. */
+.card-desc {
+  display: -webkit-box;
+  height: 2.8em;
+  min-height: 2.8em;
+  max-height: 2.8em;
+  overflow: hidden;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+@media (max-width: 720px) {
+  .card-desc {
+    display: -webkit-box;
+    height: 2.8em;
+    min-height: 0;
+    max-height: 2.8em;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}
