@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.86.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "style: improve link description readability",
+    "commit": "0149407833b1c46429bd14666b21b7dcf2eecbca"
+  },
+  {
     "version": "3.0.85.1",
     "date": "2026-10-16",
     "type": "commit",
