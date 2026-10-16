@@ -1,6 +1,6 @@
 {
-  "version": "3.0.75.1",
+  "version": "3.0.76.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "test: add NAV data integrity validator"
+  "message": "ci: validate NAV data on changes"
 }

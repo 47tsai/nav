@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.76.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "ci: validate NAV data on changes",
+    "commit": "7ec5fb6dfbd6a1a078a6cb8fa78b27a1b7c0e370"
+  },
+  {
     "version": "3.0.75.1",
     "date": "2026-10-16",
     "type": "commit",
