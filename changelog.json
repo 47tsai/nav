@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.97.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "ci: validate admin and bookmark scripts",
+    "commit": "d859195f9cd49e5cabe36a38e4579d773442e831"
+  },
+  {
     "version": "3.0.96.1",
     "date": "2026-10-16",
     "type": "commit",

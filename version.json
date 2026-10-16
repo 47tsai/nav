@@ -1,6 +1,6 @@
 {
-  "version": "3.0.96.1",
+  "version": "3.0.97.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix: preserve current view after favorite reorder"
+  "message": "ci: validate admin and bookmark scripts"
 }
