@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.93.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: preserve current view when toggling favorites",
+    "commit": "4427eedbec4aa9e6f9ab95707e7bad877d910d8a"
+  },
+  {
     "version": "3.0.92.1",
     "date": "2026-10-16",
     "type": "commit",
