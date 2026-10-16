@@ -13,6 +13,8 @@ on:
     paths:
       - 'data/data.json'
       - 'scripts/validate-data.mjs'
+      - 'js/**'
+      - 'sw.js'
       - '.github/workflows/validate-data.yml'
   workflow_dispatch:
 
