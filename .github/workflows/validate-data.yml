@@ -7,6 +7,8 @@ on:
       - 'data/data.json'
       - 'scripts/validate-data.mjs'
       - 'js/**'
+      - 'admin/**'
+      - 'bookmarks/**'
       - 'sw.js'
       - '.github/workflows/validate-data.yml'
   pull_request:
@@ -35,5 +37,5 @@ jobs:
         run: node scripts/validate-data.mjs
       - name: Check JavaScript syntax
         run: |
-          find js -type f -name '*.js' -print0 | xargs -0 -n1 node --check
+          find js admin bookmarks -type f -name '*.js' -print0 | xargs -0 -n1 node --check
           node --check sw.js
