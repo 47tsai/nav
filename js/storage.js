@@ -2,7 +2,7 @@ const FAV='chi-nav-favorites',REC='chi-nav-recent',REC_TIME='chi-nav-recent-time
 
 function loadStore(key){return load(key)}
 function saveFavorites(items){save(FAV,items)}
-function saveRecent(items){save(REC,items.slice(0,LIMIT))}
+function saveRecent(items){const next=items.slice(0,LIMIT);save(REC,next);const keep=new Set(next);const times=loadRecentTimes();let changed=false;for(const key of Object.keys(times)){if(!keep.has(key)){delete times[key];changed=true}}if(changed){try{localStorage.setItem(REC_TIME,JSON.stringify(times))}catch{}}}
 function loadRecentTimes(){try{const x=JSON.parse(localStorage.getItem(REC_TIME)||'{}');return x&&typeof x==='object'&&!Array.isArray(x)?x:{} }catch{return {}}}
 function saveRecentTime(url){const times=loadRecentTimes();times[url]=Date.now();try{localStorage.setItem(REC_TIME,JSON.stringify(times))}catch{}}
 function normalizeFavorites(items,map){return new Set([...items].map(norm).filter(k=>map.has(k)))}
