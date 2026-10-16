@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.110.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "Refresh service worker cache for compact card layout",
+    "commit": "7be08f2f265282e5fbda27387c15f9da0a95a399"
+  },
+  {
     "version": "3.0.109.1",
     "date": "2026-10-16",
     "type": "commit",

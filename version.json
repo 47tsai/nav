@@ -1,6 +1,6 @@
 {
-  "version": "3.0.109.1",
+  "version": "3.0.110.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "Reset navigation cards to compact natural-height layout"
+  "message": "Refresh service worker cache for compact card layout"
 }
