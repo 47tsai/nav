@@ -1,6 +1,6 @@
 {
-  "version": "3.0.99.1",
+  "version": "3.0.100.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "chore: refresh card stylesheet asset version"
+  "message": "chore: refresh PWA cache for card typography"
 }

@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.100.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "chore: refresh PWA cache for card typography",
+    "commit": "c9466a161f814866f7c9aa04497ed9d4b8f46f6d"
+  },
+  {
     "version": "3.0.99.1",
     "date": "2026-10-16",
     "type": "commit",
