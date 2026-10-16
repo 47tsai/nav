@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.68.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: allow cached NAV data to load offline",
+    "commit": "9da4471953dfb1d686e2983e1ca3a4dedb1bb76b"
+  },
+  {
     "version": "3.0.67.1",
     "date": "2026-10-16",
     "type": "commit",
