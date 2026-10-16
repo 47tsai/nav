@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.109.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "Reset navigation cards to compact natural-height layout",
+    "commit": "f60704a0f8d5d2a4d0b53578ac030b7514bd7bc0"
+  },
+  {
     "version": "3.0.108.1",
     "date": "2026-10-16",
     "type": "commit",
