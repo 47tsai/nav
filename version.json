@@ -1,6 +1,6 @@
 {
-  "version": "3.0.84.1",
+  "version": "3.0.85.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix: refresh service worker cache for redesign"
+  "message": "fix: refresh service worker cache for interface refinement"
 }
