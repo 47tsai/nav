@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.105.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "Shift card content further down while preserving card height",
+    "commit": "fcec030c2d446115de223cf728de21a199029f2e"
+  },
+  {
     "version": "3.0.104.1",
     "date": "2026-10-16",
     "type": "commit",

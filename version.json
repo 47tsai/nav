@@ -1,6 +1,6 @@
 {
-  "version": "3.0.104.1",
+  "version": "3.0.105.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "Refresh service worker cache for card alignment fix"
+  "message": "Shift card content further down while preserving card height"
 }
