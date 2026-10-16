@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.96.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: preserve current view after favorite reorder",
+    "commit": "8df25d32244cec0268af47b5cb253ea5a6b50ad3"
+  },
+  {
     "version": "3.0.95.1",
     "date": "2026-10-16",
     "type": "commit",

@@ -1,6 +1,6 @@
 {
-  "version": "3.0.95.1",
+  "version": "3.0.96.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix: refresh offline cache for latest styles"
+  "message": "fix: preserve current view after favorite reorder"
 }
