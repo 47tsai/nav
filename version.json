@@ -1,6 +1,6 @@
 {
-  "version": "3.0.66.1",
+  "version": "3.0.67.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix: precache refreshed stylesheet for offline use"
+  "message": "style: align installed app colors with NAV theme"
 }
