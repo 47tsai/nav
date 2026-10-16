@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.60.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix(admin): remove escaped newline from head markup",
+    "commit": "5862c39bfc0c7ba688c5a0906237b3238db4f2e9"
+  },
+  {
     "version": "3.0.59.1",
     "date": "2026-10-16",
     "type": "commit",

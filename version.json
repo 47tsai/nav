@@ -1,6 +1,6 @@
 {
-  "version": "3.0.59.1",
+  "version": "3.0.60.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "fix(admin): restrict quick-add URLs to HTTP(S)"
+  "message": "fix(admin): remove escaped newline from head markup"
 }
