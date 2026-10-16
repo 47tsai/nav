@@ -1,6 +1,6 @@
 {
-  "version": "3.0.94.1",
+  "version": "3.0.95.1",
   "date": "2026-10-16",
   "type": "commit",
-  "message": "style: use a clean white light theme background"
+  "message": "fix: refresh offline cache for latest styles"
 }

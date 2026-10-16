@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.95.1",
+    "date": "2026-10-16",
+    "type": "commit",
+    "message": "fix: refresh offline cache for latest styles",
+    "commit": "2fb2a5988acf488314bc8a2a4ab4dc4a6f5ec2a9"
+  },
+  {
     "version": "3.0.94.1",
     "date": "2026-10-16",
     "type": "commit",
