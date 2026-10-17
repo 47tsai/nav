@@ -1,6 +1,6 @@
 {
-  "version": "3.0.157.1",
+  "version": "3.0.158.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Fix shared theme preference and active admin navigation"
+  "message": "feat(admin): add secure Cloudflare Worker API foundation"
 }
