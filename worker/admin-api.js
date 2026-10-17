@@ -14,13 +14,74 @@ function createId(){return"nav_"+crypto.randomUUID()}
 function cleanSite(body){const title=String(body?.title||"").trim(),url=normalizeUrl(body?.url),description=String(body?.description||"").trim(),taxonomy=String(body?.taxonomy||"").trim(),subcategory=String(body?.subcategory||"").trim();if(!title||title.length>80)throw new Error("請輸入網站名稱（最多 80 字）。");if(!url)throw new Error("請輸入有效的 HTTP 或 HTTPS 網址。");if(description.length>240)throw new Error("描述不得超過 240 字。");if(!taxonomy||taxonomy.length>60)throw new Error("請選擇有效的分類。");return{title,url,description,taxonomy,subcategory}}
 function findTarget(data,taxonomy,subcategory){const section=data.find(x=>x.taxonomy===taxonomy);if(!section)return null;if(!Array.isArray(section.list))return subcategory?null:section;if(!subcategory)return null;return section.list.find(x=>x.term===subcategory)||null}
 function hasDuplicate(data,site,ignoreId=""){return data.some(section=>(Array.isArray(section.list)?section.list:[section]).some(group=>group.links.some(link=>link.id!==ignoreId&&(link.title.trim().toLocaleLowerCase()===site.title.toLocaleLowerCase()||normalizeUrl(link.url)===site.url))))}
-async function route(request,env){const url=new URL(request.url),path=url.pathname.replace(/\/+$/,"")||"/",origin=request.headers.get("Origin");if(request.method==="OPTIONS"){if(!origin||!ALLOWED_ORIGINS.has(origin))return reply({error:"Origin not allowed."},403);return new Response(null,{status:204,headers:corsHeaders(origin)})}if(origin&&!ALLOWED_ORIGINS.has(origin))return reply({error:"Origin not allowed."},403);if(path==="/health"&&request.method==="GET")return reply({ok:true,service:"chi-nav-admin-api",version:1});if(!path.startsWith("/api/admin/"))return reply({error:"Not found."},404);if(!env.NAV_GITHUB_TOKEN)return reply({error:"後端尚未設定 GitHub 寫入 Token。"},503);const auth=await authenticate(request,env);if(!auth.ok)return reply({error:auth.error},auth.status);
-if(path==="/api/admin/session"&&request.method==="GET")return reply({ok:true,user:{sub:auth.subject,role:"admin"}});
-if(path==="/api/admin/migrate-ids"&&request.method==="POST"){try{const current=await readData(env);let changed=false;for(const section of current.data){const groups=Array.isArray(section.list)?section.list:[section];for(const group of groups){for(const link of group.links){if(!link.id){link.id=createId();changed=true}}}}if(!changed)return reply({ok:true,changed:false,message:"所有網站已經有穩定 ID。",sha:current.sha});const result=await writeData(env,current.data,"Admin: migrate stable site IDs",current.sha);if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。"},409);return reply({ok:true,changed:true,count:result.count,sha:result.sha,commit:result.commit})}catch(e){return reply({error:e.message||"網站 ID 遷移失敗。"},502)}}
-
-if(path==="/api/admin/sites"&&request.method==="GET"){try{const current=await readData(env);return reply({ok:true,data:current.data,sha:current.sha,...validateDataset(current.data)})}catch(e){return reply({error:e.message||"無法讀取網站資料。"},502)}}
-if(path==="/api/admin/sites"&&request.method==="POST"){try{const site=cleanSite(await request.json()),current=await readData(env),target=findTarget(current.data,site.taxonomy,site.subcategory);if(!target)return reply({error:"找不到指定分類或子分類。"},400);if(hasDuplicate(current.data,site))return reply({error:"同名稱或同網址已存在。"},409);const id=createId();target.links.push({id,title:site.title,url:site.url,description:site.description});const result=await writeData(env,current.data,"Admin: add site "+site.title,current.sha);if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。"},409);return reply({ok:true,site:{...site,id},sha:result.sha,commit:result.commit,count:result.count})}catch(e){return reply({error:e.message||"新增網站失敗。"},e.message?.startsWith("GitHub 寫入失敗")?502:400)}}
-const match=path.match(/^\/api\/admin\/sites\/([A-Za-z0-9_-]{1,100})$/);if(match&&["PUT","DELETE"].includes(request.method)){const id=match[1];try{const current=await readData(env),found=locateLink(current.data,id);if(!found)return reply({error:"找不到這個網站，請重新載入資料。"},404);if(request.method==="DELETE"){found.group.links.splice(found.linkIndex,1)}else{const site=cleanSite(await request.json()),target=findTarget(current.data,site.taxonomy,site.subcategory);if(!target)return reply({error:"找不到指定分類或子分類。"},400);if(hasDuplicate(current.data,site,id))return reply({error:"同名稱或同網址已存在。"},409);if(target!==found.group){found.group.links.splice(found.linkIndex,1);target.links.push({id,title:site.title,url:site.url,description:site.description})}else Object.assign(found.link,{title:site.title,url:site.url,description:site.description})}const result=await writeData(env,current.data,(request.method==="DELETE"?"Admin: delete site ":"Admin: update site ")+found.link.title,current.sha);if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。"},409);return reply({ok:true,sha:result.sha,commit:result.commit,count:result.count})}catch(e){return reply({error:e.message||"網站資料更新失敗。"},e.message?.startsWith("GitHub 寫入失敗")?502:400)}}
-if(path==="/api/admin/categories"&&request.method==="GET"){try{const{data,sha}=await readData(env);return reply({ok:true,sha,categories:data.map(section=>({taxonomy:section.taxonomy,icon:section.icon||"",subcategories:Array.isArray(section.list)?section.list.map(group=>group.term):[]})))}catch(e){return reply({error:e.message||"無法讀取分類。"},502)}}
-return reply({error:"Method not allowed."},405)}
+async function route(request,env){
+ const url=new URL(request.url);
+ const path=url.pathname.replace(/\\/+$/,"")||"/";
+ const origin=request.headers.get("Origin");
+ if(request.method==="OPTIONS"){
+  if(!origin||!ALLOWED_ORIGINS.has(origin))return reply({error:"Origin not allowed."},403);
+  return new Response(null,{status:204,headers:corsHeaders(origin)});
+ }
+ if(origin&&!ALLOWED_ORIGINS.has(origin))return reply({error:"Origin not allowed."},403);
+ if(path==="/health"&&request.method==="GET")return reply({ok:true,service:"chi-nav-admin-api",version:1});
+ if(!path.startsWith("/api/admin/"))return reply({error:"Not found."},404);
+ if(!env.NAV_GITHUB_TOKEN)return reply({error:"後端尚未設定 GitHub 寫入 Token。"},503);
+ const auth=await authenticate(request,env);
+ if(!auth.ok)return reply({error:auth.error},auth.status);
+ if(path==="/api/admin/session"&&request.method==="GET")return reply({ok:true,user:{sub:auth.subject,role:"admin"}});
+ if(path==="/api/admin/migrate-ids"&&request.method==="POST"){
+  try{
+   const current=await readData(env);let changed=false;
+   for(const section of current.data){const groups=Array.isArray(section.list)?section.list:[section];for(const group of groups){for(const link of group.links){if(!link.id){link.id=createId();changed=true}}}}
+   if(!changed)return reply({ok:true,changed:false,message:"所有網站已經有穩定 ID。",sha:current.sha});
+   const result=await writeData(env,current.data,"Admin: migrate stable site IDs",current.sha);
+   if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。"},409);
+   return reply({ok:true,changed:true,count:result.count,sha:result.sha,commit:result.commit});
+  }catch(e){return reply({error:e.message||"網站 ID 遷移失敗。"},502)}
+ }
+ if(path==="/api/admin/sites"&&request.method==="GET"){
+  try{const current=await readData(env);return reply({ok:true,data:current.data,sha:current.sha,...validateDataset(current.data)})}
+  catch(e){return reply({error:e.message||"無法讀取網站資料。"},502)}
+ }
+ if(path==="/api/admin/sites"&&request.method==="POST"){
+  try{
+   const site=cleanSite(await request.json()),current=await readData(env),target=findTarget(current.data,site.taxonomy,site.subcategory);
+   if(!target)return reply({error:"找不到指定分類或子分類。"},400);
+   if(hasDuplicate(current.data,site))return reply({error:"同名稱或同網址已存在。"},409);
+   const id=createId();target.links.push({id,title:site.title,url:site.url,description:site.description});
+   const result=await writeData(env,current.data,"Admin: add site "+site.title,current.sha);
+   if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。"},409);
+   return reply({ok:true,site:{...site,id},sha:result.sha,commit:result.commit,count:result.count});
+  }catch(e){return reply({error:e.message||"新增網站失敗。"},e.message?.startsWith("GitHub 寫入失敗")?502:400)}
+ }
+ const match=path.match(/^\\/api\\/admin\\/sites\\/([A-Za-z0-9_-]{1,100})$/);
+ if(match&&["PUT","DELETE"].includes(request.method)){
+  const id=match[1];
+  try{
+   const current=await readData(env),found=locateLink(current.data,id);
+   if(!found)return reply({error:"找不到這個網站，請重新載入資料。"},404);
+   let auditTitle=found.link.title;
+   if(request.method==="DELETE"){found.group.links.splice(found.linkIndex,1)}
+   else{
+    const site=cleanSite(await request.json()),target=findTarget(current.data,site.taxonomy,site.subcategory);
+    if(!target)return reply({error:"找不到指定分類或子分類。"},400);
+    if(hasDuplicate(current.data,site,id))return reply({error:"同名稱或同網址已存在。"},409);
+    auditTitle=site.title;
+    if(target!==found.group){found.group.links.splice(found.linkIndex,1);target.links.push({id,title:site.title,url:site.url,description:site.description})}
+    else Object.assign(found.link,{title:site.title,url:site.url,description:site.description});
+   }
+   const result=await writeData(env,current.data,(request.method==="DELETE"?"Admin: delete site ":"Admin: update site ")+auditTitle,current.sha);
+   if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。"},409);
+   return reply({ok:true,sha:result.sha,commit:result.commit,count:result.count});
+  }catch(e){return reply({error:e.message||"網站資料更新失敗。"},e.message?.startsWith("GitHub 寫入失敗")?502:400)}
+ }
+ if(path==="/api/admin/categories"&&request.method==="GET"){
+  try{
+   const{data,sha}=await readData(env);
+   const categories=data.map(section=>({taxonomy:section.taxonomy,icon:section.icon||"",subcategories:Array.isArray(section.list)?section.list.map(group=>group.term):[]}));
+   return reply({ok:true,sha,categories});
+  }catch(e){return reply({error:e.message||"無法讀取分類。"},502)}
+ }
+ return reply({error:"Method not allowed."},405);
+}
 export default{async fetch(request,env){try{return withCors(await route(request,env),request.headers.get("Origin"))}catch(e){console.error("Chi NAV Admin API error",e);return withCors(reply({error:"伺服器發生未預期錯誤。"},500),request.headers.get("Origin"))}}};
