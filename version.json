@@ -1,6 +1,6 @@
 {
-  "version": "3.0.212.1",
+  "version": "3.0.213.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "fix: reject writes based on stale admin snapshots"
+  "message": "fix: send data revision when saving admin changes"
 }
