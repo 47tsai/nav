@@ -1,6 +1,6 @@
 {
-  "version": "3.0.171.1",
+  "version": "3.0.172.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "deploy(admin-api): bind Worker to nav-api custom domain"
+  "message": "fix(admin): correct API configuration syntax"
 }

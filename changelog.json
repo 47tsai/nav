@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.172.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix(admin): correct API configuration syntax",
+    "commit": "8854fcb4a9dc5dc1b3ec2cff8749c49318c0b42a"
+  },
+  {
     "version": "3.0.171.1",
     "date": "2026-10-17",
     "type": "commit",
