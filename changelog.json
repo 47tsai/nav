@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.164.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix(admin-api): correct route regular expressions",
+    "commit": "916a76a87238aeaf0ccad5f7ecb7417bbf045e9e"
+  },
+  {
     "version": "3.0.163.1",
     "date": "2026-10-17",
     "type": "commit",
