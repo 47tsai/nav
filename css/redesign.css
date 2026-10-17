@@ -832,3 +832,20 @@ button:focus-visible, input:focus-visible, a:focus-visible, [tabindex]:focus-vis
   .card-desc { font-size: 11px; }
   .favorite-btn { top: 50%; right: 7px; transform: translateY(-50%); }
 }
+
+
+/* Admin shortcut pinned to the bottom of the NAV sidebar */
+.sidebar-admin-link{
+  display:flex;align-items:center;gap:11px;
+  margin:14px 1px 0;padding:11px 12px;
+  border:1px solid var(--border);border-radius:7px;
+  color:var(--text);text-decoration:none;font-size:12px;font-weight:650;
+  transition:background .18s ease,border-color .18s ease,color .18s ease;
+}
+.sidebar-admin-link>i:first-child{width:16px;text-align:center;font-size:13px;color:var(--primary)}
+.sidebar-admin-link:hover,.sidebar-admin-link:focus-visible{
+  background:var(--surface-soft);border-color:var(--primary);outline:none;
+}
+.sidebar-admin-link .admin-link-external{margin-left:auto;font-size:10px;color:var(--muted);opacity:.7}
+.sidebar.collapsed .sidebar-admin-link{justify-content:center;padding-inline:8px}
+.sidebar.collapsed .sidebar-admin-link span,.sidebar.collapsed .sidebar-admin-link .admin-link-external{display:none}
