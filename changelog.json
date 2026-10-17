@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.130.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Fix admin script tag line breaks",
+    "commit": "222f73538f4f2c9feb0306ce382eff47916ffa1c"
+  },
+  {
     "version": "3.0.129.1",
     "date": "2026-10-17",
     "type": "commit",

@@ -1,6 +1,6 @@
 {
-  "version": "3.0.129.1",
+  "version": "3.0.130.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Fix PKCE base64url encoding for Chi Auth"
+  "message": "Fix admin script tag line breaks"
 }
