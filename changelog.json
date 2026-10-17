@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.212.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix: reject writes based on stale admin snapshots",
+    "commit": "debf9005c45fe7b9416c3649a1732a64693acfbd"
+  },
+  {
     "version": "3.0.211.1",
     "date": "2026-10-17",
     "type": "commit",
