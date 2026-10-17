@@ -44,3 +44,15 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: printf '%s' "$NAV_GITHUB_TOKEN" | npx wrangler secret put NAV_GITHUB_TOKEN
+      - name: Verify Worker health endpoint
+        run: |
+          for attempt in $(seq 1 10); do
+            if curl --fail --silent --show-error https://nav-api.chi.qzz.io/health; then
+              echo
+              exit 0
+            fi
+            echo "Health check attempt ${attempt}/10 failed; retrying..."
+            sleep 3
+          done
+          echo "Worker health endpoint did not become ready."
+          exit 1
