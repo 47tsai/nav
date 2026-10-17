@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.208.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix: reject duplicate site IDs in admin data",
+    "commit": "2c4bb1b426b598ac0fea5b28d21c304ba7811ea4"
+  },
+  {
     "version": "3.0.207.1",
     "date": "2026-10-17",
     "type": "commit",
