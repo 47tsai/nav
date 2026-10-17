@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.120.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Build redesigned NAV admin workspace under /new/admin",
+    "commit": "6a5f009d260ea169cd1f42a99ac3497b6319dceb"
+  },
+  {
     "version": "3.0.119.1",
     "date": "2026-10-17",
     "type": "commit",

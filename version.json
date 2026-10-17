@@ -1,6 +1,6 @@
 {
-  "version": "3.0.119.1",
+  "version": "3.0.120.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "style(nav): balance card size with larger icons and text"
+  "message": "Build redesigned NAV admin workspace under /new/admin"
 }
