@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.184.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Add manual refresh for NAV admin data",
+    "commit": "dc9aad5d9c35229484ced009e2eb4c72b435b0e3"
+  },
+  {
     "version": "3.0.183.1",
     "date": "2026-10-17",
     "type": "commit",

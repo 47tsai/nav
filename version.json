@@ -1,6 +1,6 @@
 {
-  "version": "3.0.183.1",
+  "version": "3.0.184.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Refresh NAV admin integration notice and add reload control"
+  "message": "Add manual refresh for NAV admin data"
 }
