@@ -1,6 +1,6 @@
 {
-  "version": "3.0.110.1",
-  "date": "2026-10-16",
+  "version": "3.0.111.1",
+  "date": "2026-10-17",
   "type": "commit",
-  "message": "Refresh service worker cache for compact card layout"
+  "message": "feat(nav): add /new interface preview"
 }

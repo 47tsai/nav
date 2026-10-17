@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.111.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "feat(nav): add /new interface preview",
+    "commit": "134bc3aefd3eb880148bcad8d47dfb4d863fc24b"
+  },
+  {
     "version": "3.0.110.1",
     "date": "2026-10-16",
     "type": "commit",
