@@ -1,6 +1,6 @@
 (()=>{"use strict";
 const $=s=>document.querySelector(s),cfg=window.CHI_NAV_AUTH_CONFIG||{};
-const state={data:[],flat:[],sha:null,authenticated:false,editingId:null,apiReady:false};
+const state={data:[],flat:[],sha:null,authenticated:false,editingId:null,apiReady:false,saving:false};
 const els={rows:$("#site-rows"),search:$("#site-search"),filter:$("#category-filter"),taxonomy:$("#add-taxonomy"),subcategory:$("#add-subcategory"),empty:$("#empty-state"),count:$("#result-count"),status:$("#stat-status"),updated:$("#stat-updated"),formStatus:$("#form-status"),form:$("#add-form"),reload:$("#reload-sites")};
 let accessToken=null;
 const authStatus=$("#auth-status"),authLogin=$("#auth-login"),authLogout=$("#auth-logout"),submitButton=els.form.querySelector('[type="submit"]');
