@@ -1,6 +1,6 @@
 {
-  "version": "3.0.142.1",
+  "version": "3.0.143.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Align service worker with consolidated NAV assets"
+  "message": "Retire duplicate new homepage"
 }

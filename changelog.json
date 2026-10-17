@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.143.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Retire duplicate new homepage",
+    "commit": "d7f6fb7ebf23460728dad6cfc4ee4bae9882ea6b"
+  },
+  {
     "version": "3.0.142.1",
     "date": "2026-10-17",
     "type": "commit",
