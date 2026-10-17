@@ -154,3 +154,24 @@ html[data-theme="dark"] .topbar{background:var(--chi-color-surface)}
 }
 @media(max-width:420px){.grid{grid-template-columns:1fr}.page-intro h1{font-size:27px}.section-overline{letter-spacing:1px}.card-title{font-size:13px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+.command-item{display:flex;width:100%;align-items:center;gap:12px;padding:10px 12px;border:0;border-radius:8px;background:transparent;text-align:left;cursor:pointer}
+.command-item:hover,.command-item.active{background:var(--chi-color-accent-soft);color:var(--chi-color-accent-hover)}
+.command-icon{display:grid;place-items:center;width:32px;height:32px;flex:none;border:1px solid var(--chi-color-border);border-radius:8px;background:var(--chi-color-surface);color:var(--chi-color-accent)}
+.command-item>span:nth-child(2){display:flex;flex:1;flex-direction:column;min-width:0}
+.command-item strong{font-size:12px;font-weight:700}
+.command-item small{color:var(--chi-color-text-muted);font-size:10px}
+.command-item>kbd{margin-left:auto}
+.command-empty{padding:25px 15px;color:var(--chi-color-text-muted);text-align:center;font-size:12px}
+.sidebar.collapsed{width:76px;padding-inline:12px}
+.sidebar.collapsed .brand-copy,.sidebar.collapsed .nav-caption,.sidebar.collapsed .nav-item span,.sidebar.collapsed .sidebar-bottom>span:not(.sidebar-status),.sidebar.collapsed .nav-divider{display:none}
+.sidebar.collapsed .brand{justify-content:center;padding:0}
+.sidebar.collapsed .sidebar-toggle{right:23px;top:80px}
+.sidebar.collapsed .nav-item{justify-content:center;padding-inline:8px}
+.sidebar.collapsed .nav-item i{width:auto}
+.main-content:has(~ .sidebar.collapsed){margin-left:76px}
+.card:has(a[href*="auth.chi.qzz.io"]),.card:has(a[href*="chi-auth"]){border-color:#d9d6fe}
+.card:has(a[href*="auth.chi.qzz.io"]):hover,.card:has(a[href*="chi-auth"]):hover{border-color:#818cf8;box-shadow:0 4px 16px rgb(79 70 229 / 12%)}
+.card:has(a[href*="auth.chi.qzz.io"]) .card-title,.card:has(a[href*="chi-auth"]) .card-title{color:var(--chi-color-text-strong)}
+.card:has(a[href*="auth.chi.qzz.io"]) .card-logo-container,.card:has(a[href*="chi-auth"]) .card-logo-container{background:#eef2ff;border-color:#c7d2fe}
+html[data-theme="dark"] .card:has(a[href*="auth.chi.qzz.io"]) .card-logo-container,html[data-theme="dark"] .card:has(a[href*="chi-auth"]) .card-logo-container{background:#292849;border-color:#4c4885}
