@@ -1,6 +1,6 @@
 {
-  "version": "3.0.172.1",
+  "version": "3.0.173.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "fix(admin): correct API configuration syntax"
+  "message": "fix(ci): deploy Worker before applying its first secret"
 }
