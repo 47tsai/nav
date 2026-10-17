@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.147.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Remove duplicate legacy search script",
+    "commit": "995985980bd88be7e03decab14e16d6274400349"
+  },
+  {
     "version": "3.0.146.1",
     "date": "2026-10-17",
     "type": "commit",
