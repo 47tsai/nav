@@ -1,6 +1,6 @@
 {
-  "version": "3.0.184.1",
+  "version": "3.0.185.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Add manual refresh for NAV admin data"
+  "message": "Track NAV admin write operations"
 }

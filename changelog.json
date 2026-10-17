@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.185.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Track NAV admin write operations",
+    "commit": "dc7b9cf889c0235ec21977460cbe90717200134c"
+  },
+  {
     "version": "3.0.184.1",
     "date": "2026-10-17",
     "type": "commit",
