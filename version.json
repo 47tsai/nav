@@ -1,6 +1,6 @@
 {
-  "version": "3.0.154.1",
+  "version": "3.0.155.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Remove unused duplicate theme script"
+  "message": "Align admin shell with Chi NAV branding"
 }

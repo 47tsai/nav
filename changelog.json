@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.155.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Align admin shell with Chi NAV branding",
+    "commit": "3df9db893726ef3db40f878570b9229a2e568e98"
+  },
+  {
     "version": "3.0.154.1",
     "date": "2026-10-17",
     "type": "commit",
