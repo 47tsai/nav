@@ -2,6 +2,7 @@ name = "chi-nav-admin-api"
 main = "admin-api.js"
 compatibility_date = "2026-10-17"
 workers_dev = true
+routes = [{ pattern = "nav-api.chi.qzz.io", custom_domain = true }]
 
 [vars]
 GITHUB_REPOSITORY = "tsai97216/nav"
