@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.209.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "test: reject duplicate site IDs in admin API",
+    "commit": "781d4c5deecfc661cbe7697fabfd4549f8020bcb"
+  },
+  {
     "version": "3.0.208.1",
     "date": "2026-10-17",
     "type": "commit",
