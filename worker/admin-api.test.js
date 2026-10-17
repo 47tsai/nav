@@ -227,3 +227,41 @@ test("health rejects a dataset containing duplicate site IDs", async () => {
   });
 });
 
+test("site creation rejects a stale client data revision before writing", async () => {
+  let githubWrites = 0;
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(validData))));
+  await withFetch(async (input, init = {}) => {
+    const url = String(input);
+    if (url.startsWith("https://auth.chi.qzz.io/")) {
+      return new Response(JSON.stringify({ sub: "chi-owner", aud: clientId }), {
+        status: 200, headers: { "Content-Type": "application/json" }
+      });
+    }
+    if (init.method === "PUT") {
+      githubWrites++;
+      return new Response(JSON.stringify({ message: "unexpected write" }), { status: 500 });
+    }
+    return new Response(JSON.stringify({
+      type: "file", sha: "current-sha", content: encoded
+    }), { status: 200, headers: { "Content-Type": "application/json" } });
+  }, async () => {
+    const response = await worker.fetch(new Request("https://api.test/api/admin/sites", {
+      method: "POST",
+      headers: {
+        Origin: origin,
+        Authorization: "Bearer " + "a".repeat(48),
+        "Content-Type": "application/json",
+        "If-Match": "stale-sha"
+      },
+      body: JSON.stringify({
+        title: "New Example", url: "https://new-example.com", description: "測試",
+        taxonomy: "工具", subcategory: ""
+      })
+    }), env);
+    const body = await response.json();
+    assert.equal(response.status, 409);
+    assert.equal(body.code, "DATA_CONFLICT");
+    assert.equal(githubWrites, 0);
+  });
+});
+
