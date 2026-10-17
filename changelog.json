@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.156.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Share NAV theme preference in admin",
+    "commit": "ff7a061853769ebfb7269e8dc6188f64dea845f1"
+  },
+  {
     "version": "3.0.155.1",
     "date": "2026-10-17",
     "type": "commit",
