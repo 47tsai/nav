@@ -1,0 +1,14 @@
+{
+  "name": "Chi 的工具箱 · 新版",
+  "short_name": "Chi NAV",
+  "description": "Chi 的個人網站導航與常用工具箱",
+  "start_url": "/new/",
+  "scope": "/new/",
+  "display": "standalone",
+  "background_color": "#f6f8fc",
+  "theme_color": "#f6f8fc",
+  "lang": "zh-TW",
+  "icons": [
+    {"src": "../assets/icon/icon-wb.png", "sizes": "any", "type": "image/png"}
+  ]
+}
