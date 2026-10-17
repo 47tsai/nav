@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.195.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Announce admin authentication status accessibly",
+    "commit": "74dc59adbeb2ee8be1b9faa8031f9c40f49ee7f7"
+  },
+  {
     "version": "3.0.194.1",
     "date": "2026-10-17",
     "type": "commit",
