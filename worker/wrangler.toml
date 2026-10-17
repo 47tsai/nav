@@ -7,7 +7,7 @@ routes = [{ pattern = "nav-api.chi.qzz.io", custom_domain = true }]
 [vars]
 GITHUB_REPOSITORY = "tsai97216/nav"
 GITHUB_BRANCH = "main"
-CHI_AUTH_CLIENT_ID = ""
+CHI_AUTH_CLIENT_ID = "ZFhTyIzCRwdtGiVOiEwtnYesSZ4Gxl77"
 
 # Set NAV_GITHUB_TOKEN with: wrangler secret put NAV_GITHUB_TOKEN
 # Register the OAuth client in Chi Auth, then set CHI_AUTH_CLIENT_ID.
