@@ -33,15 +33,15 @@ jobs:
         run: npm install
       - name: Check Worker syntax
         run: npm run check
-      - name: Configure GitHub access token
-        env:
-          NAV_GITHUB_TOKEN: ${{ secrets.NAV_GITHUB_TOKEN }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: printf '%s' "$NAV_GITHUB_TOKEN" | npx wrangler secret put NAV_GITHUB_TOKEN
       - name: Deploy Worker
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CHI_AUTH_CLIENT_ID: ${{ secrets.CHI_AUTH_CLIENT_ID }}
         run: npx wrangler deploy --var "CHI_AUTH_CLIENT_ID:$CHI_AUTH_CLIENT_ID"
+      - name: Configure GitHub access token
+        env:
+          NAV_GITHUB_TOKEN: ${{ secrets.NAV_GITHUB_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: printf '%s' "$NAV_GITHUB_TOKEN" | npx wrangler secret put NAV_GITHUB_TOKEN
