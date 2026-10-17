@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.146.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Remove duplicate legacy new interface scripts",
+    "commit": "1a93b0d034587ab74c27c80e8d0a55c5087b4994"
+  },
+  {
     "version": "3.0.145.1",
     "date": "2026-10-17",
     "type": "commit",
