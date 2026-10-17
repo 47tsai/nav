@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.170.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "ci(admin-api): validate Worker syntax on every backend change",
+    "commit": "d731977c3031e3882b9fc0bff9a5851ab39b4d90"
+  },
+  {
     "version": "3.0.169.1",
     "date": "2026-10-17",
     "type": "commit",

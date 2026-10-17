@@ -1,6 +1,6 @@
 {
-  "version": "3.0.169.1",
+  "version": "3.0.170.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "docs(admin-api): document deployment secrets and activation switch"
+  "message": "ci(admin-api): validate Worker syntax on every backend change"
 }
