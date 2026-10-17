@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.114.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "feat(nav): copy js/render.js into isolated /new workspace",
+    "commit": "67cc10b45846b9d73d997b8138ab29db49ed8ca0"
+  },
+  {
     "version": "3.0.113.1",
     "date": "2026-10-17",
     "type": "commit",

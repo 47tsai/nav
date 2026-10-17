@@ -1,6 +1,6 @@
 {
-  "version": "3.0.113.1",
+  "version": "3.0.114.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "feat(nav): copy js/navigation.js into isolated /new workspace"
+  "message": "feat(nav): copy js/render.js into isolated /new workspace"
 }
