@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.202.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Run admin API smoke tests in CI",
+    "commit": "62c7443de8f9642c33bdde59b12e298af07bf1cc"
+  },
+  {
     "version": "3.0.201.1",
     "date": "2026-10-17",
     "type": "commit",

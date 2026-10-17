@@ -1,6 +1,6 @@
 {
-  "version": "3.0.201.1",
+  "version": "3.0.202.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Add Worker test command"
+  "message": "Run admin API smoke tests in CI"
 }
