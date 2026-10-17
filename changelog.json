@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.162.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "style(admin): add site management action controls",
+    "commit": "edd21e958eff656f38e0890b28d99e655118731d"
+  },
+  {
     "version": "3.0.161.1",
     "date": "2026-10-17",
     "type": "commit",

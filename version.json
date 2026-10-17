@@ -1,6 +1,6 @@
 {
-  "version": "3.0.161.1",
+  "version": "3.0.162.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "config(admin): add Admin API base URL"
+  "message": "style(admin): add site management action controls"
 }
