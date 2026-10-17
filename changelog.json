@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.116.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix(nav): resolve /new assets and runtime paths",
+    "commit": "a00d2e1d455ca339fc84bf2ef57573329e35faef"
+  },
+  {
     "version": "3.0.115.1",
     "date": "2026-10-17",
     "type": "commit",
