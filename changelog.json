@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.121.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Add NAV admin data overview and filtering",
+    "commit": "7c1b56be64b44ba7a142295515c97bc6bd6251a8"
+  },
+  {
     "version": "3.0.120.1",
     "date": "2026-10-17",
     "type": "commit",

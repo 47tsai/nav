@@ -1,6 +1,6 @@
 {
-  "version": "3.0.120.1",
+  "version": "3.0.121.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Build redesigned NAV admin workspace under /new/admin"
+  "message": "Add NAV admin data overview and filtering"
 }
