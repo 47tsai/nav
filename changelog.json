@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.159.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "feat(admin): add secure Cloudflare Worker API foundation",
+    "commit": "61a71742335e04334001c7b81a62c0b281e8b1ae"
+  },
+  {
     "version": "3.0.158.1",
     "date": "2026-10-17",
     "type": "commit",
