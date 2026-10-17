@@ -1,6 +1,6 @@
 {
-  "version": "3.0.218.1",
+  "version": "3.0.219.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "docs: align admin API setup with deployed workflow"
+  "message": "style(nav): emphasize shared Chi Auth sign-in"
 }

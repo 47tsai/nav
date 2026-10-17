@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.219.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "style(nav): emphasize shared Chi Auth sign-in",
+    "commit": "aa8f0a0269a05fc6d08b08f0c6a8d2cfbab65d24"
+  },
+  {
     "version": "3.0.218.1",
     "date": "2026-10-17",
     "type": "commit",
