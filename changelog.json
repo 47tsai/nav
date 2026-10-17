@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.188.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Prevent duplicate NAV form writes and distinguish save from reload errors",
+    "commit": "e9b905024326fda6d8047fc76946881cd032551e"
+  },
+  {
     "version": "3.0.187.1",
     "date": "2026-10-17",
     "type": "commit",
