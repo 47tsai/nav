@@ -35,3 +35,48 @@
 .footer-separator{padding-inline:5px;color:var(--accent)}
 @media(max-width:1000px){.rail{width:220px}.workspace{margin-left:220px}}
 @media(max-width:700px){.rail{width:auto;padding:12px 16px}.brand{padding:0 0 12px}.workspace{margin-left:0}.topbar{padding-inline:18px;min-height:54px}.theme-toggle{width:32px;height:32px}.topbar-actions{gap:8px}}
+
+/* Final interaction and responsive polish */
+html{scroll-padding-top:84px}
+section[id]{scroll-margin-top:84px}
+.rail-bottom .status-dot{background:var(--accent)}
+.rail-bottom{align-items:center}
+.notice{gap:12px}
+.notice p{max-width:820px}
+.stat{transition:border-color .16s ease}
+.stat:hover{border-color:var(--border-strong)}
+.table-wrap{scrollbar-width:thin;scrollbar-color:var(--border-strong) transparent}
+table{min-width:660px}
+th:first-child{min-width:190px}
+th:last-child,td:last-child{width:86px}
+.table-status{color:var(--muted)}
+.table-status:before{background:var(--accent)}
+.button:focus-visible,.theme-toggle:focus-visible,.rail-link:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 35%,transparent);outline-offset:2px}
+.auth-status{white-space:nowrap}
+.topbar-actions{flex-wrap:wrap;justify-content:flex-end}
+@media(max-width:700px){
+  .topbar{align-items:flex-start;flex-direction:column;gap:12px;padding:12px 18px}
+  .crumbs{display:none}
+  .topbar-actions{width:100%;justify-content:flex-start;gap:7px}
+  .auth-status{margin-right:auto}
+  .topbar-actions .button{padding-inline:10px;font-size:11px}
+  .page{padding-top:24px}
+  .page-heading{align-items:flex-start;flex-direction:column;gap:14px}
+  .heading-actions{width:100%}
+  .heading-actions .button{width:100%}
+  .notice{align-items:flex-start}
+  .notice .chi-badge{display:none}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .section-heading{align-items:flex-start}
+  .form-footer p{line-height:1.7}
+}
+@media(max-width:390px){
+  .topbar-actions{display:grid;grid-template-columns:auto 1fr 1fr}
+  .auth-status{grid-column:1/-1}
+  .topbar-actions .theme-toggle{grid-row:2;grid-column:1}
+  .topbar-actions #auth-login,.topbar-actions #auth-logout{grid-row:2;grid-column:2}
+  .topbar-actions>a{grid-row:2;grid-column:3}
+  .stats{gap:7px}
+  .stat{padding:12px}
+  .stat strong{font-size:23px}
+}
