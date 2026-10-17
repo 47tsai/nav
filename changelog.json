@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.199.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Add timeouts to admin network requests",
+    "commit": "a10e95f32620b9970330fc471a2abae304e8c000"
+  },
+  {
     "version": "3.0.198.1",
     "date": "2026-10-17",
     "type": "commit",
