@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.112.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "feat(nav): copy js/update.js into isolated /new workspace",
+    "commit": "1126bf7d0dec4092e56b9b682c36a0b3d68552e9"
+  },
+  {
     "version": "3.0.111.1",
     "date": "2026-10-17",
     "type": "commit",
