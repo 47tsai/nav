@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.122.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Use accessible SVG icons in NAV admin",
+    "commit": "25cac8921fe9c7c5894ba9378b285509b4c24431"
+  },
+  {
     "version": "3.0.121.1",
     "date": "2026-10-17",
     "type": "commit",
