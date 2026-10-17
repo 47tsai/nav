@@ -13,6 +13,7 @@ try {
 const errors = [];
 const warnings = [];
 const seenUrls = new Map();
+const seenIds = new Set();
 let linkCount = 0;
 
 if (!Array.isArray(data)) {
@@ -25,6 +26,15 @@ const addLink = (link, location) => {
   if (!link || typeof link !== 'object' || Array.isArray(link)) {
     errors.push(`${location}: 連結項目必須是物件`);
     return;
+  }
+  if (link.id != null) {
+    if (typeof link.id !== 'string' || !link.id.trim()) {
+      errors.push(`${location}: id 必須是非空字串`);
+    } else if (seenIds.has(link.id)) {
+      errors.push(`${location}: 網站 ID 重複：${link.id}`);
+    } else {
+      seenIds.add(link.id);
+    }
   }
   if (typeof link.title !== 'string' || !link.title.trim()) {
     errors.push(`${location}: 缺少有效 title`);
