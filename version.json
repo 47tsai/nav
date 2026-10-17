@@ -1,6 +1,6 @@
 {
-  "version": "3.0.186.1",
+  "version": "3.0.187.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Disable admin writes while a mutation is running"
+  "message": "Guard NAV admin mutations and preserve delete results on refresh errors"
 }

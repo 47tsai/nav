@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.187.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Guard NAV admin mutations and preserve delete results on refresh errors",
+    "commit": "4de8679a435a783fb464bf1f7370fe7cac8e6b2c"
+  },
+  {
     "version": "3.0.186.1",
     "date": "2026-10-17",
     "type": "commit",
