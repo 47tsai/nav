@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.176.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Use repository-configured Chi Auth client ID for NAV API deployment",
+    "commit": "3f0e014e1d1a3abd51f4103bb2b98a3c7f60a295"
+  },
+  {
     "version": "3.0.175.1",
     "date": "2026-10-17",
     "type": "commit",
