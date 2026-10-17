@@ -13,7 +13,7 @@ function locateLink(data,id){for(let si=0;si<data.length;si++){const section=dat
 function createId(){return"nav_"+crypto.randomUUID()}
 function cleanSite(body){const title=String(body?.title||"").trim(),url=normalizeUrl(body?.url),description=String(body?.description||"").trim(),taxonomy=String(body?.taxonomy||"").trim(),subcategory=String(body?.subcategory||"").trim();if(!title||title.length>80)throw new Error("請輸入網站名稱（最多 80 字）。");if(!url)throw new Error("請輸入有效的 HTTP 或 HTTPS 網址。");if(description.length>240)throw new Error("描述不得超過 240 字。");if(!taxonomy||taxonomy.length>60)throw new Error("請選擇有效的分類。");return{title,url,description,taxonomy,subcategory}}
 function findTarget(data,taxonomy,subcategory){const section=data.find(x=>x.taxonomy===taxonomy);if(!section)return null;if(!Array.isArray(section.list))return subcategory?null:section;if(!subcategory)return null;return section.list.find(x=>x.term===subcategory)||null}
-function hasDuplicate(data,site){return data.some(section=>(Array.isArray(section.list)?section.list:[section]).some(group=>group.links.some(link=>link.title.trim().toLocaleLowerCase()===site.title.toLocaleLowerCase()&&normalizeUrl(link.url)===site.url)))}
+function hasDuplicate(data,site,ignoreId=null){const title=site.title.trim().toLocaleLowerCase(),url=normalizeUrl(site.url);return data.some(section=>(Array.isArray(section.list)?section.list:[section]).some(group=>group.links.some(link=>link.id!==ignoreId&&link.title.trim().toLocaleLowerCase()===title&&normalizeUrl(link.url)===url)))}
 async function route(request,env){
  const url=new URL(request.url);
  const path=url.pathname.replace(/\/+$/,"")||"/";
@@ -66,6 +66,7 @@ async function route(request,env){
     const site=cleanSite(await request.json()),target=findTarget(current.data,site.taxonomy,site.subcategory);
     if(!target)return reply({error:"找不到指定分類或子分類。"},400);
     
+    if(hasDuplicate(current.data,site,id))return reply({error:"相同名稱與網址的網站已存在。"},409);
     auditTitle=site.title;
     if(target!==found.group){found.group.links.splice(found.linkIndex,1);target.links.push({id,title:site.title,url:site.url,description:site.description})}
     else Object.assign(found.link,{title:site.title,url:site.url,description:site.description});
