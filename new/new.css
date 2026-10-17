@@ -175,3 +175,32 @@ html[data-theme="dark"] .topbar{background:var(--chi-color-surface)}
 .card:has(a[href*="auth.chi.qzz.io"]) .card-title,.card:has(a[href*="chi-auth"]) .card-title{color:var(--chi-color-text-strong)}
 .card:has(a[href*="auth.chi.qzz.io"]) .card-logo-container,.card:has(a[href*="chi-auth"]) .card-logo-container{background:#eef2ff;border-color:#c7d2fe}
 html[data-theme="dark"] .card:has(a[href*="auth.chi.qzz.io"]) .card-logo-container,html[data-theme="dark"] .card:has(a[href*="chi-auth"]) .card-logo-container{background:#292849;border-color:#4c4885}
+
+
+/* Card proportion pass: smaller footprint, stronger icon and text hierarchy. */
+.grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:9px}
+.card-link,.copy-action{min-height:72px;padding:10px 38px 10px 12px}
+.card-main{gap:11px;min-height:50px}
+.card-logo-container{flex-basis:44px;width:44px;height:44px;border-radius:11px}
+.card-logo{width:32px;height:32px}
+.avatar-fallback{font-size:19px}
+.card-content{gap:3px}
+.card-title{font-size:15px;line-height:1.4;font-weight:730}
+.card-desc{font-size:12px;line-height:1.45}
+.card-meta,.recent-time{font-size:10px}
+.favorite-btn{top:8px;right:8px;width:26px;height:26px}
+.copy-badge{right:10px;bottom:6px;font-size:9px}
+@media(max-width:760px){
+  .grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,215px),1fr));gap:8px}
+  .card-link,.copy-action{min-height:72px;padding:10px 36px 10px 10px}
+  .card-logo-container{flex-basis:42px;width:42px;height:42px}
+  .card-logo{width:30px;height:30px}
+  .card-title{font-size:14px}
+  .card-desc{font-size:11px}
+}
+@media(max-width:420px){
+  .grid{grid-template-columns:1fr}
+  .card-link,.copy-action{min-height:70px}
+  .card-title{font-size:15px}
+  .card-desc{font-size:12px}
+}
