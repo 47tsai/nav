@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.148.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Remove duplicate legacy storage script",
+    "commit": "3a8294a263c9137ccf60f022e0433f9985c7cc19"
+  },
+  {
     "version": "3.0.147.1",
     "date": "2026-10-17",
     "type": "commit",
