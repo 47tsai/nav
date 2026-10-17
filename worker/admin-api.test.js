@@ -207,3 +207,23 @@ test("site creation maps GitHub content-write conflicts to DATA_CONFLICT", async
   }
 });
 
+test("health rejects a dataset containing duplicate site IDs", async () => {
+  const duplicateData = [{
+    taxonomy: "工具",
+    links: [
+      { id: "nav_duplicate", title: "First", url: "https://first.example", description: "" },
+      { id: "nav_duplicate", title: "Second", url: "https://second.example", description: "" }
+    ]
+  }];
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(duplicateData))));
+  await withFetch(async () => new Response(JSON.stringify({
+    type: "file", sha: "duplicate-sha", content: encoded
+  }), { status: 200 }), async () => {
+    const response = await worker.fetch(new Request("https://api.test/health"), env);
+    const body = await response.json();
+    assert.equal(response.status, 503);
+    assert.equal(body.ok, false);
+    assert.equal(body.github.ok, false);
+  });
+});
+
