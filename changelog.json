@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.137.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Use existing accent token for admin shortcut",
+    "commit": "8b7178e3be739ac1c5f09ca1d974e186e3b906b1"
+  },
+  {
     "version": "3.0.136.1",
     "date": "2026-10-17",
     "type": "commit",
