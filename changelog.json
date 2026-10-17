@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.194.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Refresh admin UI when API sync fails",
+    "commit": "4724c2f9bb39a9f5427cc0b88a520b38e8704aff"
+  },
+  {
     "version": "3.0.193.1",
     "date": "2026-10-17",
     "type": "commit",
