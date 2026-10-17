@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.203.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "test: cover admin auth failure cases",
+    "commit": "88e7def5a83f719a778e2e82a00ec8bf5826b4d4"
+  },
+  {
     "version": "3.0.202.1",
     "date": "2026-10-17",
     "type": "commit",
