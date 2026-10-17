@@ -19,14 +19,14 @@ All admin routes require a short-lived Chi Auth bearer token. The Worker validat
 1. Register an OAuth client in Chi Auth for callback https://nav.chi.qzz.io/admin/ and allow origin https://nav.chi.qzz.io.
 2. Set the resulting public Client ID in admin/auth-config.js and worker/wrangler.toml.
 3. Create a fine-grained GitHub token with Contents: Read and write access only to tsai97216/nav.
-4. In repository Settings > Secrets and variables > Actions, add secrets CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, NAV_GITHUB_TOKEN, and CHI_AUTH_CLIENT_ID. Set repository variable DEPLOY_NAV_ADMIN_API to true to enable automatic deployment. The workflow will deploy the Worker and set NAV_GITHUB_TOKEN as a Worker Secret.
-5. Attach the custom domain nav-api.chi.qzz.io in Cloudflare and set API_BASE_URL in admin/auth-config.js to https://nav-api.chi.qzz.io.
+4. In repository Settings > Secrets and variables > Actions, add secrets CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, and NAV_GITHUB_TOKEN. Set repository variable DEPLOY_NAV_ADMIN_API to true to enable automatic deployment. The workflow deploys the Worker and sets NAV_GITHUB_TOKEN as a Worker Secret. CHI_AUTH_CLIENT_ID is a public OAuth client identifier configured in worker/wrangler.toml; it is not a secret required by this workflow.
+5. Attach the custom domain nav-api.chi.qzz.io in Cloudflare. The current admin/auth-config.js already points API_BASE_URL to https://nav-api.chi.qzz.io.
 6. Confirm the health endpoint responds before enabling write controls.
 
 ## Security and data notes
 
 - No GitHub token or client secret belongs in browser code.
 - Writes validate the complete dataset and use GitHub's current blob SHA to prevent stale overwrites.
-- Existing links need stable id fields before edit/delete can work. A migration step must add IDs once before these controls are enabled.
+- The admin login flow runs the stable-ID migration before loading the editable list. The API validates IDs and rejects duplicates before writing.
 - Every write creates a GitHub commit on main. No separate database is used.
-- Automated deployment and real-browser testing are still required before production use.
+- Automated deployment and API regression tests are configured. The most recent recorded Worker deployment and validation run succeeded; complete real-browser checks of OAuth, mobile layout, and create/edit/delete flows remain a manual acceptance step.
