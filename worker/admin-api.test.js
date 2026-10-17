@@ -55,3 +55,37 @@ test("admin API rejects unapproved browser origins", async () => {
   }), env);
   assert.equal(response.status, 403);
 });
+
+test("admin API reports Chi Auth network failures as temporary errors", async () => {
+  await withFetch(async () => { throw new TypeError("network unavailable"); }, async () => {
+    const response = await worker.fetch(new Request("https://api.test/api/admin/sites", {
+      headers: { Origin: origin, Authorization: "Bearer " + "a".repeat(48) }
+    }), env);
+    assert.equal(response.status, 503);
+    assert.match((await response.json()).error, /Chi Auth/);
+  });
+});
+
+test("admin API rejects a valid token belonging to a different account", async () => {
+  await withFetch(async () => new Response(JSON.stringify({
+    sub: "another-user", aud: clientId
+  }), { status: 200, headers: { "Content-Type": "application/json" } }), async () => {
+    const response = await worker.fetch(new Request("https://api.test/api/admin/sites", {
+      headers: { Origin: origin, Authorization: "Bearer " + "a".repeat(48) }
+    }), env);
+    assert.equal(response.status, 403);
+    assert.match((await response.json()).error, /沒有 NAV 管理權限/);
+  });
+});
+
+test("admin API rejects a token for a different OAuth client", async () => {
+  await withFetch(async () => new Response(JSON.stringify({
+    sub: "chi-owner", aud: "different-client"
+  }), { status: 200, headers: { "Content-Type": "application/json" } }), async () => {
+    const response = await worker.fetch(new Request("https://api.test/api/admin/sites", {
+      headers: { Origin: origin, Authorization: "Bearer " + "a".repeat(48) }
+    }), env);
+    assert.equal(response.status, 403);
+  });
+});
+
