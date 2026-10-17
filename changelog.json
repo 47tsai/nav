@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.192.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Show actionable NAV admin conflict and duplicate errors",
+    "commit": "5ce9b092f4ca0ab203e73f07d1c6beffe850a25d"
+  },
+  {
     "version": "3.0.191.1",
     "date": "2026-10-17",
     "type": "commit",

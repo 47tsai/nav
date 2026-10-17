@@ -1,6 +1,6 @@
 {
-  "version": "3.0.191.1",
+  "version": "3.0.192.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Distinguish duplicate sites from concurrent data conflicts"
+  "message": "Show actionable NAV admin conflict and duplicate errors"
 }
