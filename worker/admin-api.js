@@ -75,7 +75,7 @@ async function route(request,env){
    const result=await writeData(env,current.data,(request.method==="DELETE"?"Admin: delete site ":"Admin: update site ")+auditTitle,current.sha);
    if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。",code:"DATA_CONFLICT"},409);
    return reply({ok:true,sha:result.sha,commit:result.commit,count:result.count});
-  }catch(e){return reply({error:e.message||"網站資料更新失敗。"},e.message?.startsWith("GitHub 寫入失敗")?502:400)}
+  }catch(e){return reply({error:e.message||"網站資料更新失敗。"},errorStatus(e))}
  }
  if(path==="/api/admin/categories"&&request.method==="GET"){
   try{
