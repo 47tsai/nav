@@ -207,6 +207,50 @@ test("site creation maps GitHub content-write conflicts to DATA_CONFLICT", async
   }
 });
 
+test("site updates and deletes reject a stale client data revision before writing", async () => {
+  const dataWithId = [{
+    taxonomy: "工具",
+    links: [{ id: "nav_example", title: "Example", url: "https://example.com", description: "測試" }]
+  }];
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(dataWithId))));
+  for (const method of ["PUT", "DELETE"]) {
+    let githubWrites = 0;
+    await withFetch(async (input, init = {}) => {
+      const url = String(input);
+      if (url.startsWith("https://auth.chi.qzz.io/")) {
+        return new Response(JSON.stringify({ sub: "chi-owner", aud: clientId }), {
+          status: 200, headers: { "Content-Type": "application/json" }
+        });
+      }
+      if (init.method === "PUT") {
+        githubWrites++;
+        return new Response(JSON.stringify({ message: "unexpected write" }), { status: 500 });
+      }
+      return new Response(JSON.stringify({
+        type: "file", sha: "current-sha", content: encoded
+      }), { status: 200 });
+    }, async () => {
+      const headers = {
+        Origin: origin,
+        Authorization: "Bearer " + "a".repeat(48),
+        "If-Match": "stale-sha"
+      };
+      if (method === "PUT") headers["Content-Type"] = "application/json";
+      const response = await worker.fetch(new Request("https://api.test/api/admin/sites/nav_example", {
+        method, headers,
+        ...(method === "PUT" ? { body: JSON.stringify({
+          title: "Example Updated", url: "https://example.com", description: "測試",
+          taxonomy: "工具", subcategory: ""
+        }) } : {})
+      }), env);
+      const body = await response.json();
+      assert.equal(response.status, 409, method + " must reject stale data");
+      assert.equal(body.code, "DATA_CONFLICT", method);
+      assert.equal(githubWrites, 0, method + " must not write");
+    });
+  }
+});
+
 test("health rejects a dataset containing duplicate site IDs", async () => {
   const duplicateData = [{
     taxonomy: "工具",
