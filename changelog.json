@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.204.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix: report admin data source failures accurately",
+    "commit": "e8ea5e5aa263ceb5fb578aa6143ef500daca9b45"
+  },
+  {
     "version": "3.0.203.1",
     "date": "2026-10-17",
     "type": "commit",
