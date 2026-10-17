@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.149.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Remove obsolete second app manifest",
+    "commit": "59e8c54c4fa6877b4378679c9f1803e29c5db509"
+  },
+  {
     "version": "3.0.148.1",
     "date": "2026-10-17",
     "type": "commit",
