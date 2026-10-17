@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.179.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Avoid admin data race during OAuth callback initialization",
+    "commit": "3261cc0043d6f3e2313124d986fb312eefc957b9"
+  },
+  {
     "version": "3.0.178.1",
     "date": "2026-10-17",
     "type": "commit",
