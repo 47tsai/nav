@@ -6,32 +6,38 @@
       {
         "title": "Google",
         "url": "https://www.google.com/",
-        "description": "網路搜尋"
+        "description": "網路搜尋",
+        "id": "nav_6c807a4b-7123-461f-ae8d-2a310c77e8d1"
       },
       {
         "title": "ChatGPT",
         "url": "https://chatgpt.com/",
-        "description": "AI 助手"
+        "description": "AI 助手",
+        "id": "nav_f5e51910-151f-411f-acab-e33d29c60619"
       },
       {
         "title": "YouTube",
         "url": "https://www.youtube.com/",
-        "description": "影音平台"
+        "description": "影音平台",
+        "id": "nav_abbba250-422b-42a2-9b9b-6813f06ea4dc"
       },
       {
         "title": "GitHub",
         "url": "https://github.com/",
-        "description": "程式碼託管"
+        "description": "程式碼託管",
+        "id": "nav_6d244a7d-52d2-43cd-b7fb-f1c42e4dd31a"
       },
       {
         "title": "Notion",
         "url": "https://app.notion.com/",
-        "description": "筆記與知識管理"
+        "description": "筆記與知識管理",
+        "id": "nav_c4b884a4-46e3-4f55-b1d8-7065b35b6238"
       },
       {
         "title": "Raindrop.io",
         "url": "https://app.raindrop.io/",
-        "description": "網頁書籤管理"
+        "description": "網頁書籤管理",
+        "id": "nav_8416205d-e522-4fd3-96f2-3f5dfa6988e0"
       }
     ]
   },
@@ -45,27 +51,32 @@
           {
             "title": "工具邦",
             "url": "https://tw.piliapp.com/",
-            "description": "線上工具集合"
+            "description": "線上工具集合",
+            "id": "nav_30a31b84-22d6-4529-8014-4d7ad2b06340"
           },
           {
             "title": "Speedtest",
             "url": "https://www.speedtest.net/zh-Hant",
-            "description": "網路速度測試"
+            "description": "網路速度測試",
+            "id": "nav_ad3c83c8-ade6-4ced-9859-94c206ba339c"
           },
           {
             "title": "Regex101",
             "url": "https://regex101.com/",
-            "description": "正規表示式測試"
+            "description": "正規表示式測試",
+            "id": "nav_41b98128-4664-4ce5-af4e-1d583760bb3b"
           },
           {
             "title": "CyberChef",
             "url": "https://gchq.github.io/CyberChef/",
-            "description": "資料編碼處理"
+            "description": "資料編碼處理",
+            "id": "nav_06909b25-3b39-439c-ba91-64f8c83b5d85"
           },
           {
             "title": "is.gd",
             "url": "https://is.gd/",
-            "description": "網址縮短"
+            "description": "網址縮短",
+            "id": "nav_143318b7-eb63-414f-b24d-9a3058095ff1"
           }
         ]
       },
@@ -75,17 +86,20 @@
           {
             "title": "Google 翻譯",
             "url": "https://translate.google.com.tw/",
-            "description": "文字與網頁翻譯"
+            "description": "文字與網頁翻譯",
+            "id": "nav_ae91431b-cc1b-43b4-9066-e1197c50c343"
           },
           {
             "title": "DeepL 翻譯",
             "url": "https://www.deepl.com/translator",
-            "description": "文字與文件翻譯"
+            "description": "文字與文件翻譯",
+            "id": "nav_3984d9d8-21ae-477a-a45d-598c650e16ae"
           },
           {
             "title": "能不能好好說話",
             "url": "https://lab.magiconch.com/nbnhhsh/",
-            "description": "中文縮寫轉換"
+            "description": "中文縮寫轉換",
+            "id": "nav_cc5be097-c6f6-4dcc-913d-923f3ac4d33d"
           }
         ]
       },
@@ -95,37 +109,44 @@
           {
             "title": "Photopea",
             "url": "https://www.photopea.com/",
-            "description": "圖片編輯"
+            "description": "圖片編輯",
+            "id": "nav_36fc0643-1021-4791-a291-d3722cb0780f"
           },
           {
             "title": "Canva",
             "url": "https://www.canva.com/zh_tw/",
-            "description": "設計工具"
+            "description": "設計工具",
+            "id": "nav_0c510f83-2898-4eb6-bdd2-1e5a8d191285"
           },
           {
             "title": "iLoveIMG",
             "url": "https://www.iloveimg.com/zh-tw",
-            "description": "圖片處理工具"
+            "description": "圖片處理工具",
+            "id": "nav_75c87346-e9f8-4148-8caf-bb768a5e472e"
           },
           {
             "title": "Squoosh",
             "url": "https://squoosh.app/editor",
-            "description": "圖片壓縮"
+            "description": "圖片壓縮",
+            "id": "nav_5ca6fe5b-b549-429a-b04f-90430ddc5463"
           },
           {
             "title": "Polarr",
             "url": "https://photoeditor.polarr.co/",
-            "description": "照片調色"
+            "description": "照片調色",
+            "id": "nav_3d4e2c23-07d4-45d8-bfe0-34fb8e82c52e"
           },
           {
             "title": "Edit.photo",
             "url": "https://edit.photo/",
-            "description": "圖片編輯"
+            "description": "圖片編輯",
+            "id": "nav_95f5e096-0202-4a4c-abf2-679c963111e5"
           },
           {
             "title": "ImagesTool",
             "url": "https://imagestool.com/zh_TW/",
-            "description": "線上圖片處理工具"
+            "description": "線上圖片處理工具",
+            "id": "nav_94b5a5ac-b1c8-4e03-8597-074e6a6fb554"
           }
         ]
       },
@@ -135,17 +156,20 @@
           {
             "title": "CapCut Web",
             "url": "https://www.capcut.com/editor",
-            "description": "影片剪輯"
+            "description": "影片剪輯",
+            "id": "nav_486220d3-7088-4465-a60d-81dd6382756f"
           },
           {
             "title": "Flixier",
             "url": "https://flixier.com/",
-            "description": "影片剪輯"
+            "description": "影片剪輯",
+            "id": "nav_b8fdd63a-d82d-48b4-aa65-771a4f4baf40"
           },
           {
             "title": "123Apps 影片",
             "url": "https://online-video-cutter.com/tw/video-editor",
-            "description": "影片剪輯"
+            "description": "影片剪輯",
+            "id": "nav_8242f543-9b10-4562-acba-5b167ed11451"
           }
         ]
       },
@@ -155,22 +179,26 @@
           {
             "title": "iLovePDF",
             "url": "https://www.ilovepdf.com/zh-tw",
-            "description": "PDF 工具集合"
+            "description": "PDF 工具集合",
+            "id": "nav_32f0cef9-f1d7-46d0-b3bf-2bab0dc414ba"
           },
           {
             "title": "PDF24 Tools",
             "url": "https://tools.pdf24.org/zh/",
-            "description": "PDF 工具集合"
+            "description": "PDF 工具集合",
+            "id": "nav_20fd1c0a-92ad-49b2-ab03-578dae7d14a7"
           },
           {
             "title": "TinyWOW",
             "url": "https://tinywow.com/",
-            "description": "文件與 PDF 工具"
+            "description": "文件與 PDF 工具",
+            "id": "nav_ef9d7edd-8486-4d35-99c2-8ca536ce2630"
           },
           {
             "title": "Convertio",
             "url": "https://convertio.co/zh/",
-            "description": "檔案格式轉換"
+            "description": "檔案格式轉換",
+            "id": "nav_17a47c7c-62b5-4af6-a06f-49afb2e23e9d"
           }
         ]
       },
@@ -180,17 +208,20 @@
           {
             "title": "PairDrop",
             "url": "https://pairdrop.net/",
-            "description": "跨裝置檔案傳輸"
+            "description": "跨裝置檔案傳輸",
+            "id": "nav_dfda6771-d8d7-4384-ae1b-31d62830b284"
           },
           {
             "title": "Gofile",
             "url": "https://gofile.io/",
-            "description": "檔案分享"
+            "description": "檔案分享",
+            "id": "nav_08a81b4a-6816-4edd-9fbd-660a9aecf575"
           },
           {
             "title": "TeraBox",
             "url": "https://www.terabox.com/",
-            "description": "雲端檔案儲存"
+            "description": "雲端檔案儲存",
+            "id": "nav_1dc1e2af-1408-486b-bf61-d084f20046ef"
           }
         ]
       },
@@ -200,7 +231,8 @@
           {
             "title": "Raindrop.io",
             "url": "https://app.raindrop.io/",
-            "description": "網頁書籤管理"
+            "description": "網頁書籤管理",
+            "id": "nav_8ae5c337-af42-42dd-824d-3e3df796c1fb"
           }
         ]
       },
@@ -210,12 +242,14 @@
           {
             "title": "Notion",
             "url": "https://app.notion.com/",
-            "description": "筆記與知識管理"
+            "description": "筆記與知識管理",
+            "id": "nav_717b4244-4e66-4145-bbd4-5ccff6185d15"
           },
           {
             "title": "Simplenote",
             "url": "https://app.simplenote.com",
-            "description": "簡潔筆記"
+            "description": "簡潔筆記",
+            "id": "nav_5b502e57-d0d4-480a-b025-efc072014b36"
           }
         ]
       },
@@ -225,27 +259,32 @@
           {
             "title": "Adobe Podcast",
             "url": "https://podcast.adobe.com/enhance",
-            "description": "人聲增強"
+            "description": "人聲增強",
+            "id": "nav_0ba71cec-24a0-45ef-9752-9bf1b363cf0e"
           },
           {
             "title": "Vocal Remover",
             "url": "https://vocalremover.org/zh/",
-            "description": "人聲與伴奏分離"
+            "description": "人聲與伴奏分離",
+            "id": "nav_03c174c9-6d4c-47ba-9020-306a2fdf2774"
           },
           {
             "title": "AudioMass",
             "url": "https://audiomass.co/",
-            "description": "音訊編輯"
+            "description": "音訊編輯",
+            "id": "nav_fbdbcf09-727b-459f-ac18-f64b038779f6"
           },
           {
             "title": "Audio Converter",
             "url": "https://audio-convert.com/cn",
-            "description": "音訊格式轉換"
+            "description": "音訊格式轉換",
+            "id": "nav_dacb4cae-c1fd-448e-9c58-69f174a83e9b"
           },
           {
             "title": "123Apps 音訊",
             "url": "https://mp3cut.net/tw/",
-            "description": "音訊剪輯"
+            "description": "音訊剪輯",
+            "id": "nav_0fef7023-4bcd-4477-ba3b-9ffa7c0463a8"
           }
         ]
       },
@@ -255,12 +294,14 @@
           {
             "title": "Ente Auth",
             "url": "https://auth.ente.com/",
-            "description": "2FA 驗證碼"
+            "description": "2FA 驗證碼",
+            "id": "nav_1d624f47-b399-4543-be57-45208fe230aa"
           },
           {
             "title": "Ente QR",
             "url": "https://qr.ente.com/",
-            "description": "QR Code 產生器"
+            "description": "QR Code 產生器",
+            "id": "nav_68619aae-7e03-41de-8601-cffcc5b210d3"
           }
         ]
       },
@@ -270,7 +311,8 @@
           {
             "title": "Excalidraw",
             "url": "https://excalidraw.com/",
-            "description": "線上白板"
+            "description": "線上白板",
+            "id": "nav_7f9943ca-e068-45e1-bb77-569a5afdaa61"
           }
         ]
       }
@@ -286,37 +328,44 @@
           {
             "title": "ChatGPT",
             "url": "https://chatgpt.com/",
-            "description": "OpenAI AI 助手"
+            "description": "OpenAI AI 助手",
+            "id": "nav_1cff180f-641f-4ef7-9154-40a3cbfab263"
           },
           {
             "title": "Gemini",
             "url": "https://gemini.google.com/",
-            "description": "Google AI 助手"
+            "description": "Google AI 助手",
+            "id": "nav_3c58339f-8385-4f08-bc1e-4ff152c3ea50"
           },
           {
             "title": "Claude",
             "url": "https://claude.ai/",
-            "description": "AI 助手"
+            "description": "AI 助手",
+            "id": "nav_ce8db7e5-7a3c-4ef6-a38f-9d992b8d8bc2"
           },
           {
             "title": "Perplexity",
             "url": "https://www.perplexity.ai/",
-            "description": "AI 搜尋與研究助手"
+            "description": "AI 搜尋與研究助手",
+            "id": "nav_8d4fb5a0-6c25-4204-82cb-8a34eb8d3613"
           },
           {
             "title": "DeepSeek",
             "url": "https://chat.deepseek.com/",
-            "description": "AI 助手"
+            "description": "AI 助手",
+            "id": "nav_f360450b-8ea9-47e8-b2f8-25d753df63fe"
           },
           {
             "title": "Grok",
             "url": "https://grok.com/",
-            "description": "AI 助手"
+            "description": "AI 助手",
+            "id": "nav_96fe43cd-2543-49bd-8e0d-c7686e4ca2c0"
           },
           {
             "title": "豆包",
             "url": "https://www.doubao.com/chat/",
-            "description": "AI 助手"
+            "description": "AI 助手",
+            "id": "nav_5ac6a4ca-b734-4d63-9909-d052452fb238"
           }
         ]
       }
@@ -332,7 +381,8 @@
           {
             "title": "GitHub",
             "url": "https://github.com/",
-            "description": "程式碼託管"
+            "description": "程式碼託管",
+            "id": "nav_e03945f1-3d74-4aa0-9c1d-a909984592b4"
           }
         ]
       },
@@ -342,12 +392,14 @@
           {
             "title": "Cloudflare Dashboard",
             "url": "https://dash.cloudflare.com/",
-            "description": "Cloudflare 管理後台"
+            "description": "Cloudflare 管理後台",
+            "id": "nav_b2bd8e51-f616-4db4-b8db-1c104d65393f"
           },
           {
             "title": "Oracle Cloud Console",
             "url": "https://cloud.oracle.com/",
-            "description": "Oracle Cloud 管理後台"
+            "description": "Oracle Cloud 管理後台",
+            "id": "nav_9e4a8373-a556-4ae7-9dbc-d8ea771b9e47"
           }
         ]
       },
@@ -357,22 +409,26 @@
           {
             "title": "Alist",
             "url": "https://alist.chi.qzz.io",
-            "description": "雲端儲存整合"
+            "description": "雲端儲存整合",
+            "id": "nav_f4b14ee8-79bb-459a-9e99-6a1062520358"
           },
           {
             "title": "Bilitool",
             "url": "https://bili.chi.qzz.io",
-            "description": "Bilibili 自動化"
+            "description": "Bilibili 自動化",
+            "id": "nav_ec89ab7a-7292-43f1-b868-21e010ac605d"
           },
           {
             "title": "Twitch Miner",
             "url": "https://twitch.chi.qzz.io",
-            "description": "Twitch Drops 自動化"
+            "description": "Twitch Drops 自動化",
+            "id": "nav_46f027bf-d4f8-4366-9f2d-337c847cefd6"
           },
           {
             "title": "周邊收藏",
             "url": "https://merch.chi.qzz.io/",
-            "description": "個人周邊收藏管理"
+            "description": "個人周邊收藏管理",
+            "id": "nav_589f3106-4655-40ca-91c3-2fe6a53a9846"
           }
         ]
       },
@@ -382,12 +438,14 @@
           {
             "title": "VirusTotal",
             "url": "https://www.virustotal.com/gui/home/upload",
-            "description": "檔案與網址掃描"
+            "description": "檔案與網址掃描",
+            "id": "nav_a9c1f570-ad20-4c30-bf4b-1b239145e760"
           },
           {
             "title": "Have I Been Pwned",
             "url": "https://haveibeenpwned.com/",
-            "description": "資料外洩查詢"
+            "description": "資料外洩查詢",
+            "id": "nav_78d1eee3-4c06-41b5-b04d-9a11faac28da"
           }
         ]
       },
@@ -397,17 +455,20 @@
           {
             "title": "Block OTA",
             "url": "https://betaprofiles.dev/install/block-ota/",
-            "description": "封鎖 iOS OTA 更新"
+            "description": "封鎖 iOS OTA 更新",
+            "id": "nav_ec843355-a4be-4d55-8f37-6c35eb1e4d4e"
           },
           {
             "title": "Decrypt.day",
             "url": "https://decrypt.day/home/",
-            "description": "iOS 應用資訊"
+            "description": "iOS 應用資訊",
+            "id": "nav_11d063df-4fd9-4ab4-8ac5-08fd4db64c46"
           },
           {
             "title": "AppTesters",
             "url": "https://apps.apptesters.org",
-            "description": "iOS 測試分發"
+            "description": "iOS 測試分發",
+            "id": "nav_6a663831-0574-410e-a08b-7214e4851de4"
           }
         ]
       }
@@ -423,37 +484,44 @@
           {
             "title": "YouTube",
             "url": "https://www.youtube.com/",
-            "description": "影音平台"
+            "description": "影音平台",
+            "id": "nav_553c2dbb-0fde-4f06-b3cc-4cf3f075bdfd"
           },
           {
             "title": "Bilibili",
             "url": "https://www.bilibili.com/",
-            "description": "彈幕影音平台"
+            "description": "彈幕影音平台",
+            "id": "nav_d404e54c-80d4-4420-b8be-db46c4193407"
           },
           {
             "title": "Twitch",
             "url": "https://www.twitch.tv/",
-            "description": "直播平台"
+            "description": "直播平台",
+            "id": "nav_752614ae-6a53-4477-9994-265a849d756a"
           },
           {
             "title": "Spotify",
             "url": "https://open.spotify.com/",
-            "description": "音樂串流"
+            "description": "音樂串流",
+            "id": "nav_80fd5ff1-f0ea-492d-8fa7-1352bb457500"
           },
           {
             "title": "Netflix",
             "url": "https://www.netflix.com/tw/",
-            "description": "串流影音平台"
+            "description": "串流影音平台",
+            "id": "nav_c602e397-a173-4d9e-9b5f-b7f489865051"
           },
           {
             "title": "YouTube Music",
             "url": "https://music.youtube.com/",
-            "description": "音樂串流"
+            "description": "音樂串流",
+            "id": "nav_19c1017f-fa03-4974-994b-22b20652f8e6"
           },
           {
             "title": "ofiii 歐飛",
             "url": "https://www.ofiii.com/",
-            "description": "正版影音平台"
+            "description": "正版影音平台",
+            "id": "nav_4d16dbfc-0a07-4478-b21c-ae7b4cfc24eb"
           }
         ]
       },
@@ -463,17 +531,20 @@
           {
             "title": "巴哈姆特動畫瘋",
             "url": "https://ani.gamer.com.tw/",
-            "description": "正版動畫"
+            "description": "正版動畫",
+            "id": "nav_ee9f82a9-6847-43a1-b18a-584b2555c7ad"
           },
           {
             "title": "Bangumi 番組計畫",
             "url": "https://bgm.tv/",
-            "description": "ACG 資料庫"
+            "description": "ACG 資料庫",
+            "id": "nav_fbf63b92-4913-4ca7-98db-4d525b35cc89"
           },
           {
             "title": "Anime1",
             "url": "https://anime1.me/",
-            "description": "動畫觀看"
+            "description": "動畫觀看",
+            "id": "nav_96900873-7feb-40bc-b983-6e0faa6e40a7"
           }
         ]
       },
@@ -483,17 +554,20 @@
           {
             "title": "漫畫櫃",
             "url": "https://tw.manhuagui.com/",
-            "description": "漫畫閱讀"
+            "description": "漫畫閱讀",
+            "id": "nav_dc502a8a-c400-4305-aa6c-70ca2af90622"
           },
           {
             "title": "包子漫畫",
             "url": "https://www.baozimh.com/",
-            "description": "漫畫閱讀"
+            "description": "漫畫閱讀",
+            "id": "nav_e8870d8f-bad6-4966-9020-3ed708b847c7"
           },
           {
             "title": "列車組的不專業烤肉翻譯",
             "url": "https://www.shironkestrel.com/",
-            "description": "二遊漫畫翻譯"
+            "description": "二遊漫畫翻譯",
+            "id": "nav_a1681ce9-2146-4244-90e9-7218100924c9"
           }
         ]
       },
@@ -503,7 +577,8 @@
           {
             "title": "Pixiv",
             "url": "https://www.pixiv.net/",
-            "description": "插畫與創作社群"
+            "description": "插畫與創作社群",
+            "id": "nav_b4874f1a-5b1e-4b59-bbc1-8c9b7c027690"
           }
         ]
       }
@@ -519,22 +594,26 @@
           {
             "title": "HoYoLAB",
             "url": "https://www.hoyolab.com/",
-            "description": "米哈遊遊戲社群"
+            "description": "米哈遊遊戲社群",
+            "id": "nav_d8ca4e3c-eb41-4984-8e90-b5953b344d64"
           },
           {
             "title": "Prydwen",
             "url": "https://www.prydwen.gg/",
-            "description": "遊戲攻略資料庫"
+            "description": "遊戲攻略資料庫",
+            "id": "nav_61bde909-3630-41cb-93a6-e42a691799c2"
           },
           {
             "title": "Nanoka",
             "url": "https://nanoka.cc/",
-            "description": "遊戲資料庫"
+            "description": "遊戲資料庫",
+            "id": "nav_63ac0317-eebf-454e-bf90-b682903ef24d"
           },
           {
             "title": "Bwiki",
             "url": "https://wiki.biligame.com/",
-            "description": "遊戲 Wiki 資料庫"
+            "description": "遊戲 Wiki 資料庫",
+            "id": "nav_07a3e671-1ced-48c8-bcbb-efed669cad19"
           }
         ]
       },
@@ -544,17 +623,20 @@
           {
             "title": "SteamDB",
             "url": "https://steamdb.info/",
-            "description": "Steam 資料庫"
+            "description": "Steam 資料庫",
+            "id": "nav_3925ebf0-2f33-41c1-b523-cd211ec3c20e"
           },
           {
             "title": "IsThereAnyDeal",
             "url": "https://isthereanydeal.com/giveaways/",
-            "description": "遊戲折扣追蹤"
+            "description": "遊戲折扣追蹤",
+            "id": "nav_83495b9c-fbad-42c9-a67a-035c0d10a205"
           },
           {
             "title": "4Gamers 限免",
             "url": "https://www.4gamers.com.tw/news/tag/%E9%99%90%E6%99%82%E5%85%8D%E8%B2%BB",
-            "description": "遊戲限免資訊"
+            "description": "遊戲限免資訊",
+            "id": "nav_cb5aff29-a198-4e4c-86fd-3baa48929922"
           }
         ]
       },
@@ -564,17 +646,20 @@
           {
             "title": "GenPKM",
             "url": "https://genpkm.com/",
-            "description": "寶可夢資料"
+            "description": "寶可夢資料",
+            "id": "nav_57027991-9a67-4f7b-abb2-2a8151750668"
           },
           {
             "title": "寶可夢兌換碼",
             "url": "https://store.pokemongo.com/zh-Hant/offer-redemption",
-            "description": "Pokémon GO 優惠兌換"
+            "description": "Pokémon GO 優惠兌換",
+            "id": "nav_d61b284a-c487-42db-814d-98ab94ec6103"
           },
           {
             "title": "PoGo Coordinates",
             "url": "https://pogocoordinates.com/search",
-            "description": "寶可夢座標"
+            "description": "寶可夢座標",
+            "id": "nav_cefc5c95-8413-44fe-b927-33034347606e"
           }
         ]
       },
@@ -584,7 +669,8 @@
           {
             "title": "CloudMoon",
             "url": "https://web.cloudmoonapp.com/zh/",
-            "description": "雲端遊戲"
+            "description": "雲端遊戲",
+            "id": "nav_18b9d7c3-3e94-4f01-8f78-7a0eb05fbdfa"
           }
         ]
       }
@@ -600,32 +686,38 @@
           {
             "title": "Discord",
             "url": "https://discord.com/channels/@me",
-            "description": "社群與通訊平台"
+            "description": "社群與通訊平台",
+            "id": "nav_8851ad85-fb1a-4e9a-a64d-04a69d47ca69"
           },
           {
             "title": "Instagram",
             "url": "https://www.instagram.com/",
-            "description": "圖片與影音社群"
+            "description": "圖片與影音社群",
+            "id": "nav_32634fb6-5634-488c-8599-dd92d02a54cb"
           },
           {
             "title": "X (Twitter)",
             "url": "https://x.com/",
-            "description": "即時社群"
+            "description": "即時社群",
+            "id": "nav_2705d74e-b536-4a97-adee-7f7724d350c8"
           },
           {
             "title": "Facebook",
             "url": "https://www.facebook.com/",
-            "description": "社群平台"
+            "description": "社群平台",
+            "id": "nav_d73a9e0e-22f8-443f-aa1a-ed532dde65cc"
           },
           {
             "title": "Threads",
             "url": "https://www.threads.net/",
-            "description": "文字社群"
+            "description": "文字社群",
+            "id": "nav_ece44df6-0ad7-4b59-9fe0-51885f0d5022"
           },
           {
             "title": "Messenger",
             "url": "https://www.messenger.com/",
-            "description": "即時通訊"
+            "description": "即時通訊",
+            "id": "nav_9ae7e311-3b16-4a1d-8860-f3f537ad7ad2"
           }
         ]
       },
@@ -635,22 +727,26 @@
           {
             "title": "巴哈姆特",
             "url": "https://www.gamer.com.tw/",
-            "description": "遊戲動漫論壇"
+            "description": "遊戲動漫論壇",
+            "id": "nav_db9ba259-2d8a-4699-8306-c1d53c3124ed"
           },
           {
             "title": "Reddit",
             "url": "https://www.reddit.com/",
-            "description": "社群論壇"
+            "description": "社群論壇",
+            "id": "nav_1d48c67f-0c79-4c36-a8ad-53ddb5d0522f"
           },
           {
             "title": "NGA 玩家社區",
             "url": "https://bbs.nga.cn/",
-            "description": "遊戲論壇"
+            "description": "遊戲論壇",
+            "id": "nav_3beb4c03-e10f-4366-9580-c59bb1538657"
           },
           {
             "title": "APK.tw",
             "url": "https://apk.tw/",
-            "description": "Android 技術論壇"
+            "description": "Android 技術論壇",
+            "id": "nav_270941e6-2993-45d0-90f5-776079a06ab1"
           }
         ]
       }
@@ -666,22 +762,26 @@
           {
             "title": "蝦皮購物",
             "url": "https://shopee.tw/",
-            "description": "綜合電商"
+            "description": "綜合電商",
+            "id": "nav_d19ef50f-04f9-4d01-b3be-f9d6cd278fc3"
           },
           {
             "title": "淘寶",
             "url": "https://world.taobao.com/",
-            "description": "綜合電商"
+            "description": "綜合電商",
+            "id": "nav_70844d32-256b-4b10-b7a6-75e47a89a4f5"
           },
           {
             "title": "momo 購物網",
             "url": "https://www.momoshop.com.tw/",
-            "description": "綜合電商"
+            "description": "綜合電商",
+            "id": "nav_53985f53-6364-497b-9179-cc9d045f791b"
           },
           {
             "title": "PChome 24h 購物",
             "url": "https://24h.pchome.com.tw/",
-            "description": "綜合電商"
+            "description": "綜合電商",
+            "id": "nav_45162f83-1d57-46cc-8a73-3386e4f86c40"
           }
         ]
       },
@@ -691,7 +791,8 @@
           {
             "title": "賣貨便",
             "url": "https://myship.7-11.com.tw/Home/Index",
-            "description": "寄件與交易"
+            "description": "寄件與交易",
+            "id": "nav_a5fc7b61-db1e-45ee-8860-09fca345cdbf"
           }
         ]
       }
@@ -707,7 +808,8 @@
           {
             "title": "Wikipedia",
             "url": "https://www.wikipedia.org/",
-            "description": "線上百科"
+            "description": "線上百科",
+            "id": "nav_8595d8e0-ed54-4a2b-9ac9-90cb7797aa38"
           }
         ]
       }
