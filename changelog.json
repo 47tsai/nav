@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.171.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "deploy(admin-api): bind Worker to nav-api custom domain",
+    "commit": "78ee90649abf20dcc0c77509d1f39899272aa484"
+  },
+  {
     "version": "3.0.170.1",
     "date": "2026-10-17",
     "type": "commit",
