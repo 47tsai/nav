@@ -1,6 +1,6 @@
 {
-  "version": "3.0.168.1",
+  "version": "3.0.169.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "fix(admin-api): allow editing repeated links in existing categories"
+  "message": "docs(admin-api): document deployment secrets and activation switch"
 }

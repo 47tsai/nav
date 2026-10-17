@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.169.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "docs(admin-api): document deployment secrets and activation switch",
+    "commit": "0307729c976cb9c4fc4e4a5afd1fa0722a47aeb8"
+  },
+  {
     "version": "3.0.168.1",
     "date": "2026-10-17",
     "type": "commit",
