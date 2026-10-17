@@ -1,6 +1,6 @@
 {
-  "version": "3.0.197.1",
+  "version": "3.0.198.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Validate OAuth token before requesting user identity"
+  "message": "Handle Chi Auth outages safely"
 }
