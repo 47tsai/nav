@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.157.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Fix shared theme preference and active admin navigation",
+    "commit": "16a6840cb3c61f4bf71ba63650306e3e8226e8e0"
+  },
+  {
     "version": "3.0.156.1",
     "date": "2026-10-17",
     "type": "commit",
