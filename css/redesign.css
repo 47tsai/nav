@@ -842,9 +842,9 @@ button:focus-visible, input:focus-visible, a:focus-visible, [tabindex]:focus-vis
   color:var(--text);text-decoration:none;font-size:12px;font-weight:650;
   transition:background .18s ease,border-color .18s ease,color .18s ease;
 }
-.sidebar-admin-link>i:first-child{width:16px;text-align:center;font-size:13px;color:var(--primary)}
+.sidebar-admin-link>i:first-child{width:16px;text-align:center;font-size:13px;color:var(--accent)}
 .sidebar-admin-link:hover,.sidebar-admin-link:focus-visible{
-  background:var(--surface-soft);border-color:var(--primary);outline:none;
+  background:var(--surface-soft);border-color:var(--accent);outline:none;
 }
 .sidebar-admin-link .admin-link-external{margin-left:auto;font-size:10px;color:var(--muted);opacity:.7}
 .sidebar.collapsed .sidebar-admin-link{justify-content:center;padding-inline:8px}
