@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.151.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Remove duplicate legacy tooltip script",
+    "commit": "55d98723c9140b58721a7682bfb2375c80088ddf"
+  },
+  {
     "version": "3.0.150.1",
     "date": "2026-10-17",
     "type": "commit",
