@@ -1,6 +1,6 @@
 {
-  "version": "3.0.179.1",
+  "version": "3.0.180.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Avoid admin data race during OAuth callback initialization"
+  "message": "Verify NAV Admin API health after deployment"
 }

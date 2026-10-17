@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.180.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Verify NAV Admin API health after deployment",
+    "commit": "1e9b69a6eb92ef8479cbb7c1b8ffbbaad394cbd8"
+  },
+  {
     "version": "3.0.179.1",
     "date": "2026-10-17",
     "type": "commit",
