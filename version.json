@@ -1,6 +1,6 @@
 {
-  "version": "3.0.188.1",
+  "version": "3.0.189.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Prevent duplicate NAV form writes and distinguish save from reload errors"
+  "message": "Expose NAV Admin API status codes for conflict handling"
 }

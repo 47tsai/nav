@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.189.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Expose NAV Admin API status codes for conflict handling",
+    "commit": "13d717416317731e0062bcf3f62276be320d5a9a"
+  },
+  {
     "version": "3.0.188.1",
     "date": "2026-10-17",
     "type": "commit",
