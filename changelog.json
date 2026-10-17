@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.217.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix: clear admin data on logout and handle OAuth denial",
+    "commit": "9d410e925a229ec5d3a3bb1d536dd6b7d5aa3381"
+  },
+  {
     "version": "3.0.216.1",
     "date": "2026-10-17",
     "type": "commit",

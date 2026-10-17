@@ -1,6 +1,6 @@
 {
-  "version": "3.0.216.1",
+  "version": "3.0.217.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "test: reject stale revisions for site edits and deletes"
+  "message": "fix: clear admin data on logout and handle OAuth denial"
 }
