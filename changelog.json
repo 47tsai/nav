@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.186.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Disable admin writes while a mutation is running",
+    "commit": "076b60458857203954d86880260295ce5e22a1a2"
+  },
+  {
     "version": "3.0.185.1",
     "date": "2026-10-17",
     "type": "commit",
