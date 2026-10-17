@@ -1,0 +1,12 @@
+name = "chi-nav-admin-api"
+main = "admin-api.js"
+compatibility_date = "2026-10-17"
+workers_dev = true
+
+[vars]
+GITHUB_REPOSITORY = "tsai97216/nav"
+GITHUB_BRANCH = "main"
+CHI_AUTH_CLIENT_ID = ""
+
+# Set NAV_GITHUB_TOKEN with: wrangler secret put NAV_GITHUB_TOKEN
+# Register the OAuth client in Chi Auth, then set CHI_AUTH_CLIENT_ID.
