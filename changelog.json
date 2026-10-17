@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.134.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Add admin shortcut to main sidebar",
+    "commit": "a4aa61a7c1ff5d1d6ae5db4d69b6282234ddcb75"
+  },
+  {
     "version": "3.0.133.1",
     "date": "2026-10-17",
     "type": "commit",
