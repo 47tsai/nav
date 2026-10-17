@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.124.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Size SVG controls in NAV admin",
+    "commit": "0be69c45b56652d7e068ced7ff11a0e366300b39"
+  },
+  {
     "version": "3.0.123.1",
     "date": "2026-10-17",
     "type": "commit",
