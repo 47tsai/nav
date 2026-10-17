@@ -19,7 +19,7 @@ All admin routes require a short-lived Chi Auth bearer token. The Worker validat
 1. Register an OAuth client in Chi Auth for callback https://nav.chi.qzz.io/admin/ and allow origin https://nav.chi.qzz.io.
 2. Set the resulting public Client ID in admin/auth-config.js and worker/wrangler.toml.
 3. Create a fine-grained GitHub token with Contents: Read and write access only to tsai97216/nav.
-4. From this directory, run npx wrangler secret put NAV_GITHUB_TOKEN, then npx wrangler deploy.
+4. In repository Settings > Secrets and variables > Actions, add secrets CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, NAV_GITHUB_TOKEN, and CHI_AUTH_CLIENT_ID. Set repository variable DEPLOY_NAV_ADMIN_API to true to enable automatic deployment. The workflow will deploy the Worker and set NAV_GITHUB_TOKEN as a Worker Secret.
 5. Attach the custom domain nav-api.chi.qzz.io in Cloudflare and set API_BASE_URL in admin/auth-config.js to https://nav-api.chi.qzz.io.
 6. Confirm the health endpoint responds before enabling write controls.
 
