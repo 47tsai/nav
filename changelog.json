@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.152.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Remove obsolete secondary version metadata",
+    "commit": "5fac6f4f5261bde9a40470951672316abafc8f88"
+  },
+  {
     "version": "3.0.151.1",
     "date": "2026-10-17",
     "type": "commit",

@@ -1,6 +1,6 @@
 {
-  "version": "3.0.151.1",
+  "version": "3.0.152.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Remove duplicate legacy tooltip script"
+  "message": "Remove obsolete secondary version metadata"
 }
