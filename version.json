@@ -1,6 +1,6 @@
 {
-  "version": "3.0.180.1",
+  "version": "3.0.181.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Verify NAV Admin API health after deployment"
+  "message": "Improve NAV admin API error status handling"
 }
