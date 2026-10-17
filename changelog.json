@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.177.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Admin: migrate stable site IDs",
+    "commit": "62d72eca64f947c814d1e4f86f0f44f80d2c5aaa"
+  },
+  {
     "version": "3.0.176.1",
     "date": "2026-10-17",
     "type": "commit",

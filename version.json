@@ -1,6 +1,6 @@
 {
-  "version": "3.0.176.1",
+  "version": "3.0.177.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Use repository-configured Chi Auth client ID for NAV API deployment"
+  "message": "Admin: migrate stable site IDs"
 }
