@@ -1,6 +1,6 @@
 {
-  "version": "3.0.177.1",
+  "version": "3.0.178.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Admin: migrate stable site IDs"
+  "message": "Validate duplicate sites during edits"
 }
