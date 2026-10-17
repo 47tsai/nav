@@ -16,7 +16,7 @@ function findTarget(data,taxonomy,subcategory){const section=data.find(x=>x.taxo
 function hasDuplicate(data,site,ignoreId=""){return data.some(section=>(Array.isArray(section.list)?section.list:[section]).some(group=>group.links.some(link=>link.id!==ignoreId&&(link.title.trim().toLocaleLowerCase()===site.title.toLocaleLowerCase()||normalizeUrl(link.url)===site.url))))}
 async function route(request,env){
  const url=new URL(request.url);
- const path=url.pathname.replace(/\\/+$/,"")||"/";
+ const path=url.pathname.replace(/\/+$/,"")||"/";
  const origin=request.headers.get("Origin");
  if(request.method==="OPTIONS"){
   if(!origin||!ALLOWED_ORIGINS.has(origin))return reply({error:"Origin not allowed."},403);
@@ -54,7 +54,7 @@ async function route(request,env){
    return reply({ok:true,site:{...site,id},sha:result.sha,commit:result.commit,count:result.count});
   }catch(e){return reply({error:e.message||"新增網站失敗。"},e.message?.startsWith("GitHub 寫入失敗")?502:400)}
  }
- const match=path.match(/^\\/api\\/admin\\/sites\\/([A-Za-z0-9_-]{1,100})$/);
+ const match=path.match(/^\/api\/admin\/sites\/([A-Za-z0-9_-]{1,100})$/);
  if(match&&["PUT","DELETE"].includes(request.method)){
   const id=match[1];
   try{
