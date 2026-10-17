@@ -127,3 +127,83 @@ test("site updates report GitHub read failures as upstream errors", async () => 
   });
 });
 
+test("site creation refuses to overwrite data changed after the initial read", async () => {
+  let githubReads = 0, githubWrites = 0;
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(validData))));
+  await withFetch(async (input, init = {}) => {
+    const url = String(input);
+    if (url.startsWith("https://auth.chi.qzz.io/")) {
+      return new Response(JSON.stringify({ sub: "chi-owner", aud: clientId }), {
+        status: 200, headers: { "Content-Type": "application/json" }
+      });
+    }
+    if (init.method === "PUT") {
+      githubWrites++;
+      return new Response(JSON.stringify({ message: "unexpected write" }), { status: 500 });
+    }
+    githubReads++;
+    return new Response(JSON.stringify({
+      type: "file",
+      sha: githubReads === 1 ? "initial-sha" : "changed-sha",
+      content: encoded
+    }), { status: 200, headers: { "Content-Type": "application/json" } });
+  }, async () => {
+    const response = await worker.fetch(new Request("https://api.test/api/admin/sites", {
+      method: "POST",
+      headers: {
+        Origin: origin,
+        Authorization: "Bearer " + "a".repeat(48),
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        title: "New Example", url: "https://new-example.com", description: "測試",
+        taxonomy: "工具", subcategory: ""
+      })
+    }), env);
+    const body = await response.json();
+    assert.equal(response.status, 409);
+    assert.equal(body.code, "DATA_CONFLICT");
+    assert.equal(githubReads, 2);
+    assert.equal(githubWrites, 0);
+  });
+});
+
+test("site creation maps GitHub content-write conflicts to DATA_CONFLICT", async () => {
+  for (const status of [409, 422]) {
+    let githubReads = 0;
+    const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(validData))));
+    await withFetch(async (input, init = {}) => {
+      const url = String(input);
+      if (url.startsWith("https://auth.chi.qzz.io/")) {
+        return new Response(JSON.stringify({ sub: "chi-owner", aud: clientId }), {
+          status: 200, headers: { "Content-Type": "application/json" }
+        });
+      }
+      if (init.method === "PUT") {
+        return new Response(JSON.stringify({ message: "sha conflict" }), { status });
+      }
+      githubReads++;
+      return new Response(JSON.stringify({
+        type: "file", sha: "stable-sha", content: encoded
+      }), { status: 200, headers: { "Content-Type": "application/json" } });
+    }, async () => {
+      const response = await worker.fetch(new Request("https://api.test/api/admin/sites", {
+        method: "POST",
+        headers: {
+          Origin: origin,
+          Authorization: "Bearer " + "a".repeat(48),
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          title: "New Example", url: "https://new-example.com", description: "測試",
+          taxonomy: "工具", subcategory: ""
+        })
+      }), env);
+      const body = await response.json();
+      assert.equal(response.status, 409, "GitHub HTTP " + status);
+      assert.equal(body.code, "DATA_CONFLICT", "GitHub HTTP " + status);
+      assert.equal(githubReads, 2);
+    });
+  }
+});
+
