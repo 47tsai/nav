@@ -1,6 +1,6 @@
 {
-  "version": "3.0.210.1",
+  "version": "3.0.211.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "fix: mark cached admin data as potentially stale"
+  "message": "fix: preserve stale-data warning after session expiry"
 }

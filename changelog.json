@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.211.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix: preserve stale-data warning after session expiry",
+    "commit": "498ec5370efa7663c016d2ed84933b86e849f7f4"
+  },
+  {
     "version": "3.0.210.1",
     "date": "2026-10-17",
     "type": "commit",
