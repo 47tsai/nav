@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.131.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Respect hidden states in NAV admin controls",
+    "commit": "a14166445574808400e03b8b97818834fafd2ae0"
+  },
+  {
     "version": "3.0.130.1",
     "date": "2026-10-17",
     "type": "commit",
