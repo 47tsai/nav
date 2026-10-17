@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.154.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Remove unused duplicate theme script",
+    "commit": "e3ed321a50083c97e0756f465f173e6bc1b254d8"
+  },
+  {
     "version": "3.0.153.1",
     "date": "2026-10-17",
     "type": "commit",

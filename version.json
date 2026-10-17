@@ -1,6 +1,6 @@
 {
-  "version": "3.0.153.1",
+  "version": "3.0.154.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Redirect old /new route to consolidated homepage"
+  "message": "Remove unused duplicate theme script"
 }
