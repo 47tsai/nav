@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.118.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix(nav): add robust data loading fallback for /new",
+    "commit": "afdfe68d7425f49f5db9ac52428a117e79d0702f"
+  },
+  {
     "version": "3.0.117.1",
     "date": "2026-10-17",
     "type": "commit",
