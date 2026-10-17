@@ -8,6 +8,7 @@ on:
       - 'scripts/validate-data.mjs'
       - 'js/**'
       - 'admin/**'
+      - 'worker/**'
       - 'bookmarks/**'
       - 'sw.js'
       - '.github/workflows/validate-data.yml'
@@ -17,6 +18,7 @@ on:
       - 'scripts/validate-data.mjs'
       - 'js/**'
       - 'admin/**'
+      - 'worker/**'
       - 'bookmarks/**'
       - 'sw.js'
       - '.github/workflows/validate-data.yml'
@@ -40,4 +42,5 @@ jobs:
       - name: Check JavaScript syntax
         run: |
           find js admin bookmarks -type f -name '*.js' -print0 | xargs -0 -n1 node --check
+          node --check worker/admin-api.js
           node --check sw.js
