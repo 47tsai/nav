@@ -32,7 +32,7 @@
 <div><p class="eyebrow"><span class="eyebrow-line"></span> WORKSPACE / ADMIN</p><h1>管理中心</h1><p class="subtitle">管理 NAV 網站資料、分類與內容更新。</p></div>
 <div class="heading-actions"><button class="button button--primary" type="button" id="jump-add"><svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> 新增網站</button></div>
 </section>
-<section class="notice" aria-label="認證整合狀態"><span class="notice-icon" aria-hidden="true">i</span><div><strong>Chi Auth 整合準備中</strong><p>目前先建立管理介面與資料檢視。待註冊此應用的 OAuth Client、設定正式 callback，並完成權限驗證後，才會開放寫入操作。這個頁面不會要求或儲存 Admin Secret。</p></div><span class="chi-badge">AUTH PENDING</span></section>
+<section class="notice" aria-label="認證整合狀態"><span class="notice-icon" aria-hidden="true">i</span><div><strong>Chi Auth 整合準備中</strong><p>後端會在伺服器端驗證 Chi Auth 身分，並以 GitHub Commit 保存資料。首次登入時會為既有網站建立穩定 ID；未完成後端部署前，介面維持唯讀。</p></div><span class="chi-badge">API INTEGRATION</span></section>
 <section class="stats" aria-label="資料摘要">
 <article class="stat"><span class="stat-label">網站總數</span><strong id="stat-sites">--</strong><span class="stat-note">目前資料集中的連結</span></article>
 <article class="stat"><span class="stat-label">分類數</span><strong id="stat-categories">--</strong><span class="stat-note">主要導覽分類</span></article>
@@ -42,11 +42,11 @@
 <section class="section" id="sites">
 <div class="section-heading"><div><p class="eyebrow">CONTENT</p><h2>網站清單</h2><p class="section-description">檢視目前 NAV 的網站資料，支援搜尋與分類篩選。</p></div><span class="result-count" id="result-count">0 筆</span></div>
 <div class="toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input id="site-search" type="search" placeholder="搜尋名稱、網址、描述…" autocomplete="off"><kbd>/</kbd></label><label class="filter-field"><span>分類</span><select id="category-filter"><option value="">全部分類</option></select></label></div>
-<div class="table-wrap"><table><thead><tr><th>網站</th><th>分類</th><th>網址</th><th>資料</th></tr></thead><tbody id="site-rows"><tr><td colspan="4" class="table-message">正在載入網站資料…</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>網站</th><th>分類</th><th>網址</th><th>資料</th><th>操作</th></tr></thead><tbody id="site-rows"><tr><td colspan="4" class="table-message">正在載入網站資料…</td></tr></tbody></table></div>
 <div class="empty-state" id="empty-state" hidden><strong>沒有符合條件的網站</strong><p>試試其他關鍵字或切換分類。</p></div>
 </section>
 <section class="section add-section" id="add-site">
-<div class="section-heading"><div><p class="eyebrow">CONTENT MANAGEMENT</p><h2>新增網站</h2><p class="section-description">先填寫資料；認證與後端寫入流程完成後再啟用提交。</p></div><span class="chi-badge chi-badge--warning">尚未開放寫入</span></div>
+<div class="section-heading"><div><p class="eyebrow">CONTENT MANAGEMENT</p><h2 id="form-heading">新增網站</h2><p class="section-description">新增或編輯網站，提交後會建立 GitHub Commit。</p></div><span class="chi-badge chi-badge--warning" id="write-notice">後端尚未連線</span></div>
 <form id="add-form" class="form-panel">
 <div class="form-grid">
 <label class="field"><span>網站名稱 <b>*</b></span><input name="title" required maxlength="80" placeholder="例如：Speedtest"></label>
@@ -55,7 +55,7 @@
 <label class="field"><span>子分類</span><select name="subcategory" id="add-subcategory"><option value="">請先選擇分類</option></select></label>
 <label class="field field--wide"><span>描述</span><textarea name="description" rows="3" maxlength="240" placeholder="簡短描述網站用途"></textarea></label>
 </div>
-<div class="form-footer"><p id="form-status" role="status">表單目前為預覽模式，提交不會寫入資料。</p><button class="button button--primary" type="submit">預覽新增資料</button></div>
+<div class="form-footer"><p id="form-status" role="status">目前為唯讀模式，登入並連線後才能寫入。</p><div class="form-actions"><button class="button button--quiet" type="button" id="cancel-edit" hidden>取消編輯</button><button class="button button--primary" type="submit" disabled>登入並連線後可寫入</button></div></div>
 </form>
 </section>
 <footer class="footer"><span>CHI NAV <span class="footer-separator">/</span> ADMIN CONSOLE</span><span id="footer-version">管理介面預覽</span></footer>
