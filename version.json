@@ -1,6 +1,6 @@
 {
-  "version": "3.0.141.1",
+  "version": "3.0.142.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Set consolidated NAV app manifest"
+  "message": "Align service worker with consolidated NAV assets"
 }

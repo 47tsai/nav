@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.142.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Align service worker with consolidated NAV assets",
+    "commit": "3bf13b75f0c24f04ab9ba04a966e9020a6233c49"
+  },
+  {
     "version": "3.0.141.1",
     "date": "2026-10-17",
     "type": "commit",
