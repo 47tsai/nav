@@ -32,7 +32,7 @@
 <div><p class="eyebrow"><span class="eyebrow-line"></span> WORKSPACE / ADMIN</p><h1>管理中心</h1><p class="subtitle">管理 NAV 網站資料、分類與內容更新。</p></div>
 <div class="heading-actions"><button class="button button--primary" type="button" id="jump-add"><svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> 新增網站</button></div>
 </section>
-<section class="notice" aria-label="認證整合狀態"><span class="notice-icon" aria-hidden="true">i</span><div><strong>Chi Auth 整合準備中</strong><p>後端會在伺服器端驗證 Chi Auth 身分，並以 GitHub Commit 保存資料。首次登入時會為既有網站建立穩定 ID；未完成後端部署前，介面維持唯讀。</p></div><span class="chi-badge">API INTEGRATION</span></section>
+<section class="notice" aria-label="認證整合狀態"><span class="notice-icon" aria-hidden="true">i</span><div><strong>Chi Auth 管理已整合</strong><p>登入後由後端驗證管理身分，網站資料透過 GitHub Commit 保存。未登入時仍可搜尋與檢視公開資料。</p></div><span class="chi-badge">API INTEGRATION</span></section>
 <section class="stats" aria-label="資料摘要">
 <article class="stat"><span class="stat-label">網站總數</span><strong id="stat-sites">--</strong><span class="stat-note">目前資料集中的連結</span></article>
 <article class="stat"><span class="stat-label">分類數</span><strong id="stat-categories">--</strong><span class="stat-note">主要導覽分類</span></article>
@@ -41,7 +41,7 @@
 </section>
 <section class="section" id="sites">
 <div class="section-heading"><div><p class="eyebrow">CONTENT</p><h2>網站清單</h2><p class="section-description">檢視目前 NAV 的網站資料，支援搜尋與分類篩選。</p></div><span class="result-count" id="result-count">0 筆</span></div>
-<div class="toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input id="site-search" type="search" placeholder="搜尋名稱、網址、描述…" autocomplete="off"><kbd>/</kbd></label><label class="filter-field"><span>分類</span><select id="category-filter"><option value="">全部分類</option></select></label></div>
+<div class="toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input id="site-search" type="search" placeholder="搜尋名稱、網址、描述…" autocomplete="off"><kbd>/</kbd></label><label class="filter-field"><span>分類</span><select id="category-filter"><option value="">全部分類</option></select></label><button class="button button--quiet" id="reload-sites" type="button">重新載入</button></div>
 <div class="table-wrap"><table><thead><tr><th>網站</th><th>分類</th><th>網址</th><th>資料</th><th>操作</th></tr></thead><tbody id="site-rows"><tr><td colspan="5" class="table-message">正在載入網站資料…</td></tr></tbody></table></div>
 <div class="empty-state" id="empty-state" hidden><strong>沒有符合條件的網站</strong><p>試試其他關鍵字或切換分類。</p></div>
 </section>
