@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.201.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Add Worker test command",
+    "commit": "11cfa3b7880d3a196c27ba819e6ff30855d5e725"
+  },
+  {
     "version": "3.0.200.1",
     "date": "2026-10-17",
     "type": "commit",
