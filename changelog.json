@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.206.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "test: cover concurrent NAV data write conflicts",
+    "commit": "6d240e66dd45ba1a2e6eb5361f644061a6240fd7"
+  },
+  {
     "version": "3.0.205.1",
     "date": "2026-10-17",
     "type": "commit",

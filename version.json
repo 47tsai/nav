@@ -1,6 +1,6 @@
 {
-  "version": "3.0.205.1",
+  "version": "3.0.206.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "test: cover upstream read errors during site updates"
+  "message": "test: cover concurrent NAV data write conflicts"
 }
