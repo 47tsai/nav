@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.197.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Validate OAuth token before requesting user identity",
+    "commit": "7bea5ac87962586520e29b914575448abf8b7693"
+  },
+  {
     "version": "3.0.196.1",
     "date": "2026-10-17",
     "type": "commit",

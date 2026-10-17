@@ -1,6 +1,6 @@
 {
-  "version": "3.0.196.1",
+  "version": "3.0.197.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Clarify admin readiness and OAuth network failures"
+  "message": "Validate OAuth token before requesting user identity"
 }
