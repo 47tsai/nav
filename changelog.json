@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.129.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Fix PKCE base64url encoding for Chi Auth",
+    "commit": "db469a0211244721ba9ee0c74cff6f13d5a6a93f"
+  },
+  {
     "version": "3.0.128.1",
     "date": "2026-10-17",
     "type": "commit",
