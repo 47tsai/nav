@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.141.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Set consolidated NAV app manifest",
+    "commit": "b87158eae365d1f9750dbd71ff02c5d7b299bf33"
+  },
+  {
     "version": "3.0.140.1",
     "date": "2026-10-17",
     "type": "commit",
