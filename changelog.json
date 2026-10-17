@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.160.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix(admin-api): preserve existing duplicate links and add stable ID migration",
+    "commit": "c055170077df182a5a3e2d13064b0eb7f6805741"
+  },
+  {
     "version": "3.0.159.1",
     "date": "2026-10-17",
     "type": "commit",
