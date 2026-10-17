@@ -1,6 +1,6 @@
 {
-  "version": "3.0.213.1",
+  "version": "3.0.214.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "fix: send data revision when saving admin changes"
+  "message": "fix: disable writes when admin data becomes stale"
 }

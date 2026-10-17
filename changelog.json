@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.214.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix: disable writes when admin data becomes stale",
+    "commit": "884c2c3ee99c68940457e8ae4e55496efb580278"
+  },
+  {
     "version": "3.0.213.1",
     "date": "2026-10-17",
     "type": "commit",
