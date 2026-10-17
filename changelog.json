@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.163.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix(admin-api): correct route parsing and request handling",
+    "commit": "c67c4753ea00eb77af7edd29096dddfa8b1f233f"
+  },
+  {
     "version": "3.0.162.1",
     "date": "2026-10-17",
     "type": "commit",
