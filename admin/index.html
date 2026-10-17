@@ -23,7 +23,7 @@
 <main class="workspace">
 <header class="topbar">
 <div class="crumbs"><a href="/">Chi NAV</a><span>/</span><span>管理中心</span></div>
-<div class="topbar-actions"><span class="auth-status"><span class="status-dot status-dot--muted"></span>Chi Auth 尚未接通</span><a class="button button--quiet" href="/">返回前台</a></div>
+<div class="topbar-actions"><span class="auth-status" id="auth-status"><span class="status-dot status-dot--muted"></span>尚未登入</span><button class="button button--quiet" type="button" id="auth-login">使用 Chi Auth 登入</button><button class="button button--quiet" type="button" id="auth-logout" hidden>登出</button><a class="button button--quiet" href="/">返回前台</a></div>
 </header>
 <div class="page" id="overview">
 <section class="page-heading">
@@ -60,6 +60,6 @@
 </div>
 </main>
 </div>
-<script src="admin.js"></script>
+<script src="auth-config.js"></script>\n<script src="admin.js"></script>
 </body>
 </html>
