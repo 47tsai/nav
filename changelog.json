@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.205.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "test: cover upstream read errors during site updates",
+    "commit": "fd34939660ccb4367953115ff31f9b9f8efdd5c4"
+  },
+  {
     "version": "3.0.204.1",
     "date": "2026-10-17",
     "type": "commit",
