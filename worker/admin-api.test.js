@@ -89,3 +89,41 @@ test("admin API rejects a token for a different OAuth client", async () => {
   });
 });
 
+test("site updates report GitHub read failures as upstream errors", async () => {
+  let githubReads = 0;
+  const dataWithId = [{ taxonomy: "工具", links: [{
+    id: "nav_example", title: "Example", url: "https://example.com", description: "測試"
+  }] }];
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(dataWithId))));
+  await withFetch(async (input) => {
+    const url = String(input);
+    if (url.startsWith("https://auth.chi.qzz.io/")) {
+      return new Response(JSON.stringify({ sub: "chi-owner", aud: clientId }), {
+        status: 200, headers: { "Content-Type": "application/json" }
+      });
+    }
+    githubReads++;
+    if (githubReads === 1) {
+      return new Response(JSON.stringify({ type: "file", sha: "abc123", content: encoded }), {
+        status: 200, headers: { "Content-Type": "application/json" }
+      });
+    }
+    return new Response(JSON.stringify({ message: "Service Unavailable" }), { status: 503 });
+  }, async () => {
+    const response = await worker.fetch(new Request("https://api.test/api/admin/sites/nav_example", {
+      method: "PUT",
+      headers: {
+        Origin: origin,
+        Authorization: "Bearer " + "a".repeat(48),
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        title: "Example Updated", url: "https://example.com", description: "測試",
+        taxonomy: "工具", subcategory: ""
+      })
+    }), env);
+    assert.equal(response.status, 502);
+    assert.match((await response.json()).error, /GitHub 讀取失敗/);
+  });
+});
+
