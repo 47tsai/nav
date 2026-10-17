@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.215.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "test: reject admin writes from stale data revisions",
+    "commit": "abb8cc1710cc01506b3a35058619fbb096d01ab3"
+  },
+  {
     "version": "3.0.214.1",
     "date": "2026-10-17",
     "type": "commit",
