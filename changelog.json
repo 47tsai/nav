@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.133.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Style admin shortcut in sidebar",
+    "commit": "98a8f70905decda4336303691cfa30cff1b58194"
+  },
+  {
     "version": "3.0.132.1",
     "date": "2026-10-17",
     "type": "commit",
