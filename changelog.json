@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.123.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Validate admin add form in preview mode",
+    "commit": "7c7b5e943f4f78260eca1ea5514cb74fe5e40f41"
+  },
+  {
     "version": "3.0.122.1",
     "date": "2026-10-17",
     "type": "commit",
