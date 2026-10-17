@@ -1,6 +1,6 @@
 {
-  "version": "3.0.139.1",
+  "version": "3.0.140.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Add consolidated NAV design stylesheet"
+  "message": "Consolidate NAV app script"
 }

@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.140.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Consolidate NAV app script",
+    "commit": "cc2003e4476df01a278c3c90da7bd5ca68a3c503"
+  },
+  {
     "version": "3.0.139.1",
     "date": "2026-10-17",
     "type": "commit",
