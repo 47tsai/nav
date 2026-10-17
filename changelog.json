@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.196.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Clarify admin readiness and OAuth network failures",
+    "commit": "5e94ef7021a1eccb68d14fd70e9ded6db47da12a"
+  },
+  {
     "version": "3.0.195.1",
     "date": "2026-10-17",
     "type": "commit",

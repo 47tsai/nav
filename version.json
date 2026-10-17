@@ -1,6 +1,6 @@
 {
-  "version": "3.0.195.1",
+  "version": "3.0.196.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Announce admin authentication status accessibly"
+  "message": "Clarify admin readiness and OAuth network failures"
 }
