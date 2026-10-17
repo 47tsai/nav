@@ -1,6 +1,6 @@
 {
-  "version": "3.0.137.1",
+  "version": "3.0.138.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Use existing accent token for admin shortcut"
+  "message": "Promote the new NAV interface to the only homepage"
 }

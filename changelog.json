@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.138.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Promote the new NAV interface to the only homepage",
+    "commit": "a97718fc4e25b4fd2b9cb640d19de99b9022af7c"
+  },
+  {
     "version": "3.0.137.1",
     "date": "2026-10-17",
     "type": "commit",
