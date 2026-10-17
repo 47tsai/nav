@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.153.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Redirect old /new route to consolidated homepage",
+    "commit": "5bd22920084b80216aa1997e614369f651772de6"
+  },
+  {
     "version": "3.0.152.1",
     "date": "2026-10-17",
     "type": "commit",

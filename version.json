@@ -1,6 +1,6 @@
 {
-  "version": "3.0.152.1",
+  "version": "3.0.153.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Remove obsolete secondary version metadata"
+  "message": "Redirect old /new route to consolidated homepage"
 }
