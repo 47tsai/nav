@@ -46,7 +46,7 @@ async function route(request,env){
  }
  if(path==="/api/admin/sites"&&request.method==="POST"){
   try{
-   const site=cleanSite(await request.json()),current=await readData(env),target=findTarget(current.data,site.taxonomy,site.subcategory);
+   const site=cleanSite(await request.json()),current=await readData(env),clientSha=request.headers.get("If-Match");if(clientSha&&clientSha!==current.sha)return reply({error:"資料已在其他地方更新，請重新載入後再試。",code:"DATA_CONFLICT"},409);const target=findTarget(current.data,site.taxonomy,site.subcategory);
    if(!target)return reply({error:"找不到指定分類或子分類。"},400);
    if(hasDuplicate(current.data,site))return reply({error:"相同名稱與網址的網站已存在。",code:"DUPLICATE_SITE"},409);
    const id=createId();target.links.push({id,title:site.title,url:site.url,description:site.description});
@@ -59,7 +59,7 @@ async function route(request,env){
  if(match&&["PUT","DELETE"].includes(request.method)){
   const id=match[1];
   try{
-   const current=await readData(env),found=locateLink(current.data,id);
+   const current=await readData(env),clientSha=request.headers.get("If-Match");if(clientSha&&clientSha!==current.sha)return reply({error:"資料已在其他地方更新，請重新載入後再試。",code:"DATA_CONFLICT"},409);const found=locateLink(current.data,id);
    if(!found)return reply({error:"找不到這個網站，請重新載入資料。"},404);
    let auditTitle=found.link.title;
    if(request.method==="DELETE"){found.group.links.splice(found.linkIndex,1)}
