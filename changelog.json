@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.125.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Publish NAV admin data browser and preview validation",
+    "commit": "340ebc78f48a58b9a08f9a03d0bd5141156006cb"
+  },
+  {
     "version": "3.0.124.1",
     "date": "2026-10-17",
     "type": "commit",
