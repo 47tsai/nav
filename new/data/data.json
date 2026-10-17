@@ -1,0 +1,716 @@
+[
+  {
+    "taxonomy": "常用推薦",
+    "icon": "fa-solid fa-star",
+    "links": [
+      {
+        "title": "Google",
+        "url": "https://www.google.com/",
+        "description": "網路搜尋"
+      },
+      {
+        "title": "ChatGPT",
+        "url": "https://chatgpt.com/",
+        "description": "AI 助手"
+      },
+      {
+        "title": "YouTube",
+        "url": "https://www.youtube.com/",
+        "description": "影音平台"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/",
+        "description": "程式碼託管"
+      },
+      {
+        "title": "Notion",
+        "url": "https://app.notion.com/",
+        "description": "筆記與知識管理"
+      },
+      {
+        "title": "Raindrop.io",
+        "url": "https://app.raindrop.io/",
+        "description": "網頁書籤管理"
+      }
+    ]
+  },
+  {
+    "taxonomy": "工具",
+    "icon": "fa-solid fa-screwdriver-wrench",
+    "list": [
+      {
+        "term": "實用工具",
+        "links": [
+          {
+            "title": "工具邦",
+            "url": "https://tw.piliapp.com/",
+            "description": "線上工具集合"
+          },
+          {
+            "title": "Speedtest",
+            "url": "https://www.speedtest.net/zh-Hant",
+            "description": "網路速度測試"
+          },
+          {
+            "title": "Regex101",
+            "url": "https://regex101.com/",
+            "description": "正規表示式測試"
+          },
+          {
+            "title": "CyberChef",
+            "url": "https://gchq.github.io/CyberChef/",
+            "description": "資料編碼處理"
+          },
+          {
+            "title": "is.gd",
+            "url": "https://is.gd/",
+            "description": "網址縮短"
+          }
+        ]
+      },
+      {
+        "term": "文字與語言",
+        "links": [
+          {
+            "title": "Google 翻譯",
+            "url": "https://translate.google.com.tw/",
+            "description": "文字與網頁翻譯"
+          },
+          {
+            "title": "DeepL 翻譯",
+            "url": "https://www.deepl.com/translator",
+            "description": "文字與文件翻譯"
+          },
+          {
+            "title": "能不能好好說話",
+            "url": "https://lab.magiconch.com/nbnhhsh/",
+            "description": "中文縮寫轉換"
+          }
+        ]
+      },
+      {
+        "term": "圖片與設計",
+        "links": [
+          {
+            "title": "Photopea",
+            "url": "https://www.photopea.com/",
+            "description": "圖片編輯"
+          },
+          {
+            "title": "Canva",
+            "url": "https://www.canva.com/zh_tw/",
+            "description": "設計工具"
+          },
+          {
+            "title": "iLoveIMG",
+            "url": "https://www.iloveimg.com/zh-tw",
+            "description": "圖片處理工具"
+          },
+          {
+            "title": "Squoosh",
+            "url": "https://squoosh.app/editor",
+            "description": "圖片壓縮"
+          },
+          {
+            "title": "Polarr",
+            "url": "https://photoeditor.polarr.co/",
+            "description": "照片調色"
+          },
+          {
+            "title": "Edit.photo",
+            "url": "https://edit.photo/",
+            "description": "圖片編輯"
+          },
+          {
+            "title": "ImagesTool",
+            "url": "https://imagestool.com/zh_TW/",
+            "description": "線上圖片處理工具"
+          }
+        ]
+      },
+      {
+        "term": "影片處理",
+        "links": [
+          {
+            "title": "CapCut Web",
+            "url": "https://www.capcut.com/editor",
+            "description": "影片剪輯"
+          },
+          {
+            "title": "Flixier",
+            "url": "https://flixier.com/",
+            "description": "影片剪輯"
+          },
+          {
+            "title": "123Apps 影片",
+            "url": "https://online-video-cutter.com/tw/video-editor",
+            "description": "影片剪輯"
+          }
+        ]
+      },
+      {
+        "term": "文件與轉換",
+        "links": [
+          {
+            "title": "iLovePDF",
+            "url": "https://www.ilovepdf.com/zh-tw",
+            "description": "PDF 工具集合"
+          },
+          {
+            "title": "PDF24 Tools",
+            "url": "https://tools.pdf24.org/zh/",
+            "description": "PDF 工具集合"
+          },
+          {
+            "title": "TinyWOW",
+            "url": "https://tinywow.com/",
+            "description": "文件與 PDF 工具"
+          },
+          {
+            "title": "Convertio",
+            "url": "https://convertio.co/zh/",
+            "description": "檔案格式轉換"
+          }
+        ]
+      },
+      {
+        "term": "檔案與分享",
+        "links": [
+          {
+            "title": "PairDrop",
+            "url": "https://pairdrop.net/",
+            "description": "跨裝置檔案傳輸"
+          },
+          {
+            "title": "Gofile",
+            "url": "https://gofile.io/",
+            "description": "檔案分享"
+          },
+          {
+            "title": "TeraBox",
+            "url": "https://www.terabox.com/",
+            "description": "雲端檔案儲存"
+          }
+        ]
+      },
+      {
+        "term": "書籤管理",
+        "links": [
+          {
+            "title": "Raindrop.io",
+            "url": "https://app.raindrop.io/",
+            "description": "網頁書籤管理"
+          }
+        ]
+      },
+      {
+        "term": "筆記與知識管理",
+        "links": [
+          {
+            "title": "Notion",
+            "url": "https://app.notion.com/",
+            "description": "筆記與知識管理"
+          },
+          {
+            "title": "Simplenote",
+            "url": "https://app.simplenote.com",
+            "description": "簡潔筆記"
+          }
+        ]
+      },
+      {
+        "term": "音訊處理",
+        "links": [
+          {
+            "title": "Adobe Podcast",
+            "url": "https://podcast.adobe.com/enhance",
+            "description": "人聲增強"
+          },
+          {
+            "title": "Vocal Remover",
+            "url": "https://vocalremover.org/zh/",
+            "description": "人聲與伴奏分離"
+          },
+          {
+            "title": "AudioMass",
+            "url": "https://audiomass.co/",
+            "description": "音訊編輯"
+          },
+          {
+            "title": "Audio Converter",
+            "url": "https://audio-convert.com/cn",
+            "description": "音訊格式轉換"
+          },
+          {
+            "title": "123Apps 音訊",
+            "url": "https://mp3cut.net/tw/",
+            "description": "音訊剪輯"
+          }
+        ]
+      },
+      {
+        "term": "安全與驗證",
+        "links": [
+          {
+            "title": "Ente Auth",
+            "url": "https://auth.ente.com/",
+            "description": "2FA 驗證碼"
+          },
+          {
+            "title": "Ente QR",
+            "url": "https://qr.ente.com/",
+            "description": "QR Code 產生器"
+          }
+        ]
+      },
+      {
+        "term": "繪圖與白板",
+        "links": [
+          {
+            "title": "Excalidraw",
+            "url": "https://excalidraw.com/",
+            "description": "線上白板"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "taxonomy": "AI",
+    "icon": "fa-solid fa-wand-magic-sparkles",
+    "list": [
+      {
+        "term": "AI 助手",
+        "links": [
+          {
+            "title": "ChatGPT",
+            "url": "https://chatgpt.com/",
+            "description": "OpenAI AI 助手"
+          },
+          {
+            "title": "Gemini",
+            "url": "https://gemini.google.com/",
+            "description": "Google AI 助手"
+          },
+          {
+            "title": "Claude",
+            "url": "https://claude.ai/",
+            "description": "AI 助手"
+          },
+          {
+            "title": "Perplexity",
+            "url": "https://www.perplexity.ai/",
+            "description": "AI 搜尋與研究助手"
+          },
+          {
+            "title": "DeepSeek",
+            "url": "https://chat.deepseek.com/",
+            "description": "AI 助手"
+          },
+          {
+            "title": "Grok",
+            "url": "https://grok.com/",
+            "description": "AI 助手"
+          },
+          {
+            "title": "豆包",
+            "url": "https://www.doubao.com/chat/",
+            "description": "AI 助手"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "taxonomy": "開發與服務",
+    "icon": "fa-solid fa-code",
+    "list": [
+      {
+        "term": "開發",
+        "links": [
+          {
+            "title": "GitHub",
+            "url": "https://github.com/",
+            "description": "程式碼託管"
+          }
+        ]
+      },
+      {
+        "term": "雲端與主機",
+        "links": [
+          {
+            "title": "Cloudflare Dashboard",
+            "url": "https://dash.cloudflare.com/",
+            "description": "Cloudflare 管理後台"
+          },
+          {
+            "title": "Oracle Cloud Console",
+            "url": "https://cloud.oracle.com/",
+            "description": "Oracle Cloud 管理後台"
+          }
+        ]
+      },
+      {
+        "term": "個人服務",
+        "links": [
+          {
+            "title": "Alist",
+            "url": "https://alist.chi.qzz.io",
+            "description": "雲端儲存整合"
+          },
+          {
+            "title": "Bilitool",
+            "url": "https://bili.chi.qzz.io",
+            "description": "Bilibili 自動化"
+          },
+          {
+            "title": "Twitch Miner",
+            "url": "https://twitch.chi.qzz.io",
+            "description": "Twitch Drops 自動化"
+          },
+          {
+            "title": "周邊收藏",
+            "url": "https://merch.chi.qzz.io/",
+            "description": "個人周邊收藏管理"
+          }
+        ]
+      },
+      {
+        "term": "資安",
+        "links": [
+          {
+            "title": "VirusTotal",
+            "url": "https://www.virustotal.com/gui/home/upload",
+            "description": "檔案與網址掃描"
+          },
+          {
+            "title": "Have I Been Pwned",
+            "url": "https://haveibeenpwned.com/",
+            "description": "資料外洩查詢"
+          }
+        ]
+      },
+      {
+        "term": "iOS",
+        "links": [
+          {
+            "title": "Block OTA",
+            "url": "https://betaprofiles.dev/install/block-ota/",
+            "description": "封鎖 iOS OTA 更新"
+          },
+          {
+            "title": "Decrypt.day",
+            "url": "https://decrypt.day/home/",
+            "description": "iOS 應用資訊"
+          },
+          {
+            "title": "AppTesters",
+            "url": "https://apps.apptesters.org",
+            "description": "iOS 測試分發"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "taxonomy": "娛樂",
+    "icon": "fa-solid fa-tv",
+    "list": [
+      {
+        "term": "影音與音樂",
+        "links": [
+          {
+            "title": "YouTube",
+            "url": "https://www.youtube.com/",
+            "description": "影音平台"
+          },
+          {
+            "title": "Bilibili",
+            "url": "https://www.bilibili.com/",
+            "description": "彈幕影音平台"
+          },
+          {
+            "title": "Twitch",
+            "url": "https://www.twitch.tv/",
+            "description": "直播平台"
+          },
+          {
+            "title": "Spotify",
+            "url": "https://open.spotify.com/",
+            "description": "音樂串流"
+          },
+          {
+            "title": "Netflix",
+            "url": "https://www.netflix.com/tw/",
+            "description": "串流影音平台"
+          },
+          {
+            "title": "YouTube Music",
+            "url": "https://music.youtube.com/",
+            "description": "音樂串流"
+          },
+          {
+            "title": "ofiii 歐飛",
+            "url": "https://www.ofiii.com/",
+            "description": "正版影音平台"
+          }
+        ]
+      },
+      {
+        "term": "動畫與 ACG",
+        "links": [
+          {
+            "title": "巴哈姆特動畫瘋",
+            "url": "https://ani.gamer.com.tw/",
+            "description": "正版動畫"
+          },
+          {
+            "title": "Bangumi 番組計畫",
+            "url": "https://bgm.tv/",
+            "description": "ACG 資料庫"
+          },
+          {
+            "title": "Anime1",
+            "url": "https://anime1.me/",
+            "description": "動畫觀看"
+          }
+        ]
+      },
+      {
+        "term": "漫畫與小說",
+        "links": [
+          {
+            "title": "漫畫櫃",
+            "url": "https://tw.manhuagui.com/",
+            "description": "漫畫閱讀"
+          },
+          {
+            "title": "包子漫畫",
+            "url": "https://www.baozimh.com/",
+            "description": "漫畫閱讀"
+          },
+          {
+            "title": "列車組的不專業烤肉翻譯",
+            "url": "https://www.shironkestrel.com/",
+            "description": "二遊漫畫翻譯"
+          }
+        ]
+      },
+      {
+        "term": "繪師與作品",
+        "links": [
+          {
+            "title": "Pixiv",
+            "url": "https://www.pixiv.net/",
+            "description": "插畫與創作社群"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "taxonomy": "遊戲",
+    "icon": "fa-solid fa-gamepad",
+    "list": [
+      {
+        "term": "二次元遊戲資料",
+        "links": [
+          {
+            "title": "HoYoLAB",
+            "url": "https://www.hoyolab.com/",
+            "description": "米哈遊遊戲社群"
+          },
+          {
+            "title": "Prydwen",
+            "url": "https://www.prydwen.gg/",
+            "description": "遊戲攻略資料庫"
+          },
+          {
+            "title": "Nanoka",
+            "url": "https://nanoka.cc/",
+            "description": "遊戲資料庫"
+          },
+          {
+            "title": "Bwiki",
+            "url": "https://wiki.biligame.com/",
+            "description": "遊戲 Wiki 資料庫"
+          }
+        ]
+      },
+      {
+        "term": "遊戲資訊",
+        "links": [
+          {
+            "title": "SteamDB",
+            "url": "https://steamdb.info/",
+            "description": "Steam 資料庫"
+          },
+          {
+            "title": "IsThereAnyDeal",
+            "url": "https://isthereanydeal.com/giveaways/",
+            "description": "遊戲折扣追蹤"
+          },
+          {
+            "title": "4Gamers 限免",
+            "url": "https://www.4gamers.com.tw/news/tag/%E9%99%90%E6%99%82%E5%85%8D%E8%B2%BB",
+            "description": "遊戲限免資訊"
+          }
+        ]
+      },
+      {
+        "term": "寶可夢",
+        "links": [
+          {
+            "title": "GenPKM",
+            "url": "https://genpkm.com/",
+            "description": "寶可夢資料"
+          },
+          {
+            "title": "寶可夢兌換碼",
+            "url": "https://store.pokemongo.com/zh-Hant/offer-redemption",
+            "description": "Pokémon GO 優惠兌換"
+          },
+          {
+            "title": "PoGo Coordinates",
+            "url": "https://pogocoordinates.com/search",
+            "description": "寶可夢座標"
+          }
+        ]
+      },
+      {
+        "term": "雲端遊戲",
+        "links": [
+          {
+            "title": "CloudMoon",
+            "url": "https://web.cloudmoonapp.com/zh/",
+            "description": "雲端遊戲"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "taxonomy": "社群",
+    "icon": "fa-solid fa-users",
+    "list": [
+      {
+        "term": "社群與通訊",
+        "links": [
+          {
+            "title": "Discord",
+            "url": "https://discord.com/channels/@me",
+            "description": "社群與通訊平台"
+          },
+          {
+            "title": "Instagram",
+            "url": "https://www.instagram.com/",
+            "description": "圖片與影音社群"
+          },
+          {
+            "title": "X (Twitter)",
+            "url": "https://x.com/",
+            "description": "即時社群"
+          },
+          {
+            "title": "Facebook",
+            "url": "https://www.facebook.com/",
+            "description": "社群平台"
+          },
+          {
+            "title": "Threads",
+            "url": "https://www.threads.net/",
+            "description": "文字社群"
+          },
+          {
+            "title": "Messenger",
+            "url": "https://www.messenger.com/",
+            "description": "即時通訊"
+          }
+        ]
+      },
+      {
+        "term": "論壇",
+        "links": [
+          {
+            "title": "巴哈姆特",
+            "url": "https://www.gamer.com.tw/",
+            "description": "遊戲動漫論壇"
+          },
+          {
+            "title": "Reddit",
+            "url": "https://www.reddit.com/",
+            "description": "社群論壇"
+          },
+          {
+            "title": "NGA 玩家社區",
+            "url": "https://bbs.nga.cn/",
+            "description": "遊戲論壇"
+          },
+          {
+            "title": "APK.tw",
+            "url": "https://apk.tw/",
+            "description": "Android 技術論壇"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "taxonomy": "購物",
+    "icon": "fa-solid fa-cart-shopping",
+    "list": [
+      {
+        "term": "綜合電商",
+        "links": [
+          {
+            "title": "蝦皮購物",
+            "url": "https://shopee.tw/",
+            "description": "綜合電商"
+          },
+          {
+            "title": "淘寶",
+            "url": "https://world.taobao.com/",
+            "description": "綜合電商"
+          },
+          {
+            "title": "momo 購物網",
+            "url": "https://www.momoshop.com.tw/",
+            "description": "綜合電商"
+          },
+          {
+            "title": "PChome 24h 購物",
+            "url": "https://24h.pchome.com.tw/",
+            "description": "綜合電商"
+          }
+        ]
+      },
+      {
+        "term": "二手與交易",
+        "links": [
+          {
+            "title": "賣貨便",
+            "url": "https://myship.7-11.com.tw/Home/Index",
+            "description": "寄件與交易"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "taxonomy": "資料與參考",
+    "icon": "fa-solid fa-book",
+    "list": [
+      {
+        "term": "百科與資料庫",
+        "links": [
+          {
+            "title": "Wikipedia",
+            "url": "https://www.wikipedia.org/",
+            "description": "線上百科"
+          }
+        ]
+      }
+    ]
+  }
+]
