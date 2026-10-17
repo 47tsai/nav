@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.210.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix: mark cached admin data as potentially stale",
+    "commit": "2e0a295098e3c7867867ba7cc5a2ef61bba7c0fb"
+  },
+  {
     "version": "3.0.209.1",
     "date": "2026-10-17",
     "type": "commit",
