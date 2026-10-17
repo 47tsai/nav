@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.127.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Implement Chi Auth OAuth PKCE callback in NAV admin",
+    "commit": "a5bcf90776bb4fdd0bac92a468a77ac6736d8d95"
+  },
+  {
     "version": "3.0.126.1",
     "date": "2026-10-17",
     "type": "commit",
