@@ -80,3 +80,12 @@ th:last-child,td:last-child{width:86px}
   .stat{padding:12px}
   .stat strong{font-size:23px}
 }
+
+/* Admin data management actions */
+.row-actions{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.button--small{padding:6px 9px;font-size:12px;min-height:30px}
+.danger-action{color:var(--danger,#c43d4b)}
+.danger-action:hover{background:color-mix(in srgb,var(--danger,#c43d4b) 10%,transparent)}
+.button:disabled{opacity:.45;cursor:not-allowed;pointer-events:none}
+.form-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+@media(max-width:700px){.row-actions{gap:4px}.button--small{padding:6px;font-size:11px}}
