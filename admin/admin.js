@@ -1,5 +1,12 @@
 (()=>{"use strict";const $=s=>document.querySelector(s);
 const AUTH_CONFIG=window.CHI_NAV_AUTH_CONFIG||{};
+const themeToggle=document.getElementById("theme-toggle");
+function applyAdminTheme(mode){const dark=mode==="dark"||(mode==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.dataset.theme=dark?"dark":"light";document.documentElement.dataset.themeMode=mode;const labels={light:"亮色",dark:"暗色",system:"跟隨系統"};const icons={light:"fa-solid fa-sun",dark:"fa-solid fa-moon",system:"fa-solid fa-circle-half-stroke"};if(themeToggle){themeToggle.innerHTML='<i class="'+icons[mode]+'" aria-hidden="true"></i>';themeToggle.title="外觀模式："+labels[mode];themeToggle.setAttribute("aria-label","外觀模式："+labels[mode]+"，點擊切換")}}
+function getAdminTheme(){try{const mode=localStorage.getItem("chi-nav-theme");return ["light","dark","system"].includes(mode)?mode:"system"}catch{return "system"}}
+applyAdminTheme(getAdminTheme());
+themeToggle?.addEventListener("click",()=>{const modes=["light","dark","system"];const next=modes[(modes.indexOf(getAdminTheme())+1)%modes.length];try{localStorage.setItem("chi-nav-theme",next)}catch{}applyAdminTheme(next)});
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",()=>{if(getAdminTheme()==="system")applyAdminTheme("system")});
+
 let authAccessToken=null;
 const authStatus=document.getElementById("auth-status");
 const authLogin=document.getElementById("auth-login");
