@@ -36,7 +36,7 @@ async function route(request,env){
    for(const section of current.data){const groups=Array.isArray(section.list)?section.list:[section];for(const group of groups){for(const link of group.links){if(!link.id){link.id=createId();changed=true}}}}
    if(!changed)return reply({ok:true,changed:false,message:"所有網站已經有穩定 ID。",sha:current.sha});
    const result=await writeData(env,current.data,"Admin: migrate stable site IDs",current.sha);
-   if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。"},409);
+   if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。",code:"DATA_CONFLICT"},409);
    return reply({ok:true,changed:true,count:result.count,sha:result.sha,commit:result.commit});
   }catch(e){return reply({error:e.message||"網站 ID 遷移失敗。"},502)}
  }
@@ -48,10 +48,10 @@ async function route(request,env){
   try{
    const site=cleanSite(await request.json()),current=await readData(env),target=findTarget(current.data,site.taxonomy,site.subcategory);
    if(!target)return reply({error:"找不到指定分類或子分類。"},400);
-   if(hasDuplicate(current.data,site))return reply({error:"相同名稱與網址的網站已存在。"},409);
+   if(hasDuplicate(current.data,site))return reply({error:"相同名稱與網址的網站已存在。",code:"DUPLICATE_SITE"},409);
    const id=createId();target.links.push({id,title:site.title,url:site.url,description:site.description});
    const result=await writeData(env,current.data,"Admin: add site "+site.title,current.sha);
-   if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。"},409);
+   if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。",code:"DATA_CONFLICT"},409);
    return reply({ok:true,site:{...site,id},sha:result.sha,commit:result.commit,count:result.count});
   }catch(e){return reply({error:e.message||"新增網站失敗。"},errorStatus(e))}
  }
@@ -67,13 +67,13 @@ async function route(request,env){
     const site=cleanSite(await request.json()),target=findTarget(current.data,site.taxonomy,site.subcategory);
     if(!target)return reply({error:"找不到指定分類或子分類。"},400);
     
-    if(hasDuplicate(current.data,site,id))return reply({error:"相同名稱與網址的網站已存在。"},409);
+    if(hasDuplicate(current.data,site,id))return reply({error:"相同名稱與網址的網站已存在。",code:"DUPLICATE_SITE"},409);
     auditTitle=site.title;
     if(target!==found.group){found.group.links.splice(found.linkIndex,1);target.links.push({id,title:site.title,url:site.url,description:site.description})}
     else Object.assign(found.link,{title:site.title,url:site.url,description:site.description});
    }
    const result=await writeData(env,current.data,(request.method==="DELETE"?"Admin: delete site ":"Admin: update site ")+auditTitle,current.sha);
-   if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。"},409);
+   if(result.conflict)return reply({error:"資料剛被其他操作更新，請重新載入後再試。",code:"DATA_CONFLICT"},409);
    return reply({ok:true,sha:result.sha,commit:result.commit,count:result.count});
   }catch(e){return reply({error:e.message||"網站資料更新失敗。"},e.message?.startsWith("GitHub 寫入失敗")?502:400)}
  }
