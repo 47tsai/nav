@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.182.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Make NAV API health check verify required configuration",
+    "commit": "1a2b8800ffe3ef69b8bd11d0dd58320f8be29fd0"
+  },
+  {
     "version": "3.0.181.1",
     "date": "2026-10-17",
     "type": "commit",
