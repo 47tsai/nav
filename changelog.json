@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.191.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Distinguish duplicate sites from concurrent data conflicts",
+    "commit": "edd6a3e9405698b1edfbd356dc4be5033564e9b6"
+  },
+  {
     "version": "3.0.190.1",
     "date": "2026-10-17",
     "type": "commit",
