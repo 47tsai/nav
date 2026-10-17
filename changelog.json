@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.150.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Remove duplicate legacy bootstrap script",
+    "commit": "9ef5bdc7a36c913e9f12b40152a957045a346de4"
+  },
+  {
     "version": "3.0.149.1",
     "date": "2026-10-17",
     "type": "commit",

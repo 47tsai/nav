@@ -1,6 +1,6 @@
 {
-  "version": "3.0.149.1",
+  "version": "3.0.150.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Remove obsolete second app manifest"
+  "message": "Remove duplicate legacy bootstrap script"
 }
