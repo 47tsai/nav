@@ -1,6 +1,6 @@
 {
-  "version": "3.0.189.1",
+  "version": "3.0.190.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Expose NAV Admin API status codes for conflict handling"
+  "message": "Handle expired NAV admin sessions and retain API error codes"
 }

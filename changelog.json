@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.190.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Handle expired NAV admin sessions and retain API error codes",
+    "commit": "8f1c63d8fb9f0718364e566439a26c3b37685b5e"
+  },
+  {
     "version": "3.0.189.1",
     "date": "2026-10-17",
     "type": "commit",
