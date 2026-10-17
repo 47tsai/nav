@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.218.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "docs: align admin API setup with deployed workflow",
+    "commit": "ba37e7c12ed304eca28c4de3b0ed186953ac4fe2"
+  },
+  {
     "version": "3.0.217.1",
     "date": "2026-10-17",
     "type": "commit",
