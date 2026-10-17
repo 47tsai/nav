@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.165.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix(admin): align table loading states with action column",
+    "commit": "0fbee1847097938d31e7e9be7fd0151963f5e97f"
+  },
+  {
     "version": "3.0.164.1",
     "date": "2026-10-17",
     "type": "commit",

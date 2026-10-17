@@ -1,6 +1,6 @@
 {
-  "version": "3.0.164.1",
+  "version": "3.0.165.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "fix(admin-api): correct route regular expressions"
+  "message": "fix(admin): align table loading states with action column"
 }
