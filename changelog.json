@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.161.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "config(admin): add Admin API base URL",
+    "commit": "f925fedcef06e60a1148b6978fdc2828d25ebba0"
+  },
+  {
     "version": "3.0.160.1",
     "date": "2026-10-17",
     "type": "commit",

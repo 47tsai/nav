@@ -1,6 +1,6 @@
 {
-  "version": "3.0.160.1",
+  "version": "3.0.161.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "fix(admin-api): preserve existing duplicate links and add stable ID migration"
+  "message": "config(admin): add Admin API base URL"
 }
