@@ -89,3 +89,7 @@ th:last-child,td:last-child{width:86px}
 .button:disabled{opacity:.45;cursor:not-allowed;pointer-events:none}
 .form-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 @media(max-width:700px){.row-actions{gap:4px}.button--small{padding:6px;font-size:11px}}
+/* Chi Auth sign-in keeps the identity service's blue accent in both themes. */
+#auth-login.button--primary{border-color:#4a88fc;background:#4a88fc;color:#071a36}
+#auth-login.button--primary:hover{border-color:#3476e8;background:#3476e8}
+:root[data-theme=dark] #auth-login.button--primary:hover{border-color:#76a7ff;background:#76a7ff}
