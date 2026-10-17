@@ -1,5 +1,5 @@
 {
-  "version": "3.0.144.1",
+  "version": "3.0.145.1",
   "date": "2026-10-17",
   "type": "commit",
   "message": "Remove duplicate legacy new interface files"

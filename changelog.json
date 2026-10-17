@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.145.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Remove duplicate legacy new interface files",
+    "commit": "880f325fd1a6fdac1de667cd8d6a20441b7d914f"
+  },
+  {
     "version": "3.0.144.1",
     "date": "2026-10-17",
     "type": "commit",
