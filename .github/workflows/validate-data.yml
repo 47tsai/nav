@@ -43,4 +43,6 @@ jobs:
         run: |
           find js admin bookmarks -type f -name '*.js' -print0 | xargs -0 -n1 node --check
           node --check worker/admin-api.js
+          node --check worker/admin-api.test.js
+          node --test worker/admin-api.test.js
           node --check sw.js
