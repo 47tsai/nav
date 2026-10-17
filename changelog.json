@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.115.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "feat(nav): copy runtime assets into /new workspace",
+    "commit": "7ccd42df46492fafc6e56323e4453296ad1971a1"
+  },
+  {
     "version": "3.0.114.1",
     "date": "2026-10-17",
     "type": "commit",
