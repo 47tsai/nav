@@ -1,29 +1,65 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
+<!doctype html>
+<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow, noarchive">
-<title>Chi NAV Admin</title>
-<style>
-:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:#f5f6f8}body{margin:0;padding:32px}.panel{max-width:760px;margin:auto;background:#fff;border:1px solid #e1e5ec;border-radius:20px;padding:28px;box-shadow:0 16px 50px #00000012}h1{margin:0 0 6px}.muted{color:#687386;font-size:14px}.grid{display:grid;gap:14px;margin-top:24px}.field{display:grid;gap:6px}.field label{font-size:13px;font-weight:700}.field input,.field select,.field textarea{width:100%;box-sizing:border-box;padding:11px 12px;border:1px solid #dfe4ec;border-radius:10px;background:#fff;font:inherit}.field textarea{min-height:90px;resize:vertical}.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}.actions button{border:0;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:700}.primary{background:#356ae6;color:#fff}.status{min-height:20px;font-size:13px}.back{display:inline-block;margin-bottom:24px;color:#356ae6;text-decoration:none}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#f6f8fc">
+<title>管理中心 · Chi NAV</title>
+<link rel="stylesheet" href="admin.css">
 </head>
 <body>
-<main class="panel">
-<a class="back" href="../">← 返回 NAV</a>
-<h1>Chi NAV Admin</h1>
-<p class="muted">管理入口。提交操作仍需要 Admin Secret，請勿將密鑰分享給他人。</p>
-<form id="quick-add" class="grid" novalidate>
-<div class="field"><label for="title">網站名稱</label><input id="title" name="title" placeholder="例如：Speedtest"></div>
-<div class="field"><label for="url">網址</label><input id="url" name="url" type="url" placeholder="https://example.com"></div>
-<div class="field"><label for="taxonomy">分類</label><select id="taxonomy" name="taxonomy"></select></div>
-<div class="field"><label for="subcategory">子分類</label><select id="subcategory" name="subcategory"></select></div>
-<div class="field"><label for="description">描述</label><textarea id="description" name="description" placeholder="簡短描述網站用途"></textarea></div>
-<div class="actions"><button type="submit" class="primary">新增網站</button></div>
-<div id="status" class="status" aria-live="polite"></div>
+<div class="admin-app">
+<aside class="rail" aria-label="管理導覽">
+<a class="brand" href="/" aria-label="返回 Chi NAV"><span class="brand-mark">C</span><span class="brand-label"><strong>Chi NAV</strong><small>ADMIN CONSOLE</small></span></a>
+<div class="rail-label">管理</div>
+<nav class="rail-nav">
+<a class="rail-link is-active" href="#overview" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>總覽</span></a>
+<a class="rail-link" href="#sites"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg><span>網站清單</span></a>
+<a class="rail-link" href="#add-site"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>新增網站</span></a>
+</nav>
+<div class="rail-bottom"><span class="status-dot"></span><span>資料來源正常時會顯示最新狀態</span></div>
+</aside>
+<main class="workspace">
+<header class="topbar">
+<div class="crumbs"><a href="/">Chi NAV</a><span>/</span><span>管理中心</span></div>
+<div class="topbar-actions"><span class="auth-status"><span class="status-dot status-dot--muted"></span>Chi Auth 尚未接通</span><a class="button button--quiet" href="/">返回前台</a></div>
+</header>
+<div class="page" id="overview">
+<section class="page-heading">
+<div><p class="eyebrow">WORKSPACE / ADMIN</p><h1>管理中心</h1><p class="subtitle">管理 NAV 網站資料、分類與內容更新。</p></div>
+<div class="heading-actions"><button class="button button--primary" type="button" id="jump-add"><svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> 新增網站</button></div>
+</section>
+<section class="notice" aria-label="認證整合狀態"><span class="notice-icon" aria-hidden="true">i</span><div><strong>Chi Auth 整合準備中</strong><p>目前先建立管理介面與資料檢視。待註冊此應用的 OAuth Client、設定正式 callback，並完成權限驗證後，才會開放寫入操作。這個頁面不會要求或儲存 Admin Secret。</p></div><span class="chi-badge">AUTH PENDING</span></section>
+<section class="stats" aria-label="資料摘要">
+<article class="stat"><span class="stat-label">網站總數</span><strong id="stat-sites">--</strong><span class="stat-note">目前資料集中的連結</span></article>
+<article class="stat"><span class="stat-label">分類數</span><strong id="stat-categories">--</strong><span class="stat-note">主要導覽分類</span></article>
+<article class="stat"><span class="stat-label">子分類數</span><strong id="stat-subcategories">--</strong><span class="stat-note">含巢狀分類</span></article>
+<article class="stat"><span class="stat-label">資料狀態</span><strong class="stat-state" id="stat-status">讀取中</strong><span class="stat-note" id="stat-updated">正在取得最新資料</span></article>
+</section>
+<section class="section" id="sites">
+<div class="section-heading"><div><p class="eyebrow">CONTENT</p><h2>網站清單</h2><p class="section-description">檢視目前 NAV 的網站資料，支援搜尋與分類篩選。</p></div><span class="result-count" id="result-count">0 筆</span></div>
+<div class="toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input id="site-search" type="search" placeholder="搜尋名稱、網址、描述…" autocomplete="off"><kbd>/</kbd></label><label class="filter-field"><span>分類</span><select id="category-filter"><option value="">全部分類</option></select></label></div>
+<div class="table-wrap"><table><thead><tr><th>網站</th><th>分類</th><th>網址</th><th>狀態</th></tr></thead><tbody id="site-rows"><tr><td colspan="4" class="table-message">正在載入網站資料…</td></tr></tbody></table></div>
+<div class="empty-state" id="empty-state" hidden><strong>沒有符合條件的網站</strong><p>試試其他關鍵字或切換分類。</p></div>
+</section>
+<section class="section add-section" id="add-site">
+<div class="section-heading"><div><p class="eyebrow">CONTENT MANAGEMENT</p><h2>新增網站</h2><p class="section-description">先填寫資料；認證與後端寫入流程完成後再啟用提交。</p></div><span class="chi-badge chi-badge--warning">尚未開放寫入</span></div>
+<form id="add-form" class="form-panel">
+<div class="form-grid">
+<label class="field"><span>網站名稱 <b>*</b></span><input name="title" required maxlength="80" placeholder="例如：Speedtest"></label>
+<label class="field"><span>網址 <b>*</b></span><input name="url" required type="url" placeholder="https://example.com"></label>
+<label class="field"><span>分類 <b>*</b></span><select name="taxonomy" id="add-taxonomy" required><option value="">先載入分類…</option></select></label>
+<label class="field"><span>子分類</span><select name="subcategory" id="add-subcategory"><option value="">請先選擇分類</option></select></label>
+<label class="field field--wide"><span>描述</span><textarea name="description" rows="3" maxlength="240" placeholder="簡短描述網站用途"></textarea></label>
+</div>
+<div class="form-footer"><p id="form-status" role="status">表單目前為預覽模式，提交不會寫入資料。</p><button class="button button--primary" type="submit">預覽新增資料</button></div>
 </form>
+</section>
+<footer class="footer"><span>CHI NAV / ADMIN CONSOLE</span><span id="footer-version">管理介面預覽</span></footer>
+</div>
 </main>
-<script src="quick-add.js"></script>
+</div>
+<script src="admin.js"></script>
 </body>
 </html>
