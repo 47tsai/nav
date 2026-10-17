@@ -215,10 +215,10 @@ html[data-theme="dark"] .card:has(a[href*="auth.chi.qzz.io"]) .card-logo-contain
   font-size:12px;font-weight:650;letter-spacing:.2px;
   transition:background var(--chi-transition),border-color var(--chi-transition),color var(--chi-transition);
 }
-.sidebar-admin-link>i:first-child{width:16px;text-align:center;font-size:13px;color:var(--chi-color-primary)}
+.sidebar-admin-link>i:first-child{width:16px;text-align:center;font-size:13px;color:var(--chi-color-accent)}
 .sidebar-admin-link:hover,.sidebar-admin-link:focus-visible{
-  color:var(--chi-color-text);background:var(--chi-color-primary-soft);
-  border-color:var(--chi-color-primary);outline:none;
+  color:var(--chi-color-text);background:var(--chi-color-accent-soft);
+  border-color:var(--chi-color-accent);outline:none;
 }
 .sidebar-admin-link .admin-link-external{margin-left:auto;font-size:10px;color:var(--chi-color-text-subtle);opacity:.7}
 .sidebar.collapsed .sidebar-admin-link{justify-content:center;padding:11px 8px}
