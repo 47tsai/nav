@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.220.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "style(nav): match Chi Auth sign-in accent in dark mode",
+    "commit": "7b183e6a6ce1b2f09b113b6bee4b4fba68f7bcfa"
+  },
+  {
     "version": "3.0.219.1",
     "date": "2026-10-17",
     "type": "commit",
