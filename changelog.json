@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.168.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "fix(admin-api): allow editing repeated links in existing categories",
+    "commit": "82f80277fe09987352a49d58c6efa79c74fe533f"
+  },
+  {
     "version": "3.0.167.1",
     "date": "2026-10-17",
     "type": "commit",

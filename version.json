@@ -1,6 +1,6 @@
 {
-  "version": "3.0.167.1",
+  "version": "3.0.168.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "feat(admin): add automated Worker deployment workflow"
+  "message": "fix(admin-api): allow editing repeated links in existing categories"
 }
