@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.136.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Use valid design tokens for admin shortcut",
+    "commit": "8fbe573a9ae4a8c2d46cfb9bb50dc4b4ce9b115e"
+  },
+  {
     "version": "3.0.135.1",
     "date": "2026-10-17",
     "type": "commit",

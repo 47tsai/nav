@@ -1,6 +1,6 @@
 {
-  "version": "3.0.135.1",
+  "version": "3.0.136.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Style admin shortcut in main sidebar"
+  "message": "Use valid design tokens for admin shortcut"
 }
