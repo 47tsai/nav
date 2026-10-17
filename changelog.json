@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.139.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Add consolidated NAV design stylesheet",
+    "commit": "332f511e153b8e259707f0dbe4fca01558e5ff4b"
+  },
+  {
     "version": "3.0.138.1",
     "date": "2026-10-17",
     "type": "commit",
