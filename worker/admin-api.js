@@ -24,7 +24,7 @@ async function route(request,env){
   return new Response(null,{status:204,headers:corsHeaders(origin)});
  }
  if(origin&&!ALLOWED_ORIGINS.has(origin))return reply({error:"Origin not allowed."},403);
- if(path==="/health"&&request.method==="GET")return reply({ok:true,service:"chi-nav-admin-api",version:1});
+ if(path==="/health"&&request.method==="GET"){const configured={githubToken:Boolean(env.NAV_GITHUB_TOKEN),chiAuthClientId:Boolean(env.CHI_AUTH_CLIENT_ID)};const ready=configured.githubToken&&configured.chiAuthClientId;return reply({ok:ready,service:"chi-nav-admin-api",version:1,configured},ready?200:503)}
  if(!path.startsWith("/api/admin/"))return reply({error:"Not found."},404);
  if(!env.NAV_GITHUB_TOKEN)return reply({error:"後端尚未設定 GitHub 寫入 Token。"},503);
  const auth=await authenticate(request,env);
