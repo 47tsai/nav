@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.193.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Improve admin API network error feedback",
+    "commit": "052f28796af2cac2822c85936d415275b33a9672"
+  },
+  {
     "version": "3.0.192.1",
     "date": "2026-10-17",
     "type": "commit",
