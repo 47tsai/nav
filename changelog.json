@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.200.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Verify GitHub connectivity in health checks",
+    "commit": "c3f1d279a3d41ee0bd86fecd60cc31e38b3946d7"
+  },
+  {
     "version": "3.0.199.1",
     "date": "2026-10-17",
     "type": "commit",
