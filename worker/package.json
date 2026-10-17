@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check admin-api.js",
-    "deploy": "wrangler deploy"
+    "check": "node --check admin-api.js && node --check admin-api.test.js",
+    "deploy": "wrangler deploy",
+    "test": "node --test admin-api.test.js"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
