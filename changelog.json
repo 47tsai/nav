@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.216.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "test: reject stale revisions for site edits and deletes",
+    "commit": "61bb1cbafa88d41cd428e07b7ca07db92659dc02"
+  },
+  {
     "version": "3.0.215.1",
     "date": "2026-10-17",
     "type": "commit",
