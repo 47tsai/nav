@@ -1,6 +1,6 @@
 {
-  "version": "3.0.165.1",
+  "version": "3.0.166.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "fix(admin): align table loading states with action column"
+  "message": "feat(admin): add automated Worker deployment workflow"
 }

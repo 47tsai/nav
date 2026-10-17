@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.166.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "feat(admin): add automated Worker deployment workflow",
+    "commit": "494fdbf837fe4d1ceb6af7e6961127b3a2052d49"
+  },
+  {
     "version": "3.0.165.1",
     "date": "2026-10-17",
     "type": "commit",
