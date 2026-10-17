@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.126.1",
+    "date": "2026-10-17",
+    "type": "commit",
+    "message": "Add Chi Auth sign-in controls to NAV admin",
+    "commit": "4a1397ee54d0a9d42eeb0933255e260e33d4314e"
+  },
+  {
     "version": "3.0.125.1",
     "date": "2026-10-17",
     "type": "commit",

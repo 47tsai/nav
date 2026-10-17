@@ -1,6 +1,6 @@
 {
-  "version": "3.0.125.1",
+  "version": "3.0.126.1",
   "date": "2026-10-17",
   "type": "commit",
-  "message": "Publish NAV admin data browser and preview validation"
+  "message": "Add Chi Auth sign-in controls to NAV admin"
 }
