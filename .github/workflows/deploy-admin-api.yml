@@ -18,7 +18,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' && secrets.NAV_GITHUB_TOKEN != '' && secrets.CHI_AUTH_CLIENT_ID != '' }}
+    if: ${{ vars.DEPLOY_NAV_ADMIN_API == 'true' }}
     defaults:
       run:
         working-directory: worker
