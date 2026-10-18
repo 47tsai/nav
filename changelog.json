@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.233.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "Expose original website URL on navigation cards",
+    "commit": "fbb768e4d167909efd523dc0a180ff856896d69b"
+  },
+  {
     "version": "3.0.232.1",
     "date": "2026-10-18",
     "type": "commit",

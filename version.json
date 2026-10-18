@@ -1,6 +1,6 @@
 {
-  "version": "3.0.232.1",
+  "version": "3.0.233.1",
   "date": "2026-10-18",
   "type": "commit",
-  "message": "Remove obsolete legacy quick-add endpoint client"
+  "message": "Expose original website URL on navigation cards"
 }
