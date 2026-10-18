@@ -311,6 +311,38 @@ test("site creation rejects a stale client data revision before writing", async 
 
 
 
+test("site creation rejects non-string fields before reading or writing GitHub data", async () => {
+  for (const site of [
+    { title: 123, url: "https://new-example.com", description: "測試", taxonomy: "工具", subcategory: "" },
+    { title: "New Example", url: "https://new-example.com", description: { text: "測試" }, taxonomy: "工具", subcategory: "" },
+    { title: "New Example", url: "https://new-example.com", description: "測試", taxonomy: "工具", subcategory: ["工具"] }
+  ]) {
+    let githubCalls = 0;
+    await withFetch(async (input) => {
+      if (String(input).startsWith("https://auth.chi.qzz.io/")) {
+        return new Response(JSON.stringify({ sub: "chi-owner", aud: clientId }), {
+          status: 200, headers: { "Content-Type": "application/json" }
+        });
+      }
+      githubCalls++;
+      return new Response(JSON.stringify({ message: "unexpected GitHub request" }), { status: 500 });
+    }, async () => {
+      const response = await worker.fetch(new Request("https://api.test/api/admin/sites", {
+        method: "POST",
+        headers: {
+          Origin: origin,
+          Authorization: "Bearer " + "a".repeat(48),
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(site)
+      }), env);
+      assert.equal(response.status, 400);
+      assert.match((await response.json()).error, /必須是文字/);
+      assert.equal(githubCalls, 0, "invalid fields must be rejected before GitHub access");
+    });
+  }
+});
+
 test("site creation reports GitHub response-body read failures as upstream errors", async () => {
   const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(validData))));
   await withFetch(async (input, init = {}) => {
