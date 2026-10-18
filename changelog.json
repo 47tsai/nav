@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.224.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "test: cover interrupted GitHub response streams",
+    "commit": "56e7322388f145672e7ab5b317f11b7b89d780ce"
+  },
+  {
     "version": "3.0.223.1",
     "date": "2026-10-18",
     "type": "commit",
