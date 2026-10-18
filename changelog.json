@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.230.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "test: cover duplicate NAV category names",
+    "commit": "fa5efa06b08054b42160daf23df56a148e12b238"
+  },
+  {
     "version": "3.0.229.1",
     "date": "2026-10-18",
     "type": "commit",

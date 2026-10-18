@@ -1,6 +1,6 @@
 {
-  "version": "3.0.229.1",
+  "version": "3.0.230.1",
   "date": "2026-10-18",
   "type": "commit",
-  "message": "fix: reject duplicate NAV category names"
+  "message": "test: cover duplicate NAV category names"
 }
