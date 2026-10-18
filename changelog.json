@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.227.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "fix: validate NAV category structure strictly",
+    "commit": "22ca8ffb19cd7b0dfb67198d3dfdd129d5674049"
+  },
+  {
     "version": "3.0.226.1",
     "date": "2026-10-18",
     "type": "commit",

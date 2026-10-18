@@ -1,6 +1,6 @@
 {
-  "version": "3.0.226.1",
+  "version": "3.0.227.1",
   "date": "2026-10-18",
   "type": "commit",
-  "message": "test: reject malformed admin site field types"
+  "message": "fix: validate NAV category structure strictly"
 }
