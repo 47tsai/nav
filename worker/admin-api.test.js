@@ -409,3 +409,25 @@ test("site creation reports GitHub network outages as upstream errors", async ()
     assert.equal(githubReads, 2);
   });
 });
+
+
+test("health rejects malformed category list and subcategory terms", async () => {
+  const invalidDatasets = [
+    [{ taxonomy: "工具", list: "not-an-array", links: [] }],
+    [{ taxonomy: "工具", list: [{ term: " ", links: [] }] }],
+    [{ taxonomy: "工具", list: [{ term: 123, links: [] }] }],
+    [{ taxonomy: "工具", list: [{ term: "x".repeat(81), links: [] }] }]
+  ];
+  for (const invalidData of invalidDatasets) {
+    const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(invalidData))));
+    await withFetch(async () => new Response(JSON.stringify({
+      type: "file", sha: "invalid-shape", content: encoded
+    }), { status: 200 }), async () => {
+      const response = await worker.fetch(new Request("https://api.test/health"), env);
+      const body = await response.json();
+      assert.equal(response.status, 503);
+      assert.equal(body.ok, false);
+      assert.equal(body.github.ok, false);
+    });
+  }
+});
