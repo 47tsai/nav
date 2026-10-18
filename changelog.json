@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.237.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "fix: apply Nav logo variants to admin",
+    "commit": "bfdbb089913dbcc67cd52f5dcaf158cc3a37b964"
+  },
+  {
     "version": "3.0.236.1",
     "date": "2026-10-18",
     "type": "commit",
