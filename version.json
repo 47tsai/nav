@@ -1,6 +1,6 @@
 {
-  "version": "3.0.222.1",
+  "version": "3.0.223.1",
   "date": "2026-10-18",
   "type": "commit",
-  "message": "test: cover GitHub write network failures"
+  "message": "fix: classify interrupted GitHub response reads as upstream errors"
 }

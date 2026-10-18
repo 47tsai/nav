@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.223.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "fix: classify interrupted GitHub response reads as upstream errors",
+    "commit": "cd15d34c2ba92574950b74eed7c1c0033c122ab3"
+  },
+  {
     "version": "3.0.222.1",
     "date": "2026-10-18",
     "type": "commit",
