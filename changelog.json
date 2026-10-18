@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.236.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "chore: surface safe Chi Auth failure-stage diagnostics",
+    "commit": "a8e73823c8eda6705de7a2e562a562cb03d96604"
+  },
+  {
     "version": "3.0.235.1",
     "date": "2026-10-18",
     "type": "commit",
