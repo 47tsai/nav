@@ -21,12 +21,15 @@ if (!Array.isArray(data)) {
   process.exit(1);
 }
 
+const normalizeName = value => value.trim().toLocaleLowerCase();
+
 const addLink = (link, location) => {
   linkCount++;
   if (!link || typeof link !== 'object' || Array.isArray(link)) {
     errors.push(`${location}: 連結項目必須是物件`);
     return;
   }
+
   if (link.id != null) {
     if (typeof link.id !== 'string' || !link.id.trim()) {
       errors.push(`${location}: id 必須是非空字串`);
@@ -36,16 +39,18 @@ const addLink = (link, location) => {
       seenIds.add(link.id);
     }
   }
-  if (typeof link.title !== 'string' || !link.title.trim()) {
-    errors.push(`${location}: 缺少有效 title`);
+
+  if (typeof link.title !== 'string' || !link.title.trim() || link.title.length > 80) {
+    errors.push(`${location}: title 必須是 1 到 80 個字元的非空字串`);
   }
+
   if (typeof link.url !== 'string' || !link.url.trim()) {
-    if (!link.is_copy) errors.push(`${location}: 缺少有效 url`);
+    errors.push(`${location}: url 必須是有效的 HTTP 或 HTTPS 網址`);
   } else {
     try {
-      const url = new URL(link.url);
-      if (!['http:', 'https:'].includes(url.protocol)) {
-        errors.push(`${location}: 不支援的 URL 協定 ${url.protocol}`);
+      const url = new URL(link.url.trim());
+      if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password) {
+        errors.push(`${location}: url 僅接受不含帳號密碼的 HTTP 或 HTTPS 網址`);
       } else {
         const normalized = url.href.replace(/\/$/, '');
         if (seenUrls.has(normalized)) {
@@ -58,8 +63,11 @@ const addLink = (link, location) => {
       errors.push(`${location}: URL 格式無效：${link.url}`);
     }
   }
+
   if (link.description != null && typeof link.description !== 'string') {
     errors.push(`${location}: description 必須是字串`);
+  } else if ((link.description ?? '').length > 240) {
+    errors.push(`${location}: description 不得超過 240 個字元`);
   }
 };
 
@@ -70,17 +78,24 @@ data.forEach((section, i) => {
     errors.push(`${where}: 分類必須是物件`);
     return;
   }
+
   if (typeof section.taxonomy !== 'string' || !section.taxonomy.trim()) {
-    errors.push(`${where}: 缺少 taxonomy`);
-  } else if (taxonomies.has(section.taxonomy)) {
-    warnings.push(`分類名稱重複：${section.taxonomy}`);
+    errors.push(`${where}: 缺少有效 taxonomy`);
   } else {
-    taxonomies.add(section.taxonomy);
+    const taxonomyKey = normalizeName(section.taxonomy);
+    if (taxonomies.has(taxonomyKey)) {
+      errors.push(`${where}: 主要分類名稱重複：${section.taxonomy}`);
+    } else {
+      taxonomies.add(taxonomyKey);
+    }
   }
 
-  if (Array.isArray(section.links)) {
-    section.links.forEach((link, j) => addLink(link, `${where}.links[${j}]`));
-  } else if (Array.isArray(section.list)) {
+  if (Object.prototype.hasOwnProperty.call(section, 'list') && !Array.isArray(section.list)) {
+    errors.push(`${where}.list: 必須是陣列`);
+    return;
+  }
+
+  if (Array.isArray(section.list)) {
     const terms = new Set();
     section.list.forEach((group, j) => {
       const groupWhere = `${where}.list[${j}]`;
@@ -88,19 +103,26 @@ data.forEach((section, i) => {
         errors.push(`${groupWhere}: 子分類必須是物件`);
         return;
       }
-      if (typeof group.term !== 'string' || !group.term.trim()) {
-        errors.push(`${groupWhere}: 缺少 term`);
-      } else if (terms.has(group.term)) {
-        warnings.push(`${where}: 子分類名稱重複：${group.term}`);
+
+      if (typeof group.term !== 'string' || !group.term.trim() || group.term.length > 80) {
+        errors.push(`${groupWhere}: term 必須是 1 到 80 個字元的非空字串`);
       } else {
-        terms.add(group.term);
+        const termKey = normalizeName(group.term);
+        if (terms.has(termKey)) {
+          errors.push(`${where}: 子分類名稱重複：${group.term}`);
+        } else {
+          terms.add(termKey);
+        }
       }
+
       if (!Array.isArray(group.links)) {
         errors.push(`${groupWhere}.links: 必須是陣列`);
         return;
       }
       group.links.forEach((link, k) => addLink(link, `${groupWhere}.links[${k}]`));
     });
+  } else if (Array.isArray(section.links)) {
+    section.links.forEach((link, j) => addLink(link, `${where}.links[${j}]`));
   } else {
     errors.push(`${where}: 必須包含 links 或 list 陣列`);
   }
