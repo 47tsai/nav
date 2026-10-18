@@ -1,6 +1,6 @@
 {
-  "version": "3.0.231.1",
+  "version": "3.0.232.1",
   "date": "2026-10-18",
   "type": "commit",
-  "message": "Align dataset validation with admin API"
+  "message": "Remove obsolete legacy quick-add endpoint client"
 }

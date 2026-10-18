@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.232.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "Remove obsolete legacy quick-add endpoint client",
+    "commit": "9c8ddea20fb1ec54385e9952f66201fb88fc1b79"
+  },
+  {
     "version": "3.0.231.1",
     "date": "2026-10-18",
     "type": "commit",
