@@ -1,6 +1,6 @@
 {
-  "version": "3.0.225.1",
+  "version": "3.0.226.1",
   "date": "2026-10-18",
   "type": "commit",
-  "message": "fix: validate admin site fields without coercing invalid types"
+  "message": "test: reject malformed admin site field types"
 }

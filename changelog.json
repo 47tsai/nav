@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.226.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "test: reject malformed admin site field types",
+    "commit": "8c0220071ef582554af2a670c46cf37ba778b588"
+  },
+  {
     "version": "3.0.225.1",
     "date": "2026-10-18",
     "type": "commit",
