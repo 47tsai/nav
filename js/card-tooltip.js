@@ -2,12 +2,7 @@ document.addEventListener('mouseover', e => {
   const card = e.target.closest('.card');
   if (!card || card.contains(e.relatedTarget)) return;
   if (card.dataset.copy === '1') return;
-  let url = '';
-  try {
-    url = decodeURIComponent(card.dataset.key || '');
-  } catch {
-    url = card.dataset.key || '';
-  }
+  const url = card.dataset.url || '';
   if (!url || url === 'javascript:void(0);') return;
   let tooltip = card.querySelector('.card-url-tooltip');
   if (!tooltip) {
