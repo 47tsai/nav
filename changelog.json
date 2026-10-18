@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.238.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "fix: switch Nav admin logo by theme",
+    "commit": "8c90080b837dea7fd3b27136de83c3294a803891"
+  },
+  {
     "version": "3.0.237.1",
     "date": "2026-10-18",
     "type": "commit",
