@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.235.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "Use original URL for card hover tooltip",
+    "commit": "d7983a2b22122e8fd77f7e5d125b42e37bd78bca"
+  },
+  {
     "version": "3.0.234.1",
     "date": "2026-10-18",
     "type": "commit",
