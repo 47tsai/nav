@@ -1,6 +1,6 @@
 {
-  "version": "3.0.239.1",
+  "version": "3.0.240.1",
   "date": "2026-10-18",
   "type": "commit",
-  "message": "fix: add Nav admin favicon"
+  "message": "fix: use black-w PNG for Nav favicon"
 }
