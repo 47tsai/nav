@@ -13,7 +13,9 @@
 .brand{gap:12px;min-height:52px;padding:0 9px 28px}
 .brand-mark{width:39px;height:39px;flex:0 0 39px;overflow:hidden;border:1px solid var(--border);border-radius:11px;background:var(--accent-soft);color:var(--accent)}
 .brand-mark img{width:29px;height:29px;object-fit:contain}
-:root[data-theme=dark] .brand-mark img{filter:invert(1)}
+.brand-mark .brand-icon-dark{display:none}
+:root[data-theme=dark] .brand-mark .brand-icon-light{display:none}
+:root[data-theme=dark] .brand-mark .brand-icon-dark{display:block}
 .brand-label small{letter-spacing:1.45px;font-size:9px}
 .rail-label{letter-spacing:1.4px;text-transform:uppercase}
 .rail-link{min-height:42px;border:1px solid transparent;border-radius:8px}
