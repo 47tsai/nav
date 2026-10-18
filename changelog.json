@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.228.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "test: reject malformed NAV category structures",
+    "commit": "fbfd5c8424960741c4610e67aac4b57f8fb25831"
+  },
+  {
     "version": "3.0.227.1",
     "date": "2026-10-18",
     "type": "commit",

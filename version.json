@@ -1,6 +1,6 @@
 {
-  "version": "3.0.227.1",
+  "version": "3.0.228.1",
   "date": "2026-10-18",
   "type": "commit",
-  "message": "fix: validate NAV category structure strictly"
+  "message": "test: reject malformed NAV category structures"
 }
