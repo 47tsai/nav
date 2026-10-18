@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.231.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "Align dataset validation with admin API",
+    "commit": "e37e1566f3ffbf609d43ae65c0ea8e27493870ef"
+  },
+  {
     "version": "3.0.230.1",
     "date": "2026-10-18",
     "type": "commit",
