@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.225.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "fix: validate admin site fields without coercing invalid types",
+    "commit": "88f0fbdd711a080c07f53b027cf2c2c4f09e9a39"
+  },
+  {
     "version": "3.0.224.1",
     "date": "2026-10-18",
     "type": "commit",
