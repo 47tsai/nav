@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.234.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "Load dedicated website URL tooltip styles",
+    "commit": "a2d6ebeef26ce9e773c4944c80452108c911a5e0"
+  },
+  {
     "version": "3.0.233.1",
     "date": "2026-10-18",
     "type": "commit",
