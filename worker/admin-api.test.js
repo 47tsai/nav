@@ -309,3 +309,39 @@ test("site creation rejects a stale client data revision before writing", async 
   });
 });
 
+
+
+test("site creation reports GitHub network outages as upstream errors", async () => {
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(validData))));
+  let githubReads = 0;
+  await withFetch(async (input, init = {}) => {
+    const url = String(input);
+    if (url.startsWith("https://auth.chi.qzz.io/")) {
+      return new Response(JSON.stringify({ sub: "chi-owner", aud: clientId }), {
+        status: 200, headers: { "Content-Type": "application/json" }
+      });
+    }
+    if (init.method === "PUT") throw new TypeError("connect ECONNRESET");
+    githubReads++;
+    return new Response(JSON.stringify({
+      type: "file", sha: "stable-sha", content: encoded
+    }), { status: 200, headers: { "Content-Type": "application/json" } });
+  }, async () => {
+    const response = await worker.fetch(new Request("https://api.test/api/admin/sites", {
+      method: "POST",
+      headers: {
+        Origin: origin,
+        Authorization: "Bearer " + "a".repeat(48),
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        title: "New Example", url: "https://new-example.com", description: "測試",
+        taxonomy: "工具", subcategory: ""
+      })
+    }), env);
+    const body = await response.json();
+    assert.equal(response.status, 502);
+    assert.match(body.error, /GitHub 連線失敗/);
+    assert.equal(githubReads, 2);
+  });
+});
