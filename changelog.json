@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.239.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "fix: add Nav admin favicon",
+    "commit": "66c0b1512242c33ab8b637a2b902dfbaa6a47cb9"
+  },
+  {
     "version": "3.0.238.1",
     "date": "2026-10-18",
     "type": "commit",
