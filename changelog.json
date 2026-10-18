@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.221.1",
+    "date": "2026-10-18",
+    "type": "commit",
+    "message": "fix: report GitHub network outages as upstream errors",
+    "commit": "7e7eb776e5d43afbce46430424ab7f520cfb4ae4"
+  },
+  {
     "version": "3.0.220.1",
     "date": "2026-10-17",
     "type": "commit",

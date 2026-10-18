@@ -1,6 +1,6 @@
 {
-  "version": "3.0.220.1",
-  "date": "2026-10-17",
+  "version": "3.0.221.1",
+  "date": "2026-10-18",
   "type": "commit",
-  "message": "style(nav): match Chi Auth sign-in accent in dark mode"
+  "message": "fix: report GitHub network outages as upstream errors"
 }
