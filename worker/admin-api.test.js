@@ -311,6 +311,38 @@ test("site creation rejects a stale client data revision before writing", async 
 
 
 
+test("site creation reports GitHub response-body read failures as upstream errors", async () => {
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(validData))));
+  await withFetch(async (input, init = {}) => {
+    const url = String(input);
+    if (url.startsWith("https://auth.chi.qzz.io/")) {
+      return new Response(JSON.stringify({ sub: "chi-owner", aud: clientId }), {
+        status: 200, headers: { "Content-Type": "application/json" }
+      });
+    }
+    if (init.method === "PUT") {
+      return new Response(new ReadableStream({ start(controller) { controller.error(new Error("response stream interrupted")); } }), { status: 200 });
+    }
+    return new Response(JSON.stringify({ type: "file", sha: "stable-sha", content: encoded }), { status: 200 });
+  }, async () => {
+    const response = await worker.fetch(new Request("https://api.test/api/admin/sites", {
+      method: "POST",
+      headers: {
+        Origin: origin,
+        Authorization: "Bearer " + "a".repeat(48),
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        title: "New Example", url: "https://new-example.com", description: "測試",
+        taxonomy: "工具", subcategory: ""
+      })
+    }), env);
+    const body = await response.json();
+    assert.equal(response.status, 502);
+    assert.match(body.error, /GitHub 連線失敗/);
+  });
+});
+
 test("site creation reports GitHub network outages as upstream errors", async () => {
   const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(validData))));
   let githubReads = 0;
