@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.242.1",
+    "date": "2026-10-19",
+    "type": "commit",
+    "message": "Admin: add site cron-job.org",
+    "commit": "95a84192b5ecba281c6b0b25802dfbb8df466b43"
+  },
+  {
     "version": "3.0.241.1",
     "date": "2026-10-18",
     "type": "commit",

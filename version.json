@@ -1,6 +1,6 @@
 {
-  "version": "3.0.241.1",
-  "date": "2026-10-18",
+  "version": "3.0.242.1",
+  "date": "2026-10-19",
   "type": "commit",
-  "message": "fix: use black-w favicon on Nav legacy redirect"
+  "message": "Admin: add site cron-job.org"
 }
