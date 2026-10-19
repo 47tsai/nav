@@ -383,6 +383,12 @@
             "url": "https://github.com/",
             "description": "程式碼託管",
             "id": "nav_e03945f1-3d74-4aa0-9c1d-a909984592b4"
+          },
+          {
+            "id": "nav_dc16ed0b-74ec-4f44-907e-0436f7a9cfd4",
+            "title": "cron-job.org",
+            "url": "https://console.cron-job.org/dashboard",
+            "description": "自動化任務服務"
           }
         ]
       },
