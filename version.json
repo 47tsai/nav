@@ -1,6 +1,6 @@
 {
-  "version": "3.0.242.1",
-  "date": "2026-10-19",
+  "version": "3.0.243.1",
+  "date": "2026-10-25",
   "type": "commit",
-  "message": "Admin: add site cron-job.org"
+  "message": "Add Pokémon Trainer Central rewards link"
 }

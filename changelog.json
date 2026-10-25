@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.243.1",
+    "date": "2026-10-25",
+    "type": "commit",
+    "message": "Add Pokémon Trainer Central rewards link",
+    "commit": "04227d2f59e43c5149339107634be9e6b7279605"
+  },
+  {
     "version": "3.0.242.1",
     "date": "2026-10-19",
     "type": "commit",
