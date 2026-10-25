@@ -666,6 +666,12 @@
             "url": "https://pogocoordinates.com/search",
             "description": "寶可夢座標",
             "id": "nav_cefc5c95-8413-44fe-b927-33034347606e"
+          },
+          {
+            "title": "寶可夢獎勵",
+            "url": "https://trainer.pokemon.com/rewards/my-rewards",
+            "description": "領取 Pokémon Trainer Central 獎勵與 Twitch Drops",
+            "id": "nav_8f31c7d2-5b64-4e2a-9c10-7a6d2e51b903"
           }
         ]
       },
