@@ -1,6 +1,6 @@
 {
-  "version": "3.0.243.1",
-  "date": "2026-10-25",
+  "version": "3.0.244.1",
+  "date": "2026-10-29",
   "type": "commit",
-  "message": "Add Pokémon Trainer Central rewards link"
+  "message": "Add blank README for username rename preparation"
 }

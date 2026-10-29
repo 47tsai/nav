@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.244.1",
+    "date": "2026-10-29",
+    "type": "commit",
+    "message": "Add blank README for username rename preparation",
+    "commit": "d99f8c4e13e830edab5c83960eb20cfdf93521d8"
+  },
+  {
     "version": "3.0.243.1",
     "date": "2026-10-25",
     "type": "commit",
