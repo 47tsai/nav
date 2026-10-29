@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.245.1",
+    "date": "2026-10-29",
+    "type": "commit",
+    "message": "Remove accidental blank README",
+    "commit": "5523c1c47dc5700c432830782a648cfc5956d573"
+  },
+  {
     "version": "3.0.244.1",
     "date": "2026-10-29",
     "type": "commit",
