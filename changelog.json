@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.248.1",
+    "date": "2026-10-30",
+    "type": "commit",
+    "message": "chore: update GitHub username references",
+    "commit": "6676c4b9bb47cbd872568df2d274cd9a5d472191"
+  },
+  {
     "version": "3.0.247.1",
     "date": "2026-10-30",
     "type": "commit",
