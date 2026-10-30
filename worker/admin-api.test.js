@@ -6,7 +6,7 @@ const origin = "https://nav.chi.qzz.io";
 const clientId = "test-client";
 const validData = [{ taxonomy: "工具", links: [{ title: "Example", url: "https://example.com", description: "測試" }] }];
 const encodedData = btoa(unescape(encodeURIComponent(JSON.stringify(validData))));
-const env = { NAV_GITHUB_TOKEN: "test-token", CHI_AUTH_CLIENT_ID: clientId, GITHUB_REPOSITORY: "tsai97216/nav", GITHUB_BRANCH: "main" };
+const env = { NAV_GITHUB_TOKEN: "test-token", CHI_AUTH_CLIENT_ID: clientId, GITHUB_REPOSITORY: "47tsai/nav", GITHUB_BRANCH: "main" };
 
 async function withFetch(mock, fn) {
   const original = globalThis.fetch;
