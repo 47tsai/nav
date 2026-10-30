@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.250.1",
+    "date": "2026-10-30",
+    "type": "commit",
+    "message": "Delete new directory",
+    "commit": "386be1d177043e3fc092f051ecc2f29152964851"
+  },
+  {
     "version": "3.0.249.1",
     "date": "2026-10-30",
     "type": "commit",
