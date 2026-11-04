@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.251.1",
+    "date": "2026-11-04",
+    "type": "commit",
+    "message": "content: add VPN Gate bookmark",
+    "commit": "46cfb2328b8deae4dd6c35a1c5589dcc3217d1f7"
+  },
+  {
     "version": "3.0.250.1",
     "date": "2026-10-30",
     "type": "commit",
