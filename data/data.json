@@ -77,6 +77,12 @@
             "url": "https://is.gd/",
             "description": "網址縮短",
             "id": "nav_143318b7-eb63-414f-b24d-9a3058095ff1"
+          },
+          {
+            "id": "nav_4f2c9b71-6d83-4c20-a1e5-9b7f3d2c8a60",
+            "title": "VPN Gate",
+            "url": "https://www.vpngate.net/cn/",
+            "description": "免費公共 VPN 中繼伺服器列表"
           }
         ]
       },
