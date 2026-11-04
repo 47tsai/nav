@@ -1,6 +1,6 @@
 {
-  "version": "3.0.255.1",
+  "version": "3.0.256.1",
   "date": "2026-11-04",
   "type": "commit",
-  "message": "Add Vaultwarden and remove AltStore Sources"
+  "message": "Add SMS Forwarder and move SubsTracker"
 }
