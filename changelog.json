@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.253.1",
+    "date": "2026-11-04",
+    "type": "commit",
+    "message": "Update FGC Remaster URL",
+    "commit": "60a5ed54b1fcb7b4b10fb890f656ec45d44ae27d"
+  },
+  {
     "version": "3.0.252.1",
     "date": "2026-11-04",
     "type": "commit",
