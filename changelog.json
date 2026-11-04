@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.252.1",
+    "date": "2026-11-04",
+    "type": "commit",
+    "message": "content: organize personal website services",
+    "commit": "fa7106f65a0dfe7d6e664870d641e11ad46d5dad"
+  },
+  {
     "version": "3.0.251.1",
     "date": "2026-11-04",
     "type": "commit",
