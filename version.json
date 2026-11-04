@@ -1,6 +1,6 @@
 {
-  "version": "3.0.254.1",
+  "version": "3.0.255.1",
   "date": "2026-11-04",
   "type": "commit",
-  "message": "Rename free game claim service"
+  "message": "Add Vaultwarden and remove AltStore Sources"
 }

@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.255.1",
+    "date": "2026-11-04",
+    "type": "commit",
+    "message": "Add Vaultwarden and remove AltStore Sources",
+    "commit": "c0ab3630a4dd95fcf1d85833e1584a51c2fb77dd"
+  },
+  {
     "version": "3.0.254.1",
     "date": "2026-11-04",
     "type": "commit",
