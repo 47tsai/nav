@@ -435,12 +435,6 @@
             "url": "https://merch.chi.qzz.io/",
             "description": "個人周邊收藏管理",
             "id": "nav_589f3106-4655-40ca-91c3-2fe6a53a9846"
-          },
-          {
-            "id": "nav_03a5c2e1-8c73-4f60-a9b2-6d7e8f901234",
-            "title": "AltStore Sources",
-            "url": "https://chi.qzz.io/AltStore-Sources/",
-            "description": "AltStore 軟體來源整理"
           }
         ]
       },
@@ -470,6 +464,12 @@
             "title": "限免遊戲領取",
             "url": "https://fg.chi.qzz.io/",
             "description": "Steam、GOG 等平台遊戲領取管理"
+          },
+          {
+            "id": "nav_06a5c2e1-8c73-4f60-a9b2-6d7e8f901234",
+            "title": "Vaultwarden",
+            "url": "https://vault.chi.qzz.io/",
+            "description": "自架密碼管理服務"
           }
         ]
       },
