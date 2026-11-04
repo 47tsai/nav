@@ -470,6 +470,12 @@
             "title": "Vaultwarden",
             "url": "https://vault.chi.qzz.io/",
             "description": "自架密碼管理服務"
+          },
+          {
+            "id": "nav_05a5c2e1-8c73-4f60-a9b2-6d7e8f901234",
+            "title": "SubsTracker",
+            "url": "https://sub.chi.qzz.io/",
+            "description": "訂閱服務追蹤"
           }
         ]
       },
@@ -477,10 +483,10 @@
         "term": "專案服務",
         "links": [
           {
-            "id": "nav_05a5c2e1-8c73-4f60-a9b2-6d7e8f901234",
-            "title": "SubsTracker",
-            "url": "https://sub.chi.qzz.io/",
-            "description": "訂閱服務追蹤"
+            "id": "nav_07a5c2e1-8c73-4f60-a9b2-6d7e8f901234",
+            "title": "SMS Forwarder",
+            "url": "https://sms.chi.qzz.io/",
+            "description": "iOS 捷徑簡訊轉發至 Discord"
           }
         ]
       },
