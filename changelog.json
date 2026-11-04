@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.254.1",
+    "date": "2026-11-04",
+    "type": "commit",
+    "message": "Rename free game claim service",
+    "commit": "4770c635d7e97c8512680ec0674595a1b50a98d3"
+  },
+  {
     "version": "3.0.253.1",
     "date": "2026-11-04",
     "type": "commit",
