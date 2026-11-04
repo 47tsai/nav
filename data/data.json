@@ -416,31 +416,71 @@
         ]
       },
       {
-        "term": "個人服務",
+        "term": "個人網站",
         "links": [
           {
-            "title": "Alist",
-            "url": "https://alist.chi.qzz.io",
-            "description": "雲端儲存整合",
-            "id": "nav_f4b14ee8-79bb-459a-9e99-6a1062520358"
+            "id": "nav_01a5c2e1-8c73-4f60-a9b2-6d7e8f901234",
+            "title": "Chi Home",
+            "url": "https://chi.qzz.io/",
+            "description": "個人網站首頁"
           },
           {
-            "title": "Bilitool",
-            "url": "https://bili.chi.qzz.io",
-            "description": "Bilibili 自動化",
-            "id": "nav_ec89ab7a-7292-43f1-b868-21e010ac605d"
-          },
-          {
-            "title": "Twitch Miner",
-            "url": "https://twitch.chi.qzz.io",
-            "description": "Twitch Drops 自動化",
-            "id": "nav_46f027bf-d4f8-4366-9f2d-337c847cefd6"
+            "id": "nav_02a5c2e1-8c73-4f60-a9b2-6d7e8f901234",
+            "title": "Chi Status",
+            "url": "https://status.chi.qzz.io/",
+            "description": "個人服務狀態監測"
           },
           {
             "title": "周邊收藏",
             "url": "https://merch.chi.qzz.io/",
             "description": "個人周邊收藏管理",
             "id": "nav_589f3106-4655-40ca-91c3-2fe6a53a9846"
+          },
+          {
+            "id": "nav_03a5c2e1-8c73-4f60-a9b2-6d7e8f901234",
+            "title": "AltStore Sources",
+            "url": "https://chi.qzz.io/AltStore-Sources/",
+            "description": "AltStore 軟體來源整理"
+          }
+        ]
+      },
+      {
+        "term": "自架服務",
+        "links": [
+          {
+            "id": "nav_f4b14ee8-79bb-459a-9e99-6a1062520358",
+            "title": "Alist",
+            "url": "https://alist.chi.qzz.io/",
+            "description": "雲端儲存整合"
+          },
+          {
+            "id": "nav_ec89ab7a-7292-43f1-b868-21e010ac605d",
+            "title": "BiliTool",
+            "url": "https://bili.chi.qzz.io/",
+            "description": "Bilibili 自動化工具"
+          },
+          {
+            "id": "nav_46f027bf-d4f8-4366-9f2d-337c847cefd6",
+            "title": "Twitch Miner",
+            "url": "https://twitch.chi.qzz.io/",
+            "description": "Twitch Drops 自動化"
+          },
+          {
+            "id": "nav_04a5c2e1-8c73-4f60-a9b2-6d7e8f901234",
+            "title": "FGC Remaster",
+            "url": "https://fgc.chi.qzz.io/",
+            "description": "Steam、GOG 等平台遊戲領取管理"
+          }
+        ]
+      },
+      {
+        "term": "專案服務",
+        "links": [
+          {
+            "id": "nav_05a5c2e1-8c73-4f60-a9b2-6d7e8f901234",
+            "title": "SubsTracker",
+            "url": "https://sub.chi.qzz.io/",
+            "description": "訂閱服務追蹤"
           }
         ]
       },
