@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.258.1",
+    "date": "2026-11-14",
+    "type": "commit",
+    "message": "nav: use remote chi-system logo URLs (fix missing local logo PNGs)",
+    "commit": "a75bc3d1c8c6b6cdbb151986870efa26fec275e9"
+  },
+  {
     "version": "3.0.257.1",
     "date": "2026-11-14",
     "type": "commit",

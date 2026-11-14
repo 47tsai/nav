@@ -1,6 +1,6 @@
 {
-  "version": "3.0.257.1",
+  "version": "3.0.258.1",
   "date": "2026-11-14",
   "type": "commit",
-  "message": "nav: migrate to chi-system shell, unify admin (Chi導航)"
+  "message": "nav: use remote chi-system logo URLs (fix missing local logo PNGs)"
 }
