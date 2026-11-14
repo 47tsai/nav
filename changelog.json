@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.263.1",
+    "date": "2026-11-14",
+    "type": "commit",
+    "message": "nav: remove home page-intro description, hide home h2 on mobile",
+    "commit": "4b1238ca0ace7e4807e7caa6e98538ac0010e351"
+  },
+  {
     "version": "3.0.262.1",
     "date": "2026-11-14",
     "type": "commit",

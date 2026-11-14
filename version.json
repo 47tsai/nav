@@ -1,6 +1,6 @@
 {
-  "version": "3.0.262.1",
+  "version": "3.0.263.1",
   "date": "2026-11-14",
   "type": "commit",
-  "message": "nav: single-source sidebar via js/sidebar-nav.js; Admin active on admin page; mobile drawer auto-closes on nav tap; hash routing on load; admin jump links moved to content"
+  "message": "nav: remove home page-intro description, hide home h2 on mobile"
 }
