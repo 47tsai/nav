@@ -36,7 +36,12 @@ html[data-chi-theme="dark"] .brand-icon-light{display:none}html[data-chi-theme="
 .brand-copy{display:flex;min-width:0;flex-direction:column;line-height:1.2}
 .brand-copy strong{font-size:16px;letter-spacing:-.35px;font-weight:750}
 .brand-copy small{margin-top:5px;color:var(--chi-color-text-subtle);font-size:9px;font-weight:700;letter-spacing:1.45px}
-.sidebar-toggle{position:absolute;top:32px;right:14px;width:28px;height:28px;border:1px solid var(--chi-color-border);border-radius:8px;background:var(--chi-color-surface);color:var(--chi-color-text-muted);cursor:pointer}
+/* 收合按鈕：觸控區維持 44px（chi-system 的 min-width／min-height 不動），視覺改無框圖示 */
+.chi-sidebar__top .chi-sidebar__trigger{background:transparent;border-color:transparent;font-size:20px;line-height:1}
+.chi-sidebar__top .chi-sidebar__trigger:hover{background:var(--chi-color-surface-sunken)}
+/* 平板直列（logo 在上、按鈕在下）與桌面收合態：按鈕在欄內置中 */
+@media (min-width:768px) and (max-width:1023px){.chi-sidebar__top .chi-sidebar__trigger{align-self:center}}
+@media (min-width:1024px){html[data-chi-sidebar-collapsed] .chi-sidebar__top .chi-sidebar__trigger{align-self:center}}
 .nav-menu{display:flex;flex-direction:column;gap:4px;min-height:0;overflow:auto;scrollbar-width:thin}
 .nav-item{display:flex;align-items:center;gap:12px;min-height:42px;padding:9px 11px;border-radius:8px;border:1px solid transparent;color:var(--chi-color-text-muted);font-size:13px;font-weight:550;text-decoration:none;transition:background var(--chi-transition),color var(--chi-transition),border-color var(--chi-transition)}
 .nav-item i{width:18px;text-align:center;font-size:14px;color:var(--chi-color-text-subtle)}
@@ -49,6 +54,9 @@ html[data-chi-theme="dark"] .nav-item.active{color:#7dd3e8}
 .sidebar-status{width:7px;height:7px;border-radius:50%;background:var(--chi-color-success)}
 .sidebar-version{margin-left:auto;font:10px ui-monospace,monospace;letter-spacing:.6px}
 .main-content{min-height:100vh;margin-left:var(--sidebar-width);display:flex;flex-direction:column;min-width:0}
+/* nav 站覆寫：.chi-main 恢復全幅，topbar 貼齊側邊欄與視窗頂、不留灰縫。
+   不要改 chi-system 的 .chi-main 通則；topbar／content-wrap／頁尾各自帶 padding。 */
+.chi-main{max-width:none;margin:0;padding:0}
 .topbar{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;padding:43px clamp(24px,4.3vw,66px) 28px;border-bottom:1px solid var(--chi-color-border);background:var(--chi-color-surface)}
 .page-intro{min-width:220px}
 .eyebrow{display:flex;align-items:center;gap:9px;color:var(--chi-color-accent-hover);font-size:10px;font-weight:800;letter-spacing:1.5px}
@@ -205,20 +213,25 @@ html[data-chi-theme="dark"] .card:has(a[href*="auth.chi.qzz.io"]) .card-logo-con
 }
 
 
-/* Sidebar admin shortcut */
+/* Sidebar admin shortcut — 跟側邊欄其他連結一樣的 plain nav-item，不要邊框、不要外部箭頭。
+   圖示列（平板 768–1023 與桌面收合態）只留盾牌圖示：label 由 chi-system 圖示列規則藏掉，
+   這裡只把連結置中、去掉左右 padding。 */
 .sidebar-admin-link{
-  display:flex;align-items:center;gap:11px;
-  margin:0 2px 12px;padding:11px 12px;
-  border:1px solid var(--chi-color-border);border-radius:10px;
-  color:var(--chi-color-text-secondary);text-decoration:none;
-  font-size:12px;font-weight:650;letter-spacing:.2px;
-  transition:background var(--chi-transition),border-color var(--chi-transition),color var(--chi-transition);
+  display:flex;align-items:center;gap:12px;
+  min-height:42px;margin:0 8px 8px;padding:9px 11px;
+  border:1px solid transparent;border-radius:8px;
+  color:var(--chi-color-text-muted);text-decoration:none;
+  font-size:13px;font-weight:550;
+  transition:background var(--chi-transition),color var(--chi-transition);
 }
-.sidebar-admin-link>i:first-child{width:16px;text-align:center;font-size:13px;color:var(--chi-color-accent)}
-.sidebar-admin-link:hover,.sidebar-admin-link:focus-visible{
-  color:var(--chi-color-text);background:var(--chi-color-accent-soft);
-  border-color:var(--chi-color-accent);outline:none;
+.sidebar-admin-link .chi-sidebar__icon{width:18px;text-align:center;font-size:14px;color:var(--chi-color-accent);flex:0 0 auto}
+.sidebar-admin-link .chi-sidebar__icon i{color:var(--chi-color-accent)}
+.sidebar-admin-link:hover,.sidebar-admin-link:focus-visible{background:var(--chi-color-page-soft);color:var(--chi-color-text-strong);outline:none}
+@media (min-width:768px) and (max-width:1023px){
+  .sidebar-admin-link{justify-content:center;padding:9px 0}
+  .sidebar-admin-link .chi-sidebar__label{display:none}
 }
-.sidebar-admin-link .admin-link-external{margin-left:auto;font-size:10px;color:var(--chi-color-text-subtle);opacity:.7}
-.sidebar.collapsed .sidebar-admin-link{justify-content:center;padding:11px 8px}
-.sidebar.collapsed .sidebar-admin-link span,.sidebar.collapsed .sidebar-admin-link .admin-link-external{display:none}
+@media (min-width:1024px){
+  html[data-chi-sidebar-collapsed] .sidebar-admin-link{justify-content:center;padding:9px 0}
+  html[data-chi-sidebar-collapsed] .sidebar-admin-link .chi-sidebar__label{display:none}
+}

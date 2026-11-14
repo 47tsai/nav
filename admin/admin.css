@@ -1,10 +1,13 @@
-/* admin.css — 管理頁專屬排版（瘦身版）
- * admin 不再是獨立站：主題、側邊欄、按鈕、表單、表格、卡片、徽章全部用
- * chi-system tokens.css / components.css，admin.css 只留管理頁自己的版面
- * （topbar、tabs、stats、toolbar、表格欄位截斷、表單格線、頁尾）。
- * 全部數值只引 chi Token，不寫原始色值、不寫主題變數、不寫 data-theme。
- * 舊 .rail / .brand / .workspace / .topbar / .button / .field 已刪除，
- * 舊的三層寬度覆蓋與舊 accent 色已清掉。 */
+/* admin.css — 管理頁專屬排版（跟主站一體版）
+ * admin 是主站裡的一頁：主題、側邊欄、按鈕、表單、表格、卡片、徽章全部用
+ * chi-system tokens.css / components.css；.topbar / .page-intro / .eyebrow /
+ * .content-wrap / .section-overline 直接用主站同一份 css/nav.css（admin 有載入，
+ * 順序在 components.css 之後、admin.css 之前），admin.css 不再自寫一份
+ * 頂列、頁首、eyebrow 或分頁樣式。
+ * admin.css 只留管理頁自己的版面（登入區、總覽數字、工具列、表格欄位截斷、
+ * 表單格線、頁尾），全部數值只引 chi Token，不寫原始色值、不寫主題變數。
+ * 已刪除：舊 .rail / .brand / .workspace / .button / .field、admin-topbar、
+ * crumbs、admin-tabs、page-heading、admin-notice、sidebar-admin-link。 */
 
 [hidden]{display:none!important}
 *{box-sizing:border-box}
@@ -12,61 +15,26 @@ html{scroll-behavior:smooth;scroll-padding-top:var(--chi-space-5)}
 section[id]{scroll-margin-top:var(--chi-space-5)}
 
 /* ---------- 側邊欄裡管理頁才有的東西（殼層本身在 components.css） ---------- */
-.nav-caption{margin:var(--chi-space-5) var(--chi-space-2) var(--chi-space-2);color:var(--chi-color-text-muted);font-size:var(--chi-font-size-caption);font-weight:var(--chi-font-weight-label);letter-spacing:.12em;text-transform:uppercase}
-.nav-caption:first-child{margin-top:var(--chi-space-2)}
 .nav-divider{height:var(--chi-base-border-default-width);background:var(--chi-color-border-subtle);margin:var(--chi-space-3) var(--chi-space-2)}
 .chi-sidebar__icon{display:inline-flex;align-items:center;justify-content:center;width:var(--chi-base-icon-md);flex:none;color:var(--chi-color-text-muted)}
 .chi-sidebar__icon svg{width:18px;height:18px}
 .chi-sidebar__nav a[aria-current="page"] .chi-sidebar__icon{color:var(--chi-color-brand)}
-.sidebar-admin-link{display:flex;align-items:center;gap:var(--chi-space-2);margin:0 var(--chi-space-2) var(--chi-space-3);padding:var(--chi-space-3);border:var(--chi-base-border-default-width) solid var(--chi-color-border-subtle);border-radius:var(--chi-radius-md);background:var(--chi-color-surface-sunken);color:var(--chi-color-text-primary);text-decoration:none;font-size:var(--chi-font-size-caption);font-weight:var(--chi-font-weight-label)}
-.sidebar-admin-link>i:first-child{width:16px;text-align:center;color:var(--chi-color-brand)}
-.sidebar-admin-link .admin-link-external{margin-left:auto;font-size:10px;color:var(--chi-color-text-muted)}
-/* 收合／圖示列時跟主站一樣只留圖示：標題、分隔線、Admin 文字都收掉 */
+/* 收合／圖示列時跟主站一樣只留圖示：分隔線收掉 */
 @media (min-width:768px) and (max-width:1023px){
-  .nav-caption,.nav-divider{display:none}
-  .sidebar-admin-link{justify-content:center;margin:0 var(--chi-space-2) var(--chi-space-2);padding:var(--chi-space-2)}
-  .sidebar-admin-link span,.sidebar-admin-link .admin-link-external{display:none}
+  .nav-divider{display:none}
 }
 @media (min-width:1024px){
-  html[data-chi-sidebar-collapsed] .nav-caption,
   html[data-chi-sidebar-collapsed] .nav-divider{display:none}
-  html[data-chi-sidebar-collapsed] .sidebar-admin-link{justify-content:center;margin:0 var(--chi-space-2) var(--chi-space-2);padding:var(--chi-space-2)}
-  html[data-chi-sidebar-collapsed] .sidebar-admin-link span,
-  html[data-chi-sidebar-collapsed] .sidebar-admin-link .admin-link-external{display:none}
 }
 
-/* ---------- 管理頁頂列 ---------- */
-.admin-topbar{display:flex;align-items:center;justify-content:space-between;gap:var(--chi-space-4);padding-bottom:var(--chi-space-4);border-bottom:var(--chi-base-border-default-width) solid var(--chi-color-border-subtle)}
-.crumbs,.admin-topbar-actions{display:flex;align-items:center;gap:var(--chi-space-2);font-size:var(--chi-font-size-caption)}
-.crumbs a{color:var(--chi-color-text-muted);text-decoration:none}
-.crumbs span:last-child{color:var(--chi-color-text-primary);font-weight:var(--chi-font-weight-label)}
-.crumbs span:nth-child(2){color:var(--chi-color-text-muted)}
-.admin-topbar-actions{flex-wrap:wrap;justify-content:flex-end}
-.auth-status{display:flex;align-items:center;gap:var(--chi-space-2);color:var(--chi-color-text-muted);font-size:var(--chi-font-size-caption);white-space:nowrap}
+/* ---------- .topbar 右側登入區（.topbar / .page-intro 本身在 css/nav.css） ---------- */
+.topbar-tools .auth-status{display:flex;align-items:center;justify-content:flex-end;gap:var(--chi-space-2);color:var(--chi-color-text-muted);font-size:var(--chi-font-size-caption);white-space:nowrap}
 .status-dot{display:inline-block;width:7px;height:7px;flex:none;border-radius:var(--chi-radius-full);background:var(--chi-color-success)}
 .status-dot--muted{background:var(--chi-color-warning);margin:0}
-
-/* ---------- 管理分頁（chi-tabs，錨點用） ---------- */
-.admin-tabs{margin-top:var(--chi-space-4)}
-.admin-tabs .chi-tab{text-decoration:none}
-
-/* ---------- 頁首 ---------- */
-.page-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--chi-space-5);margin:var(--chi-space-5) 0}
-.eyebrow{display:flex;align-items:center;gap:var(--chi-space-2);margin:0 0 var(--chi-space-2);color:var(--chi-color-text-muted);font-size:var(--chi-font-size-caption);font-weight:var(--chi-font-weight-label);letter-spacing:.13em}
-.eyebrow-line{display:inline-block;width:18px;height:var(--chi-base-border-default-width);background:var(--chi-color-brand)}
-.page-heading h1{margin:0}
-.subtitle{margin:var(--chi-space-2) 0 0;color:var(--chi-color-text-secondary);font-size:var(--chi-font-size-body-small)}
-.heading-actions .button-icon{display:inline-block;width:16px;height:16px;flex:none;vertical-align:middle}
-
-/* ---------- 通知 ---------- */
-.admin-notice{display:flex;align-items:flex-start;gap:var(--chi-space-3);border-left:var(--chi-base-border-indicator-width) solid var(--chi-color-brand)}
-.notice-icon{display:grid;place-items:center;width:24px;height:24px;flex:none;border-radius:var(--chi-radius-md);background:var(--chi-color-info-bg);color:var(--chi-color-info-strong);font-weight:var(--chi-font-weight-label);font-size:var(--chi-font-size-body-small)}
-.admin-notice>div{flex:1;min-width:0}
-.admin-notice strong{color:var(--chi-color-text-primary);font-size:var(--chi-font-size-body-small)}
-.admin-notice p{margin:var(--chi-space-1) 0 0;color:var(--chi-color-text-secondary);font-size:var(--chi-font-size-caption)}
+.auth-actions{display:flex;align-items:center;gap:var(--chi-space-2);flex-wrap:wrap;justify-content:flex-end}
 
 /* ---------- 總覽數字 ---------- */
-.admin-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--chi-space-3);margin:var(--chi-space-5) 0 var(--chi-space-6)}
+.admin-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--chi-space-3);margin:0 0 var(--chi-space-6)}
 .admin-stat__label{display:block;color:var(--chi-color-text-secondary);font-size:var(--chi-font-size-caption);font-weight:var(--chi-font-weight-label)}
 .admin-stat__value{display:block;margin-top:var(--chi-space-2);color:var(--chi-color-text-primary);font-size:28px;line-height:1.2;font-weight:var(--chi-font-weight-display);letter-spacing:-.04em}
 .admin-stat__value--state{font-size:18px;letter-spacing:0}
@@ -113,17 +81,12 @@ section[id]{scroll-margin-top:var(--chi-space-5)}
 .chi-footer__name{color:var(--chi-color-text-primary);font-weight:var(--chi-font-weight-label)}
 .chi-footer__version{color:var(--chi-color-text-muted)}
 
-/* ---------- 響應式（斷點只用 chi 斷點 768 / 1024） ---------- */
+/* ---------- 響應式（斷點只用 chi 斷點 768 / 1024；.topbar 本身在 css/nav.css） ---------- */
 @media (max-width:1023px){
   .admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:767px){
-  .admin-topbar{align-items:flex-start;flex-direction:column}
-  .admin-topbar-actions{width:100%;justify-content:flex-start}
-  .crumbs{display:none}
-  .page-heading{align-items:flex-start;flex-direction:column;gap:var(--chi-space-3)}
-  .heading-actions{width:100%}
-  .heading-actions .chi-btn{width:100%}
+  .auth-actions{justify-content:flex-start}
   .toolbar{flex-direction:column}
   .admin-filter{justify-content:space-between;min-height:var(--chi-size-control)}
   .admin-filter .chi-select{max-width:65%}
@@ -131,7 +94,6 @@ section[id]{scroll-margin-top:var(--chi-space-5)}
   .chi-field--wide{grid-column:auto}
   .form-footer{align-items:flex-start;flex-direction:column}
   .form-footer .chi-btn{width:100%}
-  .admin-notice .chi-badge{display:none}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}

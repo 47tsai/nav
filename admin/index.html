@@ -3,12 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 管理中心 — 主站 chi-system 殼層裡的管理檢視（不是獨立站）
-  - 跟主站 index.html 同一套殼層：theme.js / sidebar.js / tokens.css / components.css，
-    收合 key chi-nav-sidebar-collapsed、主題 key chi-theme-mode、品牌 Chi導航、識別色 #008CAD。
-  - 側邊欄：工作區分類由 admin.js 從 ../data/data.json 長出（連結指回主站 /#...），
-    管理三連結（總覽/網站清單/新增網站）在側邊欄「管理」區，Admin 連結標示目前頁面。
-  - 管理頁專屬排版只在 admin.css，全部只引 chi Token，不再有獨立主題變數。 -->
+<!-- 管理中心 — 主站裡的一頁，不是獨立站
+  - 跟主站 index.html 同一套殼層與同一份視覺層：theme.js / sidebar.js / tokens.css /
+    components.css，外加主站同一份 css/nav.css（.topbar / .page-intro / .content-wrap /
+    .section-overline 的樣式與 token 都跟主站完全一樣）；admin.css 只留管理頁自己的版面。
+  - 收合 key chi-nav-sidebar-collapsed、主題 key chi-theme-mode、品牌 Chi導航、識別色 #008CAD。
+  - 主內容結構跟主站一模一樣：header.topbar（左 page-intro、右 topbar-tools）＋
+    div.content-wrap（section-overline＋內容）＋ footer.chi-footer；沒有自己的 topbar、
+    沒有 chi-tabs、沒有自誇卡片、側邊欄沒有 Admin 快捷、頁尾顯示真實版本號。
+  - 導覽只留側邊欄：工作區分類由 admin.js 從 ../data/data.json 長出（連結指回主站 /#...），
+    管理三連結（總覽/網站清單/新增網站）在側邊欄「管理」區。 -->
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f6f8fc">
@@ -21,6 +25,7 @@
 <link rel="stylesheet" href="../chi-system/tokens.css">
 <link rel="stylesheet" href="../chi-system/components.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="../css/nav.css">
 <link rel="stylesheet" href="admin.css">
 </head>
 <body>
@@ -35,17 +40,14 @@
       <button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="true" aria-label="收合側邊欄" title="收合側邊欄">‹</button>
     </div>
     <nav class="chi-sidebar__nav" aria-label="網站分類與管理">
-      <div class="nav-caption">工作區</div>
       <div id="js-nav-menu"></div>
       <div class="nav-divider" aria-hidden="true"></div>
-      <div class="nav-caption">管理</div>
       <div id="js-admin-menu">
         <a href="#overview" aria-current="page"><span class="chi-sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><span class="chi-sidebar__label">總覽</span></a>
         <a href="#sites"><span class="chi-sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg></span><span class="chi-sidebar__label">網站清單</span></a>
         <a href="#add-site"><span class="chi-sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="chi-sidebar__label">新增網站</span></a>
       </div>
     </nav>
-    <a class="sidebar-admin-link" href="/admin/" aria-current="page" aria-label="管理後台，目前頁面"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span>Admin</span><i class="fa-solid fa-arrow-up-right-from-square admin-link-external" aria-hidden="true"></i></a>
     <div class="chi-sidebar__bottom">
       <button class="chi-sidebar__theme" type="button" data-chi-theme-toggle aria-label="切換主題" title="切換主題"><span aria-hidden="true" data-chi-theme-icon>◐</span></button>
       <span class="chi-sidebar__version">nav.chi.qzz.io</span>
@@ -58,29 +60,19 @@
       <span class="chi-header__name">Chi導航</span>
     </div>
     <main class="chi-main" id="admin-main">
-      <div class="admin-topbar">
-        <div class="crumbs"><a href="/">Chi導航</a><span>/</span><span>管理中心</span></div>
-        <div class="admin-topbar-actions">
+      <header class="topbar">
+        <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> PERSONAL NAVIGATOR</div><h2>管理中心</h2><p>管理網站資料、分類與內容更新。</p></div>
+        <div class="topbar-tools">
           <span class="auth-status" id="auth-status" role="status" aria-live="polite" aria-atomic="true"><span class="status-dot status-dot--muted"></span>尚未登入</span>
-          <button class="chi-btn chi-btn--primary chi-btn--sm" type="button" id="auth-login">使用 Chi Auth 登入</button>
-          <button class="chi-btn chi-btn--secondary chi-btn--sm" type="button" id="auth-logout" hidden>登出</button>
-          <a class="chi-btn chi-btn--ghost chi-btn--sm" href="/">返回前台</a>
+          <div class="auth-actions">
+            <button class="chi-btn chi-btn--primary chi-btn--sm" type="button" id="auth-login">使用 Chi Auth 登入</button>
+            <button class="chi-btn chi-btn--secondary chi-btn--sm" type="button" id="auth-logout" hidden>登出</button>
+          </div>
         </div>
-      </div>
-
-      <nav class="chi-tabs admin-tabs" aria-label="管理分頁">
-        <a class="chi-tab" href="#overview" aria-selected="true">總覽</a>
-        <a class="chi-tab" href="#sites" aria-selected="false">網站清單</a>
-        <a class="chi-tab" href="#add-site" aria-selected="false">新增網站</a>
-      </nav>
-
-      <div class="page" id="overview">
-        <section class="page-heading">
-          <div><p class="eyebrow"><span class="eyebrow-line"></span> WORKSPACE / ADMIN</p><h1>管理中心</h1><p class="subtitle">管理 NAV 網站資料、分類與內容更新。</p></div>
-          <div class="heading-actions"><button class="chi-btn chi-btn--primary" type="button" id="jump-add"><svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> 新增網站</button></div>
-        </section>
-        <section class="chi-card admin-notice" aria-label="認證整合狀態"><span class="notice-icon" aria-hidden="true">i</span><div><strong>Chi Auth 管理已整合</strong><p>登入後由後端驗證管理身分，網站資料透過 GitHub Commit 保存。未登入時仍可搜尋與檢視公開資料。</p></div><span class="chi-badge chi-badge--info">API INTEGRATION</span></section>
-        <section class="admin-stats" aria-label="資料摘要">
+      </header>
+      <div class="content-wrap">
+        <div class="section-overline"><span>ADMIN</span><span class="section-rule"></span><span class="section-note">SITES &amp; CONTENT</span></div>
+        <section class="admin-stats" id="overview" aria-label="資料摘要">
           <article class="chi-card admin-stat"><span class="admin-stat__label">網站總數</span><strong class="admin-stat__value" id="stat-sites">--</strong><span class="admin-stat__note">目前資料集中的連結</span></article>
           <article class="chi-card admin-stat"><span class="admin-stat__label">分類數</span><strong class="admin-stat__value" id="stat-categories">--</strong><span class="admin-stat__note">主要導覽分類</span></article>
           <article class="chi-card admin-stat"><span class="admin-stat__label">子分類數</span><strong class="admin-stat__value" id="stat-subcategories">--</strong><span class="admin-stat__note">含巢狀分類</span></article>
@@ -109,8 +101,8 @@
             <div class="form-footer"><p id="form-status" role="status">目前為唯讀模式，登入並連線後才能寫入。</p><div class="form-actions"><button class="chi-btn chi-btn--ghost" type="button" id="cancel-edit" hidden>取消編輯</button><button class="chi-btn chi-btn--primary" type="submit" disabled>登入並連線後可寫入</button></div></div>
           </form>
         </section>
-        <footer class="chi-footer"><span class="chi-footer__name">Chi導航</span><span id="footer-version" class="chi-footer__version">管理介面預覽</span></footer>
       </div>
+      <footer class="chi-footer"><span class="chi-footer__name">Chi導航</span><span id="site-version" class="chi-footer__version" aria-label="目前版本"></span></footer>
     </main>
   </div>
 </div>
