@@ -1,6 +1,6 @@
 {
-  "version": "3.0.265.1",
+  "version": "3.0.266.1",
   "date": "2026-11-14",
   "type": "commit",
-  "message": "nav: restore home Chi導航 title on mobile"
+  "message": "nav: bump Service Worker cache to v23 so stale is-home assets are replaced"
 }
