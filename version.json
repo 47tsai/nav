@@ -1,6 +1,6 @@
 {
-  "version": "3.0.258.1",
+  "version": "3.0.259.1",
   "date": "2026-11-14",
   "type": "commit",
-  "message": "nav: use remote chi-system logo URLs (fix missing local logo PNGs)"
+  "message": "nav: theme-color accents (#008CAD) and remove sidebar captions"
 }
