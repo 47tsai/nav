@@ -213,25 +213,15 @@ html[data-chi-theme="dark"] .card:has(a[href*="auth.chi.qzz.io"]) .card-logo-con
 }
 
 
-/* Sidebar admin shortcut — 跟側邊欄其他連結一樣的 plain nav-item，不要邊框、不要外部箭頭。
-   圖示列（平板 768–1023 與桌面收合態）只留盾牌圖示：label 由 chi-system 圖示列規則藏掉，
-   這裡只把連結置中、去掉左右 padding。 */
-.sidebar-admin-link{
-  display:flex;align-items:center;gap:12px;
-  min-height:42px;margin:0 8px 8px;padding:9px 11px;
-  border:1px solid transparent;border-radius:8px;
-  color:var(--chi-color-text-muted);text-decoration:none;
-  font-size:13px;font-weight:550;
-  transition:background var(--chi-transition),color var(--chi-transition);
-}
-.sidebar-admin-link .chi-sidebar__icon{width:18px;text-align:center;font-size:14px;color:var(--chi-color-accent);flex:0 0 auto}
+/* Sidebar admin shortcut — 由 js/sidebar-nav.js 跟其他連結一起產生，是普通的
+   nav-item，只把盾牌圖示染成主題色。不要在這裡另外寫寬度、margin 或 padding，
+   否則它又會跟其他連結長得不一樣。
+   圖示列（平板 768–1023 與桌面收合態）藏分隔線：label 由 chi-system 圖示列規則藏掉，
+   連結置中也是 chi-system 的規則，這裡只補分隔線。 */
 .sidebar-admin-link .chi-sidebar__icon i{color:var(--chi-color-accent)}
-.sidebar-admin-link:hover,.sidebar-admin-link:focus-visible{background:var(--chi-color-page-soft);color:var(--chi-color-text-strong);outline:none}
 @media (min-width:768px) and (max-width:1023px){
-  .sidebar-admin-link{justify-content:center;padding:9px 0}
-  .sidebar-admin-link .chi-sidebar__label{display:none}
+  .chi-sidebar__nav .nav-divider{display:none}
 }
 @media (min-width:1024px){
-  html[data-chi-sidebar-collapsed] .sidebar-admin-link{justify-content:center;padding:9px 0}
-  html[data-chi-sidebar-collapsed] .sidebar-admin-link .chi-sidebar__label{display:none}
+  html[data-chi-sidebar-collapsed] .chi-sidebar__nav .nav-divider{display:none}
 }

@@ -11,8 +11,11 @@
   - 主內容結構跟主站一模一樣：header.topbar（左 page-intro、右 topbar-tools）＋
     div.content-wrap（section-overline＋內容）＋ footer.chi-footer；沒有自己的 topbar、
     沒有 chi-tabs、沒有自誇卡片、側邊欄沒有 Admin 快捷、頁尾顯示真實版本號。
-  - 導覽只留側邊欄：工作區分類由 admin.js 從 ../data/data.json 長出（連結指回主站 /#...），
-    管理三連結（總覽/網站清單/新增網站）在側邊欄「管理」區。 -->
+  - 導覽只留側邊欄：側邊欄連結只有一份來源——../js/sidebar-nav.js 的
+    renderSidebarNav()，主站 navigation.js 的 sidebar() 與 admin.js 的
+    buildSidebarNav() 都呼叫它；admin/index.html 裡不再手寫任何側邊欄連結
+    （以前的 #js-admin-menu 已刪掉），差別只在 active 的是 Admin 這一個狀態。
+    總覽／網站清單／新增網站三個錨點改放在內容區頂部的 .admin-jump。 -->
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f6f8fc">
@@ -39,15 +42,7 @@
       </a>
       <button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="true" aria-label="收合側邊欄" title="收合側邊欄">‹</button>
     </div>
-    <nav class="chi-sidebar__nav" aria-label="網站分類與管理">
-      <div id="js-nav-menu"></div>
-      <div class="nav-divider" aria-hidden="true"></div>
-      <div id="js-admin-menu">
-        <a href="#overview" aria-current="page"><span class="chi-sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><span class="chi-sidebar__label">總覽</span></a>
-        <a href="#sites"><span class="chi-sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></svg></span><span class="chi-sidebar__label">網站清單</span></a>
-        <a href="#add-site"><span class="chi-sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="chi-sidebar__label">新增網站</span></a>
-      </div>
-    </nav>
+    <nav class="chi-sidebar__nav" id="js-nav-menu" aria-label="網站分類"></nav>
     <div class="chi-sidebar__bottom">
       <button class="chi-sidebar__theme" type="button" data-chi-theme-toggle aria-label="切換主題" title="切換主題"><span aria-hidden="true" data-chi-theme-icon>◐</span></button>
       <span class="chi-sidebar__version">nav.chi.qzz.io</span>
@@ -72,6 +67,11 @@
       </header>
       <div class="content-wrap">
         <div class="section-overline"><span>ADMIN</span><span class="section-rule"></span><span class="section-note">SITES &amp; CONTENT</span></div>
+        <nav class="admin-jump" aria-label="管理區段">
+          <a href="#overview" aria-current="page">總覽</a>
+          <a href="#sites">網站清單</a>
+          <a href="#add-site">新增網站</a>
+        </nav>
         <section class="admin-stats" id="overview" aria-label="資料摘要">
           <article class="chi-card admin-stat"><span class="admin-stat__label">網站總數</span><strong class="admin-stat__value" id="stat-sites">--</strong><span class="admin-stat__note">目前資料集中的連結</span></article>
           <article class="chi-card admin-stat"><span class="admin-stat__label">分類數</span><strong class="admin-stat__value" id="stat-categories">--</strong><span class="admin-stat__note">主要導覽分類</span></article>
@@ -107,6 +107,7 @@
   </div>
 </div>
 <script src="auth-config.js"></script>
+<script src="../js/sidebar-nav.js"></script>
 <script src="admin.js"></script>
 </body>
 </html>

@@ -12,8 +12,9 @@
     主題 key chi-theme-mode（三態 system/light/dark），收合 key chi-nav-sidebar-collapsed，
     收合開關在側邊欄頂列右側（chi-system sidebar.js），手機版抽屜開關只在 <768px 顯示。
   - 顯示名只有「Chi導航」，沒有副標題（齊 2026-11-14 定案）；站點 ID nav、域名、repo 皆不動。
-  - 本站專屬內容（書籤、分類導覽、搜尋、Command Palette、Admin、版本）保留原 JS/CSS；
-    本站專屬樣式在 css/nav.css、css/card-tooltip.css。
+  - 本站專屬內容（書籤、分類導覽、搜尋、Command Palette、版本）保留原 JS/CSS；
+    側邊欄連結（分類＋Admin）只有一份來源：js/sidebar-nav.js 的 renderSidebarNav()，
+    主站與 admin 都呼叫它，HTML 裡不再手寫側邊欄連結；本站專屬樣式在 css/nav.css、css/card-tooltip.css。
 -->
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f6f8fc">
@@ -46,7 +47,6 @@
       <button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="true" aria-label="收合側邊欄" title="收合側邊欄">‹</button>
     </div>
     <nav class="chi-sidebar__nav" id="js-nav-menu" aria-label="網站分類"></nav>
-    <a class="nav-item sidebar-admin-link" href="/admin/" aria-label="開啟管理後台" title="管理後台"><span class="chi-sidebar__icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span><span class="chi-sidebar__label">Admin</span></a>
     <div class="chi-sidebar__bottom">
       <button class="chi-sidebar__theme" type="button" data-chi-theme-toggle aria-label="切換主題" title="切換主題"><span aria-hidden="true" data-chi-theme-icon>◐</span></button>
       <span class="chi-sidebar__version">nav.chi.qzz.io</span>
@@ -81,6 +81,7 @@
 <script src="js/storage.js"></script>
 <script src="js/update.js"></script>
 <script src="js/search.js"></script>
+<script src="js/sidebar-nav.js"></script>
 <script src="js/navigation.js"></script>
 <script src="js/render.js"></script>
 <script src="js/data/metadata.js"></script>

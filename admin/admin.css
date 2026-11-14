@@ -14,18 +14,12 @@
 html{scroll-behavior:smooth;scroll-padding-top:var(--chi-space-5)}
 section[id]{scroll-margin-top:var(--chi-space-5)}
 
-/* ---------- 側邊欄裡管理頁才有的東西（殼層本身在 components.css） ---------- */
-.nav-divider{height:var(--chi-base-border-default-width);background:var(--chi-color-border-subtle);margin:var(--chi-space-3) var(--chi-space-2)}
-.chi-sidebar__icon{display:inline-flex;align-items:center;justify-content:center;width:var(--chi-base-icon-md);flex:none;color:var(--chi-color-text-muted)}
-.chi-sidebar__icon svg{width:18px;height:18px}
-.chi-sidebar__nav a[aria-current="page"] .chi-sidebar__icon{color:var(--chi-color-brand)}
-/* 收合／圖示列時跟主站一樣只留圖示：分隔線收掉 */
-@media (min-width:768px) and (max-width:1023px){
-  .nav-divider{display:none}
-}
-@media (min-width:1024px){
-  html[data-chi-sidebar-collapsed] .nav-divider{display:none}
-}
+/* ---------- 內容區錨點列（.admin-jump）：總覽／網站清單／新增網站跳轉用，
+   放在 topbar 下方、總覽數字區上方。側邊欄不再有這三個連結，樣式只用 chi Token。 ---------- */
+.admin-jump{display:flex;gap:var(--chi-space-2);flex-wrap:wrap;margin-bottom:var(--chi-space-5)}
+.admin-jump a{display:inline-flex;align-items:center;min-height:var(--chi-size-control-compact);padding:var(--chi-space-2) var(--chi-space-4);border:var(--chi-base-border-default-width) solid var(--chi-color-border-strong);border-radius:var(--chi-radius-md);color:var(--chi-color-text-secondary);font-size:var(--chi-font-size-caption);font-weight:var(--chi-font-weight-label);text-decoration:none}
+.admin-jump a:hover{background:var(--chi-color-surface-sunken);color:var(--chi-color-text-primary)}
+.admin-jump a[aria-current="page"]{border-color:var(--chi-color-accent-border);background:var(--chi-color-accent-soft);color:var(--chi-color-accent-hover);font-weight:700}
 
 /* ---------- .topbar 右側登入區（.topbar / .page-intro 本身在 css/nav.css） ---------- */
 .topbar-tools .auth-status{display:flex;align-items:center;justify-content:flex-end;gap:var(--chi-space-2);color:var(--chi-color-text-muted);font-size:var(--chi-font-size-caption);white-space:nowrap}
