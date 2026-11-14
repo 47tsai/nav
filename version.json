@@ -1,6 +1,6 @@
 {
-  "version": "3.0.256.1",
-  "date": "2026-11-04",
+  "version": "3.0.257.1",
+  "date": "2026-11-14",
   "type": "commit",
-  "message": "Add SMS Forwarder and move SubsTracker"
+  "message": "nav: migrate to chi-system shell, unify admin (Chi導航)"
 }

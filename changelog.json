@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.257.1",
+    "date": "2026-11-14",
+    "type": "commit",
+    "message": "nav: migrate to chi-system shell, unify admin (Chi導航)",
+    "commit": "fdf657032fd1a2b151ba7f5de3c19993c7fe8cf5"
+  },
+  {
     "version": "3.0.256.1",
     "date": "2026-11-04",
     "type": "commit",
