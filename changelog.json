@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.261.1",
+    "date": "2026-11-14",
+    "type": "commit",
+    "message": "nav: plain Admin nav-item, frameless collapse button, full-width topbar, quick-open binding, back-to-top; admin rework",
+    "commit": "c9560d1b9bad7d58154c372c6546d156b5fd24ec"
+  },
+  {
     "version": "3.0.260.1",
     "date": "2026-11-14",
     "type": "commit",

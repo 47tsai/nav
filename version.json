@@ -1,6 +1,6 @@
 {
-  "version": "3.0.260.1",
+  "version": "3.0.261.1",
   "date": "2026-11-14",
   "type": "commit",
-  "message": "nav: text accent #006E87 for AA contrast on sunken/soft backgrounds"
+  "message": "nav: plain Admin nav-item, frameless collapse button, full-width topbar, quick-open binding, back-to-top; admin rework"
 }
