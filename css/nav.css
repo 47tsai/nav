@@ -159,6 +159,7 @@ html[data-chi-theme="dark"] .topbar{background:var(--chi-color-surface)}
   .card-link,.copy-action{min-height:78px;padding:12px 38px 12px 11px}.card-logo-container{width:38px;height:38px;flex-basis:38px}.card-logo{width:25px;height:25px}
   .site-footer{padding:16px 20px}.floating-actions{right:12px;bottom:12px}.command-palette{padding-top:9vh}
 }
+@media(max-width:767px){.page-intro.is-home h2{display:none}}
 @media(max-width:420px){.grid{grid-template-columns:1fr}.page-intro h2{font-size:27px}.section-overline{letter-spacing:1px}.card-title{font-size:13px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
