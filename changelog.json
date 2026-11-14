@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.264.1",
+    "date": "2026-11-14",
+    "type": "commit",
+    "message": "nav: admin table fits desktop width, operations column no longer clipped",
+    "commit": "c1a50583eaa44d575609bfabc7a98d0799355f97"
+  },
+  {
     "version": "3.0.263.1",
     "date": "2026-11-14",
     "type": "commit",
