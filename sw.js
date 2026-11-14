@@ -1,5 +1,5 @@
 const CACHE_NAME="chi-nav-main-v20";
-const CORE_ASSETS=["./","./index.html","./css/nav.css","./js/utils.js","./js/data.js","./js/storage.js","./js/update.js","./js/search.js","./js/navigation.js","./js/render.js","./js/data/metadata.js","./js/app.js","./js/theme.js","./js/card-tooltip.js","./js/bootstrap.js","./data/data.json","./manifest.json","./assets/icon/icon-bw.png","./assets/icon/icon-wb.png"];
+const CORE_ASSETS=["./","./index.html","./css/nav.css","./js/utils.js","./js/data.js","./js/storage.js","./js/update.js","./js/search.js","./js/navigation.js","./js/render.js","./js/data/metadata.js","./js/app.js","./js/theme.js","./chi-system/tokens.css","./chi-system/components.css","./chi-system/theme.js","./chi-system/sidebar.js","./chi-system/tabs.js","./chi-system/dialog.js","./chi-system/logo/nav-b.png","./chi-system/logo/nav-w.png","./js/card-tooltip.js","./js/bootstrap.js","./data/data.json","./manifest.json","./assets/icon/icon-bw.png","./assets/icon/icon-wb.png"];
 const NETWORK_FIRST=["/","/index.html","/data/data.json","/manifest.json"];
 const NETWORK_FIRST_EXTENSIONS=[".css",".js"];
 const CACHE_FIRST_EXTENSIONS=[".svg",".png",".jpg",".jpeg",".webp",".ico",".woff",".woff2"];

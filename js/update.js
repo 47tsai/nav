@@ -4,7 +4,7 @@ async function checkVersion(){
     if(!response.ok)throw new Error(`version.json HTTP ${response.status}`);
     const info=await response.json();
     if(!info?.version)return;
-    const footer=document.querySelector('.site-footer');
+    const footer=document.querySelector('.chi-footer, .site-footer');
     if(!footer)return;
     let label=document.getElementById('site-version');
     if(!label){

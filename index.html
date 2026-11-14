@@ -1,67 +1,92 @@
 <!doctype html>
-<html lang="zh-TW">
+
+<html lang="zh-Hant" data-chi-theme="light" data-chi-layout="sidebar" data-chi-brand="nav">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Chi導航（nav.chi.qzz.io）— chi-system 遷移版
+  - 共用件（tokens/components/theme/sidebar/tabs/dialog/logo）由 chi-system 釘版複製進
+    本站 chi-system/，來源 commit 47tsai/chi-system 4f776ae3b4a8e65e9774708151b2fe6f992d3031（M40）；
+    不得熱連結 chi-system main。
+  - 版式 sidebar（chi-system sites/nav.json layout: "sidebar"），品牌 nav，識別色 #008CAD；
+    主題 key chi-theme-mode（三態 system/light/dark），收合 key chi-nav-sidebar-collapsed，
+    收合開關在側邊欄頂列右側（chi-system sidebar.js），手機版抽屜開關只在 <768px 顯示。
+  - 顯示名只有「Chi導航」，沒有副標題（齊 2026-11-14 定案）；站點 ID nav、域名、repo 皆不動。
+  - 本站專屬內容（書籤、分類導覽、搜尋、Command Palette、Admin、版本）保留原 JS/CSS；
+    本站專屬樣式在 css/nav.css、css/card-tooltip.css。
+-->
+<meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f6f8fc">
-<meta name="description" content="Chi 的個人網站導航與常用工具箱">
+<meta name="description" content="Chi 的個人網站導航">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-touch-icon" href="https://raw.githubusercontent.com/47tsai/chi-design-system/main/logo/black-w.png">
+<meta name="apple-touch-icon" href="chi-system/logo/nav-w.png">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/47tsai/chi-design-system/main/logo/black-w.png">
-<title>Chi NAV · 個人導航</title>
+<link rel="icon" type="image/png" href="chi-system/logo/nav-w.png">
+<title>Chi導航</title>
+<script src="chi-system/theme.js"></script>
+<script src="chi-system/sidebar.js" data-chi-sidebar-key="chi-nav-sidebar-collapsed"></script>
+<link rel="stylesheet" href="chi-system/tokens.css">
+<link rel="stylesheet" href="chi-system/components.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/card-tooltip.css">
-<script src="js/theme.js"></script>
+<script src="chi-system/tabs.js" defer></script>
+<script src="chi-system/dialog.js" defer></script>
 </head>
 <body>
-<div class="app-shell">
-  <aside class="sidebar" id="sidebar">
-    <a class="brand" id="brand-home" href="/" aria-label="Chi NAV 首頁">
-      <span class="brand-mark"><img class="brand-icon brand-icon-light" src="https://raw.githubusercontent.com/47tsai/chi-design-system/main/logo/white-b.png" alt=""><img class="brand-icon brand-icon-dark" src="https://raw.githubusercontent.com/47tsai/chi-design-system/main/logo/black-w.png" alt=""></span>
-      <span class="brand-copy"><strong>Chi NAV</strong><small>PERSONAL SPACE</small></span>
-    </a>
-    <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-label="收合側邊欄" title="收合側邊欄"><span aria-hidden="true">‹</span></button>
-    <div class="nav-caption">工作區</div>
-    <nav class="nav-menu" id="js-nav-menu" aria-label="網站分類"></nav>
-    <a class="sidebar-admin-link" href="/admin/" aria-label="開啟管理後台" title="管理後台"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span>Admin</span><i class="fa-solid fa-arrow-up-right-from-square admin-link-external" aria-hidden="true"></i></a>
-    <div class="sidebar-bottom"><span class="sidebar-status"></span><span>個人導航</span><span class="sidebar-version">NAV</span></div>
-  </aside>
-  <main id="home" class="main-content">
-    <header class="topbar">
-      <div class="mobile-brand"><button id="mobile-menu-toggle" type="button" aria-label="開啟導覽選單">☰</button><span>Chi NAV</span></div>
-      <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> PERSONAL NAVIGATOR</div><h2>Chi 的工具箱</h2><p>常用網站、收藏與分類連結，集中在這裡。</p></div>
-      <div class="topbar-tools">
-        <label class="search-box" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="搜尋網站、分類或關鍵字…" autocomplete="off" aria-label="搜尋網站、分類或關鍵字"><button class="search-clear" id="search-clear" type="button" aria-label="清除搜尋">×</button><span class="shortcut"><kbd>⌘</kbd><kbd>K</kbd></span><span id="search-result-info" aria-live="polite"></span></label>
-        <button class="command-trigger" id="command-trigger" type="button" aria-label="開啟快速搜尋"><span>↗</span><span>快速開啟</span><kbd>Ctrl K</kbd></button>
-      </div>
-    </header>
-    <div class="content-wrap">
-      <div class="section-overline"><span>YOUR SPACE</span><span class="section-rule"></span><span class="section-note">LINKS & TOOLS</span></div>
-      <div id="js-main-content" aria-live="polite" aria-busy="true"><div class="app-loading" role="status">正在準備你的導航…</div></div>
+<div class="chi-shell">
+  <aside id="chi-sidebar" class="chi-sidebar" aria-label="側邊欄">
+    <div class="chi-sidebar__top">
+      <a class="chi-sidebar__brand" href="/" aria-label="Chi導航首頁">
+        <img class="chi-sidebar__logo chi-sidebar__logo--light" src="chi-system/logo/nav-b.png" alt="" width="32" height="32">
+        <img class="chi-sidebar__logo chi-sidebar__logo--dark" src="chi-system/logo/nav-w.png" alt="" width="32" height="32">
+        <span class="chi-sidebar__name">Chi導航</span>
+      </a>
+      <button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="true" aria-label="收合側邊欄" title="收合側邊欄">‹</button>
     </div>
-    <footer class="site-footer"><span>CHI NAV <span class="footer-separator">/</span> PERSONAL LINK HUB</span><span id="site-version" class="site-version" aria-label="目前版本"></span></footer>
-  </main>
+    <div class="nav-caption">工作區</div>
+    <nav class="chi-sidebar__nav" id="js-nav-menu" aria-label="網站分類"></nav>
+    <a class="sidebar-admin-link" href="/admin/" aria-label="開啟管理後台" title="管理後台"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span>Admin</span><i class="fa-solid fa-arrow-up-right-from-square admin-link-external" aria-hidden="true"></i></a>
+    <div class="chi-sidebar__bottom">
+      <button class="chi-sidebar__theme" type="button" data-chi-theme-toggle aria-label="切換主題" title="切換主題"><span aria-hidden="true" data-chi-theme-icon>◐</span></button>
+      <span class="chi-sidebar__version">nav.chi.qzz.io</span>
+    </div>
+  </aside>
+  <div class="chi-sidebar__scrim" data-chi-sidebar-scrim aria-hidden="true"></div>
+  <div class="chi-content">
+    <div class="chi-mobile-header">
+      <button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="false" aria-label="開啟導覽選單" title="開啟導覽選單">☰</button>
+      <span class="chi-header__name">Chi導航</span>
+    </div>
+    <main class="chi-main" id="home">
+      <header class="topbar">
+        <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> PERSONAL NAVIGATOR</div><h2>Chi導航</h2><p>常用網站、收藏與分類連結，集中在這裡。</p></div>
+        <div class="topbar-tools">
+          <label class="search-box" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="搜尋網站、分類或關鍵字…" autocomplete="off" aria-label="搜尋網站、分類或關鍵字"><button class="search-clear" id="search-clear" type="button" aria-label="清除搜尋">×</button><span class="shortcut"><kbd>⌘</kbd><kbd>K</kbd></span><span id="search-result-info" aria-live="polite"></span></label>
+          <button class="command-trigger" id="command-trigger" type="button" aria-label="開啟快速搜尋"><span>↗</span><span>快速開啟</span><kbd>Ctrl K</kbd></button>
+        </div>
+      </header>
+      <div class="content-wrap">
+        <div class="section-overline"><span>YOUR SPACE</span><span class="section-rule"></span><span class="section-note">LINKS &amp; TOOLS</span></div>
+        <div id="js-main-content" aria-live="polite" aria-busy="true"><div class="app-loading" role="status">正在準備你的導航…</div></div>
+      </div>
+      <footer class="chi-footer"><span class="chi-footer__name">Chi導航</span><span id="site-version" class="chi-footer__version" aria-label="目前版本"></span></footer>
+    </main>
+  </div>
 </div>
-<div class="mobile-scrim" id="mobile-scrim"></div>
 <div class="command-palette" id="command-palette" aria-hidden="true"><div class="command-backdrop" data-command-close></div><section class="command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-title"><div class="command-head"><span aria-hidden="true">⌕</span><span id="command-title" class="sr-only">搜尋網站與指令</span><input id="command-input" type="search" placeholder="輸入網站、分類或指令…" autocomplete="off" aria-label="快速搜尋"><button type="button" data-command-close aria-label="關閉">×</button></div><div class="command-hint" id="command-hint">↑ ↓ 選擇　·　Enter 開啟　·　Esc 關閉</div><div class="command-results" id="command-results"></div></section></div>
 <div class="toast" id="js-toast" role="status"><div class="toast-title"><span aria-hidden="true">✓</span><span>腳本已複製</span></div><div class="toast-desc">請到對應網頁開啟 Console 後貼上執行。</div></div>
-<script src="js/utils.js"></script><script src="js/data.js"></script><script src="js/storage.js"></script><script src="js/update.js"></script><script src="js/search.js"></script><script src="js/navigation.js"></script><script src="js/render.js"></script><script src="js/data/metadata.js"></script><script src="js/app.js"></script><script src="js/card-tooltip.js"></script><script src="js/bootstrap.js"></script>
-<script>
-(() => {
-  const sidebar = document.getElementById('sidebar');
-  const toggle = document.getElementById('mobile-menu-toggle');
-  const scrim = document.getElementById('mobile-scrim');
-  const close = () => { sidebar?.classList.remove('mobile-open'); scrim?.classList.remove('visible'); };
-  toggle?.addEventListener('click', () => { sidebar?.classList.toggle('mobile-open'); scrim?.classList.toggle('visible'); });
-  scrim?.addEventListener('click', close);
-  document.addEventListener('click', e => { if (e.target.closest('#command-trigger')) { if (typeof openCommand === 'function') openCommand(); } });
-  const observer = new MutationObserver(() => { if (window.matchMedia('(max-width: 760px)').matches && eHasNavAction()) close(); });
-  function eHasNavAction(){ return !!document.querySelector('.nav-item.active'); }
-  const nav = document.getElementById('js-nav-menu'); if (nav) observer.observe(nav, {subtree:true,attributes:true,attributeFilter:['class']});
-})();
-</script>
+<script src="js/utils.js"></script>
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/update.js"></script>
+<script src="js/search.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/render.js"></script>
+<script src="js/data/metadata.js"></script>
+<script src="js/app.js"></script>
+<script src="js/card-tooltip.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>

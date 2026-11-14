@@ -1,4 +1,4 @@
-/* Chi NAV /new — single-purpose visual layer based on Chi Design System */
+/* Chi導航 — single-purpose visual layer based on Chi Design System */
 :root{
   color-scheme:light;
   --chi-color-page:#f6f8fc;--chi-color-page-soft:#f1f5fb;--chi-color-surface:#fff;--chi-color-surface-raised:#fff;--chi-color-surface-muted:#edf2fc;
@@ -10,7 +10,7 @@
   --chi-shadow-sm:0 4px 14px rgb(59 82 145 / 8%);--chi-transition:180ms ease;
   --sidebar-width:252px;
 }
-html[data-theme="dark"]{
+html[data-chi-theme="dark"]{
   color-scheme:dark;
   --chi-color-page:#17191f;--chi-color-page-soft:#1b1e27;--chi-color-surface:#20232c;--chi-color-surface-raised:#272b36;--chi-color-surface-muted:#282c38;
   --chi-color-text:#e8eaf1;--chi-color-text-strong:#f7f8fc;--chi-color-text-muted:#b2b8c7;--chi-color-text-subtle:#8c94a6;
@@ -32,7 +32,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid color
 .brand-mark{width:39px;height:39px;display:grid;place-items:center;flex:0 0 39px;border-radius:11px;background:var(--chi-color-accent-soft);overflow:hidden}
 .brand-icon{width:29px;height:29px;object-fit:contain}
 .brand-icon-light{display:block}.brand-icon-dark{display:none}
-html[data-theme="dark"] .brand-icon-light{display:none}html[data-theme="dark"] .brand-icon-dark{display:block}
+html[data-chi-theme="dark"] .brand-icon-light{display:none}html[data-chi-theme="dark"] .brand-icon-dark{display:block}
 .brand-copy{display:flex;min-width:0;flex-direction:column;line-height:1.2}
 .brand-copy strong{font-size:16px;letter-spacing:-.35px;font-weight:750}
 .brand-copy small{margin-top:5px;color:var(--chi-color-text-subtle);font-size:9px;font-weight:700;letter-spacing:1.45px}
@@ -43,7 +43,7 @@ html[data-theme="dark"] .brand-icon-light{display:none}html[data-theme="dark"] .
 .nav-item i{width:18px;text-align:center;font-size:14px;color:var(--chi-color-text-subtle)}
 .nav-item:hover{background:var(--chi-color-page-soft);color:var(--chi-color-text-strong)}
 .nav-item.active{background:var(--chi-color-accent-soft);border-color:var(--chi-color-accent-border);color:var(--chi-color-accent-hover);font-weight:700}
-html[data-theme="dark"] .nav-item.active{color:#a9c8ff}
+html[data-chi-theme="dark"] .nav-item.active{color:#a9c8ff}
 .nav-item.active i{color:var(--chi-color-accent)}
 .nav-divider{height:1px;background:var(--chi-color-border);margin:12px 5px}
 .sidebar-bottom{display:flex;align-items:center;gap:8px;margin-top:auto;padding:16px 10px 3px;border-top:1px solid var(--chi-color-border);color:var(--chi-color-text-subtle);font-size:11px}
@@ -136,7 +136,7 @@ kbd{padding:2px 5px;border:1px solid var(--chi-color-border-strong);border-radiu
 .theme-float button,.back-to-top{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--chi-color-border-strong);border-radius:10px;background:var(--chi-color-surface);color:var(--chi-color-text-muted);box-shadow:var(--chi-shadow-sm);cursor:pointer}
 .mobile-brand{display:none}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-html[data-theme="dark"] .topbar{background:var(--chi-color-surface)}
+html[data-chi-theme="dark"] .topbar{background:var(--chi-color-surface)}
 /* Chi Auth keeps its own identity instead of inheriting NAV blue. */
 .card:has(a[href*="auth.chi.qzz.io"]) .card-logo-container,
 .card:has(a[href*="chi-auth"]) .card-logo-container{background:#20202b;border-color:#3b3b4b}
@@ -174,7 +174,7 @@ html[data-theme="dark"] .topbar{background:var(--chi-color-surface)}
 .card:has(a[href*="auth.chi.qzz.io"]):hover,.card:has(a[href*="chi-auth"]):hover{border-color:#818cf8;box-shadow:0 4px 16px rgb(79 70 229 / 12%)}
 .card:has(a[href*="auth.chi.qzz.io"]) .card-title,.card:has(a[href*="chi-auth"]) .card-title{color:var(--chi-color-text-strong)}
 .card:has(a[href*="auth.chi.qzz.io"]) .card-logo-container,.card:has(a[href*="chi-auth"]) .card-logo-container{background:#eef2ff;border-color:#c7d2fe}
-html[data-theme="dark"] .card:has(a[href*="auth.chi.qzz.io"]) .card-logo-container,html[data-theme="dark"] .card:has(a[href*="chi-auth"]) .card-logo-container{background:#292849;border-color:#4c4885}
+html[data-chi-theme="dark"] .card:has(a[href*="auth.chi.qzz.io"]) .card-logo-container,html[data-chi-theme="dark"] .card:has(a[href*="chi-auth"]) .card-logo-container{background:#292849;border-color:#4c4885}
 
 
 /* Card proportion pass: smaller footprint, stronger icon and text hierarchy. */
