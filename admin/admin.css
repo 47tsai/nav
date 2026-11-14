@@ -52,11 +52,11 @@ section[id]{scroll-margin-top:var(--chi-space-5)}
 /* ---------- 表格欄位（chi-table 之上的管理頁截斷） ---------- */
 .chi-table td:first-child{min-width:180px}
 .chi-table td:nth-child(2){white-space:nowrap;color:var(--chi-color-text-secondary)}
-.chi-table td:nth-child(3){max-width:360px;color:var(--chi-color-text-secondary)}
-.chi-table td:last-child{width:120px}
+.chi-table td:nth-child(3){max-width:280px;color:var(--chi-color-text-secondary)}
+.chi-table th:last-child,.chi-table td:last-child{width:148px}
 .site-name{display:block;color:var(--chi-color-text-primary);font-weight:var(--chi-font-weight-label)}
 .site-desc{display:block;max-width:340px;margin-top:2px;color:var(--chi-color-text-muted);font-size:var(--chi-font-size-caption);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.site-url{display:block;max-width:360px;color:var(--chi-color-text-secondary);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.site-url{display:block;max-width:280px;color:var(--chi-color-text-secondary);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .site-url:hover{color:var(--chi-color-brand)}
 .table-status{display:inline-flex;align-items:center;gap:var(--chi-space-1);color:var(--chi-color-success);font-size:var(--chi-font-size-caption);white-space:nowrap}
 .table-status::before{content:"";width:6px;height:6px;border-radius:var(--chi-radius-full);background:currentColor}
