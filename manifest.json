@@ -9,7 +9,7 @@
   "lang": "zh-TW",
   "icons": [
     {
-      "src": "chi-system/logo/nav-w.png",
+      "src": "https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-w.png",
       "sizes": "any",
       "type": "image/png"
     }
@@ -22,7 +22,7 @@
       "url": "./?action=search",
       "icons": [
         {
-          "src": "chi-system/logo/nav-w.png",
+          "src": "https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-w.png",
           "sizes": "any",
           "type": "image/png"
         }
@@ -35,7 +35,7 @@
       "url": "./?view=favorites",
       "icons": [
         {
-          "src": "chi-system/logo/nav-w.png",
+          "src": "https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-w.png",
           "sizes": "any",
           "type": "image/png"
         }
@@ -48,7 +48,7 @@
       "url": "./?view=recent",
       "icons": [
         {
-          "src": "chi-system/logo/nav-w.png",
+          "src": "https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-w.png",
           "sizes": "any",
           "type": "image/png"
         }
@@ -61,7 +61,7 @@
       "url": "./?view=recommendations",
       "icons": [
         {
-          "src": "chi-system/logo/nav-w.png",
+          "src": "https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-w.png",
           "sizes": "any",
           "type": "image/png"
         }
