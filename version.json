@@ -1,6 +1,6 @@
 {
-  "version": "3.0.264.1",
+  "version": "3.0.265.1",
   "date": "2026-11-14",
   "type": "commit",
-  "message": "nav: admin table fits desktop width, operations column no longer clipped"
+  "message": "nav: restore home Chi導航 title on mobile"
 }
