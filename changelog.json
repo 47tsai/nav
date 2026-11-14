@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.262.1",
+    "date": "2026-11-14",
+    "type": "commit",
+    "message": "nav: single-source sidebar via js/sidebar-nav.js; Admin active on admin page; mobile drawer auto-closes on nav tap; hash routing on load; admin jump links moved to content",
+    "commit": "34ef606107210fac68e649adbb70b89469f843b8"
+  },
+  {
     "version": "3.0.261.1",
     "date": "2026-11-14",
     "type": "commit",

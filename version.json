@@ -1,6 +1,6 @@
 {
-  "version": "3.0.261.1",
+  "version": "3.0.262.1",
   "date": "2026-11-14",
   "type": "commit",
-  "message": "nav: plain Admin nav-item, frameless collapse button, full-width topbar, quick-open binding, back-to-top; admin rework"
+  "message": "nav: single-source sidebar via js/sidebar-nav.js; Admin active on admin page; mobile drawer auto-closes on nav tap; hash routing on load; admin jump links moved to content"
 }
