@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.260.1",
+    "date": "2026-11-14",
+    "type": "commit",
+    "message": "nav: text accent #006E87 for AA contrast on sunken/soft backgrounds",
+    "commit": "3025431e7edab07ed4b2128915df73428d196ced"
+  },
+  {
     "version": "3.0.259.1",
     "date": "2026-11-14",
     "type": "commit",
