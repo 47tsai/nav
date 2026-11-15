@@ -1,62 +1,76 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
+<!doctype html>
+<html lang="zh-Hant" data-chi-theme="light" data-chi-layout="sidebar" data-chi-brand="nav">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#356ae6">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 書籤列 — 主站裡的一頁，不是獨立站（2026-11-16 遷到 chi-system 架構）
+  - 跟主站 index.html 同一套殼層與同一份視覺層：theme.js / sidebar.js / tokens.css /
+    components.css，外加主站同一份 css/nav.css；bookmarks.css 只留書籤頁自己的樣式
+    （卡片裡的 Font Awesome 圖示大小）。
+  - 收合 key chi-nav-sidebar-collapsed、主題 key chi-theme-mode、品牌 Chi導航、識別色 #008CAD。
+  - 側邊欄連結只有一份來源：../js/sidebar-nav.js 的 renderSidebarNav()，分類來自
+    ../data/data.json（sidebarGroups），連結前綴 '/' 指回主站；這頁沒有對應的
+    active 項目。舊的 ../js/theme.js（chi-nav-theme）與舊 CSS（style.css /
+    theme.css / enhancements.css 等）已不再載入。
+  - 內容：15 個固定書籤（bookmarks.js 內建清單），搜尋、清除、Ctrl+K 聚焦保留。 -->
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f8fc">
 <meta name="description" content="Chi 的快速書籤列">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/47tsai/chi-design-system/main/logo/black-w.png">
-<title>Chi 的書籤列</title>
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-w.png">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-w.png">
+<title>書籤列 · Chi導航</title>
+<script src="../chi-system/theme.js"></script>
+<script src="../chi-system/sidebar.js" data-chi-sidebar-key="chi-nav-sidebar-collapsed"></script>
+<link rel="stylesheet" href="../chi-system/tokens.css">
+<link rel="stylesheet" href="../chi-system/components.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/responsive.css">
-<link rel="stylesheet" href="../css/theme.css">
-<link rel="stylesheet" href="../css/update.css">
-<link rel="stylesheet" href="../css/card-tooltip.css">
-<link rel="stylesheet" href="../css/enhancements.css">
-<link rel="stylesheet" href="../css/loading.css">
-<link rel="stylesheet" href="../css/category-page.css">
-<link rel="stylesheet" href="../css/design-system.css">
-<link rel="stylesheet" href="../css/card-layout.css">
-<script src="../js/theme.js"></script>
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="bookmarks.css">
 </head>
 <body>
-<aside class="sidebar">
-  <a class="brand" href="../" aria-label="回到 Chi 的工具箱">
-    <div class="brand-mark">
-      <img class="brand-icon brand-icon-light" src="https://raw.githubusercontent.com/47tsai/chi-design-system/main/logo/white-b.png" alt="">
-      <img class="brand-icon brand-icon-dark" src="https://raw.githubusercontent.com/47tsai/chi-design-system/main/logo/black-w.png" alt="">
-      <i class="fa-solid fa-grip-lines-vertical sidebar-open-icon" aria-hidden="true"></i>
+<div class="chi-shell">
+  <aside id="chi-sidebar" class="chi-sidebar" aria-label="側邊欄">
+    <div class="chi-sidebar__top">
+      <a class="chi-sidebar__brand" href="/" aria-label="Chi導航首頁">
+        <img class="chi-sidebar__logo chi-sidebar__logo--light" src="https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-b.png" alt="" width="32" height="32">
+        <img class="chi-sidebar__logo chi-sidebar__logo--dark" src="https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-w.png" alt="" width="32" height="32">
+        <span class="chi-sidebar__name">Chi導航</span>
+      </a>
+      <button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="true" aria-label="收合側邊欄" title="收合側邊欄">‹</button>
     </div>
-    <div><h1>Chi 的書籤列</h1><p>Personal Bookmarks</p></div>
-  </a>
-  <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-label="收合側邊欄" title="收合側邊欄"><i class="fa-solid fa-grip-lines-vertical" aria-hidden="true"></i></button>
-  <nav class="nav-menu" aria-label="書籤分類">
-    <a class="nav-item active" href="#bookmarks"><i class="fa-solid fa-bookmark" aria-hidden="true"></i><span>書籤列</span></a>
-  </nav>
-</aside>
-<main id="home" class="main-content">
-  <header class="topbar">
-    <div class="page-intro">
-      <span class="eyebrow">CHI BOOKMARKS</span>
-      <h2>我的書籤列</h2>
-      <p>平常最常用的網站，集中放在這裡。</p>
+    <nav class="chi-sidebar__nav" id="js-nav-menu" aria-label="網站分類"></nav>
+    <div class="chi-sidebar__bottom">
+      <button class="chi-sidebar__theme" type="button" data-chi-theme-toggle aria-label="切換主題" title="切換主題"><span aria-hidden="true" data-chi-theme-icon>◐</span></button>
+      <span class="chi-sidebar__version">nav.chi.qzz.io</span>
     </div>
-    <div class="search-box" role="search">
-      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-      <input id="search-input" type="search" placeholder="搜尋書籤…" autocomplete="off" aria-label="搜尋書籤">
-      <button class="search-clear" id="search-clear" type="button" aria-label="清除搜尋"><i class="fa-solid fa-xmark"></i></button>
-      <span class="shortcut"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+  </aside>
+  <div class="chi-sidebar__scrim" data-chi-sidebar-scrim aria-hidden="true"></div>
+  <div class="chi-content">
+    <div class="chi-mobile-header">
+      <button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="false" aria-label="開啟導覽選單" title="開啟導覽選單">☰</button>
+      <span class="chi-header__name">Chi導航</span>
     </div>
-  </header>
-  <section class="section" id="bookmarks">
-    <div class="section-header"><i class="fa-solid fa-bookmark" aria-hidden="true"></i><span>書籤列</span></div>
-    <div class="grid" id="bookmark-grid"></div>
-    <div class="empty-state" id="empty-state" hidden>找不到符合的書籤。</div>
-  </section>
-  <footer class="site-footer"><span>Chi Bookmarks</span><span>·</span><span>15 bookmarks</span></footer>
-</main>
-<script src="../js/utils.js"></script>
+    <main class="chi-main" id="home">
+      <header class="topbar">
+        <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> PERSONAL NAVIGATOR</div><h2>我的書籤列</h2><p>平常最常用的網站，集中放在這裡。</p></div>
+        <div class="topbar-tools">
+          <label class="search-box" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="搜尋書籤…" autocomplete="off" aria-label="搜尋書籤"><button class="search-clear" id="search-clear" type="button" aria-label="清除搜尋">×</button><span class="shortcut"><kbd>⌘</kbd><kbd>K</kbd></span></label>
+        </div>
+      </header>
+      <div class="content-wrap">
+        <div class="section-overline"><span>YOUR SPACE</span><span class="section-rule"></span><span class="section-note">BOOKMARKS</span></div>
+        <section class="launcher-page" id="bookmarks">
+          <div class="launcher-page-head"><h2><i class="fa-solid fa-bookmark"></i>書籤列</h2></div>
+          <div class="grid" id="bookmark-grid"></div>
+          <div class="empty-state" id="empty-state" hidden>找不到符合的書籤。</div>
+        </section>
+      </div>
+      <footer class="chi-footer"><span class="chi-footer__name">Chi導航</span><span id="site-version" class="chi-footer__version" aria-label="目前版本"></span></footer>
+    </main>
+  </div>
+</div>
+<script src="../js/sidebar-nav.js"></script>
 <script src="bookmarks.js"></script>
 </body>
 </html>

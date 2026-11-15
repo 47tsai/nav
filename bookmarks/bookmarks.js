@@ -65,3 +65,39 @@ document.addEventListener("keydown", event => {
 });
 
 render();
+
+/* 側邊欄與版本 — 跟主站／admin 共用同一份來源，不要在這頁手寫側邊欄連結。
+ * 側邊欄：分類來自 ../data/data.json，renderSidebarNav() 產生；前綴 '/' 指回主站，
+ * 這頁沒有對應的 active 項目；有收藏時才顯示「我的收藏」（跟 admin 一樣讀
+ * localStorage 的 chi-nav-favorites）。載不到 data.json 時側邊欄留空，不影響書籤。 */
+(function initSidebar() {
+  var menu = document.getElementById("js-nav-menu");
+  if (!menu || typeof renderSidebarNav !== "function" || typeof sidebarGroups !== "function") return;
+  var showFavorites = false;
+  try {
+    var fav = JSON.parse(localStorage.getItem("chi-nav-favorites") || "[]");
+    showFavorites = Array.isArray(fav) && fav.length > 0;
+  } catch (e) {}
+  fetch("../data/data.json", { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("data.json HTTP " + r.status); return r.json(); })
+    .then(function (data) {
+      menu.innerHTML = renderSidebarNav({ groups: sidebarGroups(data), activeId: null, prefix: "/", showFavorites: showFavorites });
+    })
+    .catch(function (err) { console.warn("bookmarks sidebar failed:", err); });
+})();
+
+/* 頁尾版本號 — 主站 js/update.js 的 checkVersion() 是寫死抓站內 version.json，
+ * 從 /bookmarks/ 抓會變成 /bookmarks/version.json（不存在），所以這頁自己抓 ../version.json。 */
+(function initVersion() {
+  var label = document.getElementById("site-version");
+  if (!label) return;
+  fetch("../version.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("version.json HTTP " + r.status); return r.json(); })
+    .then(function (info) {
+      if (!info || !info.version) return;
+      label.textContent = "v" + info.version;
+      label.title = info.message ? (info.date || "") + " · " + info.message : (info.date || "");
+      label.setAttribute("aria-label", "目前版本 v" + info.version);
+    })
+    .catch(function (err) { console.warn("bookmarks version check failed:", err); });
+})();
