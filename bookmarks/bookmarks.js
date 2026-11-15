@@ -37,7 +37,7 @@ function render() {
     <a class="card card-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
       <div class="card-main">
         <div class="card-logo-container">
-          <i class="${escapeHtml(item.icon)} card-logo" aria-hidden="true"></i>
+          ${ChiIcon.icon(item.icon, { className: 'card-logo' })}
         </div>
         <div class="card-content">
           <div class="card-title">${escapeHtml(item.title)}</div>

@@ -1,11 +1,10 @@
 /* 書籤頁自己的樣式 — 主站樣式都在 ../css/nav.css，這裡只補書籤卡片專用的部分。
  * 主站卡片 logo 是 <img>（.card-logo 設了 28px 固定寬高＋object-fit），書籤卡片
- * 用的是 Font Awesome <i>，要另外給字體大小與顏色；其他（.card / .grid /
+ * 用的是 chi-system 內嵌 SVG（ChiIcon.icon()，class 附帶 card-logo），直接給
+ * 24px 固定寬高與主題色；其他（.card / .grid /
  * .topbar / .search-box 等）全部沿用 nav.css。 */
 .card-logo-container .card-logo {
-  width: auto;
-  height: auto;
-  font-size: 24px;
-  line-height: 1;
+  width: 24px;
+  height: 24px;
   color: var(--chi-color-accent);
 }

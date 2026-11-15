@@ -13,7 +13,7 @@
     btn.type = 'button';
     btn.title = '回到最上面';
     btn.setAttribute('aria-label', '回到最上面');
-    btn.innerHTML = '<i class="fa-solid fa-location-arrow" aria-hidden="true"></i>';
+btn.innerHTML = ChiIcon.icon('fa-solid fa-location-arrow');
     btn.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();

@@ -6,7 +6,7 @@
 <!-- 書籤列 — 主站裡的一頁，不是獨立站（2026-11-16 遷到 chi-system 架構）
   - 跟主站 index.html 同一套殼層與同一份視覺層：theme.js / sidebar.js / tokens.css /
     components.css，外加主站同一份 css/nav.css；bookmarks.css 只留書籤頁自己的樣式
-    （卡片裡的 Font Awesome 圖示大小）。
+    （卡片裡的內嵌 SVG 圖示大小，見 bookmarks.js 的 ChiIcon.icon() 呼叫）。
   - 收合 key chi-nav-sidebar-collapsed、主題 key chi-theme-mode、品牌 Chi導航、識別色 #008CAD。
   - 側邊欄連結只有一份來源：../js/sidebar-nav.js 的 renderSidebarNav()，分類來自
     ../data/data.json（sidebarGroups），連結前綴 '/' 指回主站；這頁沒有對應的
@@ -24,7 +24,7 @@
 <script src="../chi-system/sidebar.js" data-chi-sidebar-key="chi-nav-sidebar-collapsed"></script>
 <link rel="stylesheet" href="../chi-system/tokens.css">
 <link rel="stylesheet" href="../chi-system/components.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="../chi-system/icon.js"></script>
 <link rel="stylesheet" href="../css/nav.css">
 <link rel="stylesheet" href="bookmarks.css">
 </head>
@@ -48,7 +48,7 @@
       <div class="content-wrap">
         <div class="section-overline"><span>YOUR SPACE</span><span class="section-rule"></span><span class="section-note">BOOKMARKS</span></div>
         <section class="launcher-page" id="bookmarks">
-          <div class="launcher-page-head"><h2><i class="fa-solid fa-bookmark"></i>書籤列</h2></div>
+          <div class="launcher-page-head"><h2><svg class="chi-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg>書籤列</h2></div>
           <div class="grid" id="bookmark-grid"></div>
           <div class="empty-state" id="empty-state" hidden>找不到符合的書籤。</div>
         </section>

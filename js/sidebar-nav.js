@@ -48,7 +48,7 @@ function renderSidebarNav(opts) {
       (extra && extra.dataGroupNav ? ' data-group-nav="' + esc(extra.dataGroupNav) + '"' : '') +
       (extra && extra.ariaLabel ? ' aria-label="' + esc(extra.ariaLabel) + '"' : '') +
       ' title="' + esc(label) + '"' + (active ? ' aria-current="page"' : '') + '>' +
-      '<span class="chi-sidebar__icon"><i class="' + esc(icon) + '" aria-hidden="true"></i></span>' +
+      '<span class="chi-sidebar__icon">' + ChiIcon.icon(icon) + '</span>' +
       '<span class="chi-sidebar__label">' + esc(label) + '</span></a>';
   };
   var html = '';

@@ -19,7 +19,7 @@ section[id]{scroll-margin-top:var(--chi-space-5)}
 .admin-jump{display:flex;gap:var(--chi-space-2);flex-wrap:wrap;margin-bottom:var(--chi-space-5)}
 .admin-jump a{display:inline-flex;align-items:center;min-height:var(--chi-size-control-compact);padding:var(--chi-space-2) var(--chi-space-4);border:var(--chi-base-border-default-width) solid var(--chi-color-border-strong);border-radius:var(--chi-radius-md);color:var(--chi-color-text-secondary);font-size:var(--chi-font-size-caption);font-weight:var(--chi-font-weight-label);text-decoration:none}
 .admin-jump a:hover{background:var(--chi-color-surface-sunken);color:var(--chi-color-text-primary)}
-.admin-jump a[aria-current="page"]{border-color:var(--chi-color-accent-border);background:var(--chi-color-accent-soft);color:var(--chi-color-accent-hover);font-weight:700}
+.admin-jump a[aria-current="page"]{border-color:var(--nav-color-accent-border);background:var(--nav-color-accent-soft);color:var(--chi-color-accent-hover);font-weight:700}
 
 /* ---------- .topbar 右側登入區（.topbar / .page-intro 本身在 css/nav.css） ---------- */
 .topbar-tools .auth-status{display:flex;align-items:center;justify-content:flex-end;gap:var(--chi-space-2);color:var(--chi-color-text-muted);font-size:var(--chi-font-size-caption);white-space:nowrap}
