@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.269.1",
+    "date": "2026-11-15",
+    "type": "commit",
+    "message": "nav: share sidebar shell via js/sidebar-shell.js (3 pages), bump SW cache to v26",
+    "commit": "5f59d8de979303dedf61c316f07978c4a6bedd12"
+  },
+  {
     "version": "3.0.268.1",
     "date": "2026-11-15",
     "type": "commit",

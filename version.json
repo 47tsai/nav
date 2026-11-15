@@ -1,6 +1,6 @@
 {
-  "version": "3.0.268.1",
+  "version": "3.0.269.1",
   "date": "2026-11-15",
   "type": "commit",
-  "message": "nav: migrate bookmarks page to chi-system shell (chi-theme-mode, teal), bump SW cache to v25"
+  "message": "nav: share sidebar shell via js/sidebar-shell.js (3 pages), bump SW cache to v26"
 }
