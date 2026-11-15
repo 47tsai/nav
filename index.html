@@ -40,22 +40,9 @@
 </head>
 <body>
 <div class="chi-shell">
-  <aside id="chi-sidebar" class="chi-sidebar" aria-label="側邊欄">
-    <div class="chi-sidebar__top">
-      <a class="chi-sidebar__brand" href="/" aria-label="Chi導航首頁">
-        <img class="chi-sidebar__logo chi-sidebar__logo--light" src="https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-b.png" alt="" width="32" height="32">
-        <img class="chi-sidebar__logo chi-sidebar__logo--dark" src="https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-w.png" alt="" width="32" height="32">
-        <span class="chi-sidebar__name">Chi導航</span>
-      </a>
-      <button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="true" aria-label="收合側邊欄" title="收合側邊欄">‹</button>
-    </div>
-    <nav class="chi-sidebar__nav" id="js-nav-menu" aria-label="網站分類"></nav>
-    <div class="chi-sidebar__bottom">
-      <button class="chi-sidebar__theme" type="button" data-chi-theme-toggle aria-label="切換主題" title="切換主題"><span aria-hidden="true" data-chi-theme-icon>◐</span></button>
-      <span class="chi-sidebar__version">nav.chi.qzz.io</span>
-    </div>
-  </aside>
-  <div class="chi-sidebar__scrim" data-chi-sidebar-scrim aria-hidden="true"></div>
+  <!-- 側邊欄外殼由 js/sidebar-shell.js 注入（三頁共用），不要在這裡手寫 aside -->
+  <div id="js-sidebar-shell"></div>
+  <script src="js/sidebar-shell.js"></script>
   <div class="chi-content">
     <div class="chi-mobile-header">
       <button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="false" aria-label="開啟導覽選單" title="開啟導覽選單">☰</button>

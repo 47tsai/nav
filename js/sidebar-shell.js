@@ -1,0 +1,40 @@
+/* 側邊欄外殼唯一來源 — 主站／admin／bookmarks 三頁共用，不要再各寫一份 aside。
+ *
+ * 為什麼用 JS 注入而不是靜態 HTML：三頁的 aside 外殼（品牌、收合鈕、底部主題切換＋
+ * 版本）與 scrim 一字相同，靜態各寫一份遲早走歪；本站沒有建置步驟，唯一能在不加
+ * 建置的前提下共用的辦法就是由這支小腳本在解析期把外殼寫進頁面。
+ *
+ * 為什麼這樣寫是安全的：
+ * - 這支腳本放在 <div id="js-sidebar-shell"></div> 緊接著的下一行、同步載入，執行時
+ *   placeholder 已經解析完成；chi-system 的 sidebar.js／theme.js 都是等
+ *   DOMContentLoaded 才綁按鈕（[data-chi-sidebar-toggle]／[data-chi-theme-toggle]），
+ *   外殼在那之前就已經在 DOM 裡，按鈕照常綁得到。
+ * - 注入用 outerHTML 整段替換 placeholder，不留多餘 wrapper，.chi-shell 的子層
+ *   結構跟以前靜態寫法完全一樣（aside＋scrim 為直接子層）。
+ * - logo 是絕對路徑熱連結、品牌連結 href="/"，三頁不需要任何差異。
+ *
+ * 限制：關掉 JS 就沒有側邊欄外殼。但本站內容本來就全靠 JS 渲染（卡片、admin
+ * 表格、書籤皆然），無 JS 時整站本來就無法使用，所以這不算新增的退化。
+ * 改品牌／logo／收合鈕／底部列時，只改這裡的 SHELL 一處。 */
+(function () {
+  'use strict';
+  var SHELL =
+    '<aside id="chi-sidebar" class="chi-sidebar" aria-label="側邊欄">' +
+    '<div class="chi-sidebar__top">' +
+    '<a class="chi-sidebar__brand" href="/" aria-label="Chi導航首頁">' +
+    '<img class="chi-sidebar__logo chi-sidebar__logo--light" src="https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-b.png" alt="" width="32" height="32">' +
+    '<img class="chi-sidebar__logo chi-sidebar__logo--dark" src="https://raw.githubusercontent.com/47tsai/chi-system/main/logo/nav-w.png" alt="" width="32" height="32">' +
+    '<span class="chi-sidebar__name">Chi導航</span>' +
+    '</a>' +
+    '<button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="true" aria-label="收合側邊欄" title="收合側邊欄">‹</button>' +
+    '</div>' +
+    '<nav class="chi-sidebar__nav" id="js-nav-menu" aria-label="網站分類"></nav>' +
+    '<div class="chi-sidebar__bottom">' +
+    '<button class="chi-sidebar__theme" type="button" data-chi-theme-toggle aria-label="切換主題" title="切換主題"><span aria-hidden="true" data-chi-theme-icon>◐</span></button>' +
+    '<span class="chi-sidebar__version">nav.chi.qzz.io</span>' +
+    '</div>' +
+    '</aside>' +
+    '<div class="chi-sidebar__scrim" data-chi-sidebar-scrim aria-hidden="true"></div>';
+  var host = document.getElementById('js-sidebar-shell');
+  if (host) host.outerHTML = SHELL;
+})();
