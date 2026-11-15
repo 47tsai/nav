@@ -5,9 +5,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Chi導航（nav.chi.qzz.io）— chi-system 遷移版
-  - 共用件（tokens/components/theme/sidebar/tabs/dialog/logo）由 chi-system 釘版複製進
+  - 共用件（tokens/components/theme/sidebar/tabs/dialog）由 chi-system 釘版複製進
     本站 chi-system/，來源 commit 47tsai/chi-system 4f776ae3b4a8e65e9774708151b2fe6f992d3031（M40）；
-    不得熱連結 chi-system main。
+    程式與樣式一律用這份釘版複製，不得熱連結 chi-system main。
+  - 例外只有 logo 圖檔：二進位檔走不了 push-files 快照，所以 nav-b/nav-w 兩張 PNG
+    是刻意熱連結 raw.githubusercontent.com/47tsai/chi-system/main/logo/（見下方
+    .chi-sidebar__logo 與 apple-touch-icon／favicon），不是寫漏。
   - 版式 sidebar（chi-system sites/nav.json layout: "sidebar"），品牌 nav，識別色 #008CAD；
     主題 key chi-theme-mode（三態 system/light/dark），收合 key chi-nav-sidebar-collapsed，
     收合開關在側邊欄頂列右側（chi-system sidebar.js），手機版抽屜開關只在 <768px 顯示。
