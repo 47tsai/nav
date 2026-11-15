@@ -1,6 +1,6 @@
 {
-  "version": "3.0.269.1",
+  "version": "3.0.270.1",
   "date": "2026-11-15",
   "type": "commit",
-  "message": "nav: share sidebar shell via js/sidebar-shell.js (3 pages), bump SW cache to v26"
+  "message": "nav: converge site CSS onto chi-system tokens, replace Font Awesome with inline SVG icons (chi-system 64ad8e71), bump SW cache to v27"
 }
