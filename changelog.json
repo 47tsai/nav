@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.267.1",
+    "date": "2026-11-15",
+    "type": "commit",
+    "message": "nav: remove dead sidebar code, fix hotlink comment, bump SW cache to v24",
+    "commit": "e42b70b14ce28bd8aba1fcf874e0f6ab3bb0e641"
+  },
+  {
     "version": "3.0.266.1",
     "date": "2026-11-14",
     "type": "commit",
