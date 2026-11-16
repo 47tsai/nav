@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.271.1",
+    "date": "2026-11-16",
+    "type": "commit",
+    "message": "nav: add release.json (chi-system v1.1.0, site v3.0.270.1)",
+    "commit": "3bc05a2b16c14c3acb332674476f7d6a3796922b"
+  },
+  {
     "version": "3.0.270.1",
     "date": "2026-11-15",
     "type": "commit",

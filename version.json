@@ -1,6 +1,6 @@
 {
-  "version": "3.0.270.1",
-  "date": "2026-11-15",
+  "version": "3.0.271.1",
+  "date": "2026-11-16",
   "type": "commit",
-  "message": "nav: converge site CSS onto chi-system tokens, replace Font Awesome with inline SVG icons (chi-system 64ad8e71), bump SW cache to v27"
+  "message": "nav: add release.json (chi-system v1.1.0, site v3.0.270.1)"
 }
