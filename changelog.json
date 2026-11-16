@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.287.1",
+    "date": "2026-11-16",
+    "type": "commit",
+    "message": "nav: repin chi-system to 2b8cd04 (100dvh sidebar fix)",
+    "commit": "366d560eb06ba74c7927492fe2197dace77af4d9"
+  },
+  {
     "version": "3.0.286.1",
     "date": "2026-11-16",
     "type": "commit",
