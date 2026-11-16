@@ -1,5 +1,12 @@
 [
   {
+    "version": "3.0.284.1",
+    "date": "2026-11-16",
+    "type": "commit",
+    "message": "nav: remove unused legacy CSS and theme.js, share mobile header",
+    "commit": "adb611291c72be6932e6958f286069c3d435242a"
+  },
+  {
     "version": "3.0.283.1",
     "date": "2026-11-16",
     "type": "commit",
