@@ -32,12 +32,10 @@
 <div class="chi-shell">
   <!-- 側邊欄外殼由 js/sidebar-shell.js 注入（三頁共用），不要在這裡手寫 aside -->
   <div id="js-sidebar-shell"></div>
-  <script src="../js/sidebar-shell.js"></script>
   <div class="chi-content">
-    <div class="chi-mobile-header">
-      <button class="chi-sidebar__trigger" type="button" data-chi-sidebar-toggle aria-controls="chi-sidebar" aria-expanded="false" aria-label="開啟導覽選單" title="開啟導覽選單">☰</button>
-      <span class="chi-header__name">Chi導航</span>
-    </div>
+    <!-- 手機版標頭由 js/sidebar-shell.js 注入（三頁共用）；腳本須放在兩個 placeholder 之後、解析期同步執行 -->
+    <div id="js-mobile-header"></div>
+    <script src="../js/sidebar-shell.js"></script>
     <main class="chi-main" id="home">
       <header class="topbar">
         <div class="page-intro"><div class="eyebrow"><span class="eyebrow-line"></span> PERSONAL NAVIGATOR</div><h2>我的書籤列</h2><p>平常最常用的網站，集中放在這裡。</p></div>
